@@ -1,0 +1,112 @@
+
+`timescale 1 ns/ 1 ns
+module key_out_vlg_tst();
+// constants                                           
+// general purpose registers
+//reg eachvec;
+// test vector input registers
+reg IN_clk;
+reg IN_key;
+reg IN_reset;
+reg [3:0] IN_value;
+// wires                                               
+wire [3:0]  OUT_ALU_OP;
+wire [7:0]  OUT_DSTH;
+wire [7:0]  OUT_DSTL;
+wire [7:0]  OUT_SRCH;
+wire [7:0]  OUT_SRCL;
+wire OUT_finish;
+wire [1:0] OUT_state;
+
+// assign statements (if any)                          
+key_out i1 (
+// port map - connection between master ports and signals/registers   
+	.IN_clk(IN_clk),
+	.IN_key(IN_key),
+	.IN_reset(IN_reset),
+	.IN_value(IN_value),
+	.OUT_ALU_OP(OUT_ALU_OP),
+	.OUT_DSTH(OUT_DSTH),
+	.OUT_DSTL(OUT_DSTL),
+	.OUT_SRCH(OUT_SRCH),
+	.OUT_SRCL(OUT_SRCL),
+	.OUT_finish(OUT_finish),
+	.OUT_state(OUT_state)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+#0		IN_clk = 1;
+#0 	IN_reset = 1;
+#1 	IN_value = 4'h1;
+#0 	IN_key = 1;
+#40	IN_value = 4'h1;
+#0 	IN_key = 0;
+#80	IN_value = 4'h3;
+#0 	IN_key = 1;
+#40	IN_value = 4'h3;
+#0 	IN_key = 0;
+#80	IN_value = 4'h7;
+#0 	IN_key = 1;
+#40	IN_value = 4'h7;
+#0 	IN_key = 0;
+#80	IN_value = 4'h2;
+#0 	IN_key = 1;
+#40	IN_value = 4'h2;
+#0 	IN_key = 0;
+
+#80	IN_value = 4'hA;
+#0 	IN_key = 1;
+#40	IN_value = 4'hA;
+#0 	IN_key = 0;
+#80	IN_value = 4'hB;
+#0 	IN_key = 1;
+#40	IN_value = 4'hB;
+#0 	IN_key = 0;
+#80	IN_value = 4'hC;
+#0 	IN_key = 1;
+#40	IN_value = 4'hC;
+#0 	IN_key = 0;
+
+#80	IN_value = 4'h8;
+#0 	IN_key = 1;
+#40	IN_value = 4'h8;
+#0 	IN_key = 0;
+#80	IN_value = 4'h9;
+#0 	IN_key = 1;
+#40	IN_value = 4'h9;
+#0 	IN_key = 0;
+#80	IN_value = 4'h6;
+#0 	IN_key = 1;
+#40	IN_value = 4'h6;
+#0 	IN_key = 0;
+#80	IN_value = 4'h4;
+#0 	IN_key = 1;
+#40	IN_value = 4'h4;
+#0 	IN_key = 0;
+
+#80	IN_value = 4'hF;
+#0 	IN_key = 1;
+#40	IN_value = 4'hF;
+#0 	IN_key = 0;
+
+
+
+
+                                             
+// --> end                                             
+//$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+#20 IN_clk = ~IN_clk;                                                      
+//@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

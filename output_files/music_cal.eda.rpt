@@ -1,5 +1,5 @@
 EDA Netlist Writer report for music_cal
-Tue Jun 27 09:52:12 2017
+Tue Jun 27 20:48:30 2017
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -34,9 +34,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Jun 27 09:52:12 2017 ;
+; EDA Netlist Writer Status ; Successful - Tue Jun 27 20:48:30 2017 ;
 ; Revision Name             ; music_cal                             ;
-; Top-level Entity Name     ; alu                                   ;
+; Top-level Entity Name     ; key_out                               ;
 ; Family                    ; Cyclone II                            ;
 +---------------------------+---------------------------------------+
 
@@ -47,14 +47,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Tue Jun 27 09:52:11 2017
+    Info: Processing started: Tue Jun 27 20:48:30 2017
 Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off music_cal -c music_cal --gen_testbench
 Info (119006): Selected device EP2C5Q208C8 for design "music_cal"
-Info (201000): Generated Verilog Test Bench File C:/altera/13.0/EX_music_cal/simulation/modelsim/alu.vt for simulation
+Info (201000): Generated Verilog Test Bench File C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt for simulation
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 402 megabytes
-    Info: Processing ended: Tue Jun 27 09:52:12 2017
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Tue Jun 27 20:48:30 2017
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

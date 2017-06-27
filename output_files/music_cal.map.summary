@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Jun 27 10:31:19 2017
+Analysis & Synthesis Status : Successful - Tue Jun 27 21:45:45 2017
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : music_cal
-Top-level Entity Name : alu
+Top-level Entity Name : key_out
 Family : Cyclone II
-Total logic elements : 112
-    Total combinational functions : 112
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 31
+Total logic elements : 94
+    Total combinational functions : 94
+    Dedicated logic registers : 43
+Total registers : 43
+Total pins : 46
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
