@@ -18,7 +18,7 @@ Z3 o-vlog01compat -work work -O0
 !i10b 1
 !s100 K3V1bo=fiaO_@H`_NmCHN0
 !s85 0
-!s108 1498530693.864000
+!s108 1498531086.606000
 !s107 C:/altera/13.0/EX_music_cal/alu.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/alu.v|
 !s101 -O0
@@ -37,7 +37,7 @@ R2
 r1
 !s85 0
 31
-!s108 1498530694.015000
+!s108 1498531086.749000
 !s107 C:/altera/13.0/EX_music_cal/simulation/modelsim/alu.vt|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim|C:/altera/13.0/EX_music_cal/simulation/modelsim/alu.vt|
 !s101 -O0

@@ -1,48 +1,87 @@
 // 位数按照从左到右,从上到下
+
 // s0 第一列 1 4 7 0（从上到下） 
 // s1 第二列 2 5 8 =(F)
 // s2 第三列 3 6 9 cmp(E)
 // s3 第四列 +(A) -(B) and(C) or(D) 
 
-// flag表示从有输入开始经过了多少个状态。
-// key 是从按键按下开始就有1，松开为0.
 module keyboard(input IN_clk, input[3:0] IN_row,
-					output reg [3:0] OUT_col, output reg [3:0] OUT_value, output reg OUT_key);
+					output reg [3:0] OUT_col, output reg [7:0] OUT_SRCH, output reg [7:0] OUT_SRCL, output reg [7:0] OUT_DSTH, output reg [7:0] OUT_SRCL, output reg [7:0] OUT_ALU_OP, output reg OUT_finish);
 
 	// Declare state register
-	reg	[1:0]state = 0;
-	reg [1:0]flag = 0;
-
-	// Declare	states
-	parameter S0 = 0, S1 = 1, S2 = 2, S3 = 3;
+	reg	[2:0] state = 0;
+	reg [3:0] data = 0;
+	reg key = 0;
+	
+	parameter S0 = 0, S1 = 1, S2 = 2, S3 = 3, S4 = 4, S5 = 5;
 
 	always @ (posedge IN_clk) 
 	begin
 			case (state)
 				S0:
 					begin
-						state <= S1;
-						OUT_col <= 4'b0100;
+						if(IN_row[1])
+						begin
+							state = S1;
+						end
+						else if(IN_row[2])
+						begin
+							state = S2;
+						end
+						else if(IN_row[3])
+						begin
+							state = S3;
+						end
+						else if(IN_row[4])
+						begin
+							state = S4;
+						end
+						else
+						begin
+							state = S0;
+							key = 1'b0;
+							data = data;
+							OUT_col = 4'b1111;
+						end					
 					end
 				S1:
 					begin
-						state <= S2;
-						OUT_col <= 4'b0010;
+						key = 1'b0;
+						if(IN_row[4])
+							state = S1;
+						else
+							state = S0;
 					end
 				S2:
 					begin
-						state <= S3;
-						OUT_col <= 4'b0001;
+						key = 1'b0;
+						if(IN_row[3])
+							state = S2;
+						else
+							state = S0;
 					end
 				S3:
 					begin
-						state <= S0;
-						OUT_col <= 4'b1000;
+						key = 1'b0;
+						if(IN_row[2])
+							state = S3;
+						else
+							state = S0;
+					end
+				S4:
+					begin
+						key = 1'b0;
+						if(IN_row[1])
+							state = S4;
+						else
+							state = S0;
 					end
 				default:
 					begin
-						state <= S0;
-						OUT_col <= 4'b1000;
+						key = 1'b0;
+						data = 4'b0000;
+						OUT_col = 4'b1111;
+						state = S0;
 					end
 			endcase
 	end
@@ -50,12 +89,17 @@ module keyboard(input IN_clk, input[3:0] IN_row,
 	// Determine the output based only on the current state
 	// and the input (do not wait for a clock edge).
 	// always @ (state or IN_reset or IN_row)
-	always @ (posedge IN_clk)
+	always @ (state)
 	begin
 		//OUT_value <= OUT_value;
 		begin
 			case (state)
-				S0:
+				S0：
+				begin
+					key = 1'b0;
+					OUT_col = 4'b1111;
+				end
+				S1:
 					case(IN_row)
 						4'b1000: begin OUT_value <= 1; OUT_key <= 1; flag <= 0; end
 						4'b0100: begin OUT_value <= 4; OUT_key <= 1; flag <= 0; end
