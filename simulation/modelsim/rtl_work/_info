@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0\EX_music_cal\simulation\modelsim
+valu
+I?BehokGd<1AjHP52MASP]1
+Vfg`3`ie5z1N_IJZjX9;NN0
+Z1 dC:\altera\13.0\EX_music_cal\simulation\modelsim
+w1498529961
+8C:/altera/13.0/EX_music_cal/alu.v
+FC:/altera/13.0/EX_music_cal/alu.v
+L0 10
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 K3V1bo=fiaO_@H`_NmCHN0
+!s85 0
+!s108 1498530693.864000
+!s107 C:/altera/13.0/EX_music_cal/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/alu.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal -O0
+valu_vlg_tst
+!i10b 1
+!s100 cBfF2N24C1jYDoHQ6><`T3
+Ij4G0bL@GLmW>2h_XiXJQL1
+V4@Qz@EdL77HUFgW1UMdE[0
+R1
+w1498530644
+8C:/altera/13.0/EX_music_cal/simulation/modelsim/alu.vt
+FC:/altera/13.0/EX_music_cal/simulation/modelsim/alu.vt
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1498530694.015000
+!s107 C:/altera/13.0/EX_music_cal/simulation/modelsim/alu.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim|C:/altera/13.0/EX_music_cal/simulation/modelsim/alu.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim -O0

@@ -1,0 +1,119 @@
+`timescale 1 ns/ 1 ns
+module alu_vlg_tst();
+// constants                                           
+// general purpose registers
+// reg eachvec;
+// test vector input registers
+reg [3:0] IN_CS;
+reg IN_carry_in;
+reg [7:0] IN_data_a;
+reg [7:0] IN_data_b;
+// wires                                               
+wire [7:0]  OUT_S;
+wire OUT_carry_out;
+wire OUT_zero;
+
+// assign statements (if any)                          
+alu i1 (
+// port map - connection between master ports and signals/registers   
+	.IN_CS(IN_CS),
+	.IN_carry_in(IN_carry_in),
+	.IN_data_a(IN_data_a),
+	.IN_data_b(IN_data_b),
+	.OUT_S(OUT_S),
+	.OUT_carry_out(OUT_carry_out),
+	.OUT_zero(OUT_zero)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+#0 IN_carry_in = 1'b0; 
+#0 IN_CS = 4'hA;   
+#0 IN_data_a = 8'hFF;
+#0 IN_data_b = 8'h0A; 
+
+#20 IN_carry_in = 1'b1; 
+#0 IN_CS = 4'hA;   
+#0 IN_data_a = 8'h02;
+#0 IN_data_b = 8'h05; 
+
+#20 IN_carry_in = 1'b0; 
+#0 IN_CS = 4'hB;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h02; 
+
+#20 IN_carry_in = 1'b0; 
+#0 IN_CS = 4'hB;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h09; 
+
+#20 IN_carry_in = 1'b1; 
+#0 IN_CS = 4'hB;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h02; 
+
+#20 IN_carry_in = 1'b1; 
+#0 IN_CS = 4'hB;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h09; 
+
+#20 IN_carry_in = 1'b1; 
+#0 IN_CS = 4'hC;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h09; 
+
+#20 IN_carry_in = 1'b0; 
+#0 IN_CS = 4'hC;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h09; 
+
+#20 IN_carry_in = 1'b1; 
+#0 IN_CS = 4'hD;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h09; 
+
+#20 IN_carry_in = 1'b0; 
+#0 IN_CS = 4'hD;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h09; 
+
+#20 IN_carry_in = 1'b1; 
+#0 IN_CS = 4'hE;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h09; 
+
+#20 IN_carry_in = 1'b0; 
+#0 IN_CS = 4'hE;   
+#0 IN_data_a = 8'h05;
+#0 IN_data_b = 8'h09; 
+
+#20 IN_carry_in = 1'b0; 
+#0 IN_CS = 4'hE;   
+#0 IN_data_a = 8'h09;
+#0 IN_data_b = 8'h09;
+
+#20 IN_carry_in = 1'b0; 
+#0 IN_CS = 4'hE;   
+#0 IN_data_a = 8'h0F;
+#0 IN_data_b = 8'h09;  
+
+#20 IN_carry_in = 1'b1; 
+#0 IN_CS = 4'hB;   
+#0 IN_data_a = 8'h06;
+#0 IN_data_b = 8'h05; 
+// --> end                                             
+//$display("Running testbench");                       
+end                                                    
+//always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+//begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+//@eachvec;                                              
+// --> end                                             
+//end                                                    
+endmodule
+
