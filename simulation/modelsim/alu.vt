@@ -98,7 +98,7 @@ begin
 #0 IN_data_a = 8'h0F;
 #0 IN_data_b = 8'h09;  
 
-#20 IN_carry_in = 1'b1; 
+#20 IN_carry_in = 1'b0; 
 #0 IN_CS = 4'hB;   
 #0 IN_data_a = 8'h06;
 #0 IN_data_b = 8'h05; 

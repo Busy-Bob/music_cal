@@ -17,6 +17,7 @@ wire [7:0]  OUT_SRCH;
 wire [7:0]  OUT_SRCL;
 wire OUT_finish;
 wire [1:0] OUT_state;
+wire [1:0] OUT_flag;
 
 // assign statements (if any)                          
 key_out i1 (
@@ -31,7 +32,8 @@ key_out i1 (
 	.OUT_SRCH(OUT_SRCH),
 	.OUT_SRCL(OUT_SRCL),
 	.OUT_finish(OUT_finish),
-	.OUT_state(OUT_state)
+	.OUT_state(OUT_state),
+	.OUT_flag(OUT_flag)
 );
 initial                                                
 begin                                                  

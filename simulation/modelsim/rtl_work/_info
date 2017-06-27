@@ -3,43 +3,185 @@ K3
 13
 cModel Technology
 Z0 dC:\altera\13.0\EX_music_cal\simulation\modelsim
-vkey_out
-IfM4hW9Y=]H^6oo_4CIM@T3
-V95;RGCeSCdZQ8]PhYg:6g1
+valu
+II]MHD3n1zhSHB9iW>5@0L2
+Vfg`3`ie5z1N_IJZjX9;NN0
 Z1 dC:\altera\13.0\EX_music_cal\simulation\modelsim
-w1498571134
-8C:/altera/13.0/EX_music_cal/key_out.v
-FC:/altera/13.0/EX_music_cal/key_out.v
-L0 7
+w1498582932
+8C:/altera/13.0/EX_music_cal/alu.v
+FC:/altera/13.0/EX_music_cal/alu.v
+L0 11
 Z2 OV;L;10.1d;51
 r1
 31
 Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal -O0
 !i10b 1
-!s100 8]zK8>Lam:Ef8kaY?oiA[0
+!s100 ]zOmch9FjIcalendC?;Hi0
 !s85 0
-!s108 1498571275.865000
+!s108 1498589917.232000
+!s107 C:/altera/13.0/EX_music_cal/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/alu.v|
+!s101 -O0
+vanti_shake
+I5IMHcNHiec=Sz>LHmWhJX1
+VBIiCRhdLShLmbD<m__[^d1
+R1
+w1496112834
+8C:/altera/13.0/EX_music_cal/anti_shake.v
+FC:/altera/13.0/EX_music_cal/anti_shake.v
+L0 5
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 bcA?P@Wka7X8ATiBXAF>e0
+!s85 0
+!s108 1498589917.099000
+!s107 C:/altera/13.0/EX_music_cal/anti_shake.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/anti_shake.v|
+!s101 -O0
+vBCD
+IT1kfKIf`3Ejib5jM:ciDb2
+V7CC_f5`7dh;P;<^S6?;2K1
+R1
+w1498586532
+8C:/altera/13.0/EX_music_cal/BCD.v
+FC:/altera/13.0/EX_music_cal/BCD.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@b@c@d
+!i10b 1
+!s100 0L1gCCLI=@C]`dEWdiid[3
+!s85 0
+!s108 1498589917.733000
+!s107 C:/altera/13.0/EX_music_cal/BCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/BCD.v|
+!s101 -O0
+vCore_unit
+IlD8[K`DD8GJQoRGBL6FJj2
+V3Q@XY:^3dIg1QNFH;dAk10
+R1
+w1498586171
+8C:/altera/13.0/EX_music_cal/Core_unit.v
+FC:/altera/13.0/EX_music_cal/Core_unit.v
+L0 18
+R2
+r1
+31
+R3
+R4
+n@core_unit
+!i10b 1
+!s100 XNVFeo?O;MVU0KiIXl@6:2
+!s85 0
+!s108 1498589917.451000
+!s107 C:/altera/13.0/EX_music_cal/Core_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/Core_unit.v|
+!s101 -O0
+vdisplay
+IkW<Lh<lJHd`EQkTQ0U3z>3
+VM]OJQ`meoS5Td`ojTnQmY0
+R1
+w1498589655
+8C:/altera/13.0/EX_music_cal/display.v
+FC:/altera/13.0/EX_music_cal/display.v
+L0 4
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Ad4A>jTXT@lESeJJ[^i9<3
+!s85 0
+!s108 1498589916.581000
+!s107 C:/altera/13.0/EX_music_cal/display.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/display.v|
+!s101 -O0
+vdivider
+I:^Ikd?jF]zlo0iFKT[U0L2
+VM1G9VMzdDM9E>NM:FW[Ad2
+R1
+w1496025789
+8C:/altera/13.0/EX_music_cal/divider.v
+FC:/altera/13.0/EX_music_cal/divider.v
+L0 6
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 2:=>H9DA=`17PPg>EXdik0
+!s85 0
+!s108 1498589916.398000
+!s107 C:/altera/13.0/EX_music_cal/divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/divider.v|
+!s101 -O0
+vkey_out
+I=e_jn<KkoD::zIk@dUDEZ0
+Vm]HieO[<[oT@nXi0=?JGR0
+R1
+w1498581848
+8C:/altera/13.0/EX_music_cal/key_out.v
+FC:/altera/13.0/EX_music_cal/key_out.v
+L0 7
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 @@mmkGdIn:NlN^OgE1B[d2
+!s85 0
+!s108 1498589916.976000
 !s107 C:/altera/13.0/EX_music_cal/key_out.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/key_out.v|
 !s101 -O0
-!s92 -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal -O0
 vkey_out_vlg_tst
 !i10b 1
-!s100 k8ASa_J_e:R_mNi[z3h0a0
-I>48T@TEcSV?^I9kM83Bb20
+!s100 h5^eMe0BIeeJU`<3kjh@L1
+Ia>LZz<TSTj0Tbi2TfbB:D3
 V<k92S9KaTJmazCYT8:H2e1
 R1
-w1498571261
+w1498581069
 8C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt
 FC:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt
-L0 4
+L0 3
 R2
 r1
 !s85 0
 31
-!s108 1498571275.985000
+!s108 1498589917.876000
 !s107 C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim|C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt|
 !s101 -O0
 R3
 !s92 -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim -O0
+vkeyboard
+IVeG6TC`S9C`]4<RYQUo]b3
+VSXBdi9zFHSo:HEifQg;eZ2
+R1
+w1498532041
+8C:/altera/13.0/EX_music_cal/keyboard.v
+FC:/altera/13.0/EX_music_cal/keyboard.v
+L0 8
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 4Ea030R>ljWG]TcVdKLi93
+!s85 0
+!s108 1498589916.843000
+!s107 C:/altera/13.0/EX_music_cal/keyboard.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0/EX_music_cal|C:/altera/13.0/EX_music_cal/keyboard.v|
+!s101 -O0

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C5Q208C8
-set_global_assignment -name TOP_LEVEL_ENTITY BCD
+set_global_assignment -name TOP_LEVEL_ENTITY music_cal
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:03:46  JUNE 26, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.0
@@ -55,12 +55,12 @@ set_global_assignment -name EDA_TEST_BENCH_NAME alu -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id alu
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2 us" -section_id alu
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME alu_vlg_tst -section_id alu
-set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/alu.vt -section_id alu
 set_global_assignment -name EDA_TEST_BENCH_NAME key_out -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id key_out
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2 us" -section_id key_out
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME key_out_vlg_tst -section_id key_out
-set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/key_out.vt -section_id key_out
+set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/BCD.vt
+set_global_assignment -name VERILOG_FILE divider.v
 set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/key_out.vt
 set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/alu.vt
 set_global_assignment -name VERILOG_FILE display.v
@@ -70,6 +70,41 @@ set_global_assignment -name VERILOG_FILE anti_shake.v
 set_global_assignment -name VERILOG_FILE alu.v
 set_global_assignment -name VERILOG_FILE Core_unit.v
 set_global_assignment -name VERILOG_FILE BCD.v
+set_global_assignment -name EDA_TEST_BENCH_NAME BCD -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id BCD
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2 us" -section_id BCD
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME BCD_vlg_tst -section_id BCD
+set_global_assignment -name BDF_FILE music_cal.bdf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_141 -to CARRY_OUT
+set_location_assignment PIN_149 -to CHOICE[3]
+set_location_assignment PIN_147 -to CHOICE[2]
+set_location_assignment PIN_146 -to CHOICE[1]
+set_location_assignment PIN_145 -to CHOICE[0]
+set_location_assignment PIN_132 -to CLK
+set_location_assignment PIN_115 -to COL[3]
+set_location_assignment PIN_116 -to COL[2]
+set_location_assignment PIN_117 -to COL[1]
+set_location_assignment PIN_118 -to COL[0]
+set_location_assignment PIN_143 -to LESS_THAN
+set_location_assignment PIN_144 -to NEG_ANS
+set_location_assignment PIN_48 -to RESET
+set_location_assignment PIN_114 -to ROW[3]
+set_location_assignment PIN_113 -to ROW[2]
+set_location_assignment PIN_112 -to ROW[1]
+set_location_assignment PIN_110 -to ROW[0]
+set_location_assignment PIN_164 -to SEG[7]
+set_location_assignment PIN_162 -to SEG[6]
+set_location_assignment PIN_151 -to SEG[5]
+set_location_assignment PIN_160 -to SEG[4]
+set_location_assignment PIN_161 -to SEG[3]
+set_location_assignment PIN_163 -to SEG[2]
+set_location_assignment PIN_150 -to SEG[1]
+set_location_assignment PIN_152 -to SEG[0]
+set_location_assignment PIN_142 -to ZERO
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/alu.vt -section_id alu
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/key_out.vt -section_id key_out
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/BCD.vt -section_id BCD
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

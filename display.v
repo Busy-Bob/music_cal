@@ -11,7 +11,7 @@ module display(input IN_clk, input [15:0] IN_value, input [2:0] IN_off_number,
 	begin
 		state = 0;
 	end
-	always @(IN_value or IN_off)
+	always @(IN_value or IN_off_number)
 	begin
 		case(IN_value[3:0])
 			4'b0000: 
@@ -279,12 +279,11 @@ module display(input IN_clk, input [15:0] IN_value, input [2:0] IN_off_number,
 		endcase
 		case(IN_off_number)
 		3'b000: 	temp_seg = temp_seg;
-		3'b001:	temp_seg = {DNULL,temp_seg[11:0]};
-		3'b010:	temp_seg = {DNULL,DNULL,temp_seg[7:0]};
-		3'b011:	temp_seg = {DNULL,DNULL,DNULL,temp_seg[3:0]};
+		3'b001:	temp_seg = {DNULL,temp_seg[23:0]};
+		3'b010:	temp_seg = {DNULL,DNULL,temp_seg[15:0]};
+		3'b011:	temp_seg = {DNULL,DNULL,DNULL,temp_seg[7:0]};
 		default: temp_seg = {DNULL,DNULL,DNULL,DNULL};
 		endcase
-	end
 	end
 	
 	always @ (state or temp_seg) begin

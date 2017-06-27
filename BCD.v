@@ -3,8 +3,8 @@ module BCD(clk,
           dec);
 
 input  clk;
-input  [16:0] hex;
-output [19:0] dec;
+input  [15:0] hex;
+output [15:0] dec;
 
 wire [15:0] rrhex;
 reg [3:0] rhex[3:0];
@@ -15,10 +15,10 @@ reg [9:0] rhexb;
 reg [3:0] rhexa;
 
 reg [5:0] resa,resb,resc,resd;
-reg [3:0] rese;
+//reg [3:0] rese;
 
-assign rrhex = hex[16] ? ~hex[15:0]+1'b1 : hex[15:0];         //去符号
-assign dec = {rese,resd[3:0],resc[3:0],resb[3:0],resa[3:0]};
+assign rrhex = hex[15] ? ~hex[15:0]+1'b1 : hex[15:0];         //去符号
+assign dec = {/*rese,*/resd[3:0],resc[3:0],resb[3:0],resa[3:0]};
 
 always@(posedge clk)                  //第一级寄存器
 begin
@@ -100,7 +100,7 @@ begin
     resb = addbcd4(resa[5:4], rhexb[7:4],rhexc[7:4],  rhexd[7:4]);
     resc = addbcd4(resb[5:4], rhexb[9:8],rhexc[11:8], rhexd[11:8]);
     resd = addbcd4(resc[5:4], 4'h0,      rhexc[13:12],rhexd[15:12]);
-    rese = resd[5:4] + rhexd[17:16];
+//    rese = resd[5:4] + rhexd[17:16];
 end
 
 function [5:0] addbcd4; 

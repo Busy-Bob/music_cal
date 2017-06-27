@@ -5,7 +5,14 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/divider.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/display.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/keyboard.v}
 vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/key_out.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/anti_shake.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/alu.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/Core_unit.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/BCD.v}
 
 vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim {C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt}
 

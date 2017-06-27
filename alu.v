@@ -3,10 +3,11 @@
 // s2 第三列 3 6 9 cmp(E)
 // s3 第四列 +(A) -(B) and(C) or(D) 
 
-//carry_in是carry_out回来的值，和运算上次有进位的时候为1，差运算上一次有借位的时候为1
-//carry_out  小于是1，进位是1，借位是1，其他0
+//carry_in是carry_out回来的值，和运算上次有进位的时候为1，差运算上一次有借位的时候为0
+//carry_out  小于是1，进位是1，借位是0，其他0
 //OUT_zero比较时候0，其他时候为0就是为1
 //比较时候s是减法结果结果
+
 module alu(input [3:0] IN_CS, input [7:0] IN_data_a, input [7:0] IN_data_b, input IN_carry_in,
 			output reg [7:0] OUT_S, output reg OUT_zero, output reg OUT_carry_out);
 	
@@ -22,11 +23,8 @@ module alu(input [3:0] IN_CS, input [7:0] IN_data_a, input [7:0] IN_data_b, inpu
 	end
 	else if(IN_CS == 4'hB)
 	begin
-		{OUT_carry_out,OUT_S} = IN_data_a - IN_data_b - IN_carry_in;
-		if(OUT_carry_out == 1'b1)
-			OUT_S = ~OUT_S + 8'h01;
-		else
-			OUT_S = OUT_S;
+		{OUT_carry_out,OUT_S} = IN_data_a - IN_data_b - !IN_carry_in;
+		OUT_carry_out = ~OUT_carry_out;
 		if(OUT_S == 0)
 			OUT_zero = 1'b1;
 		else

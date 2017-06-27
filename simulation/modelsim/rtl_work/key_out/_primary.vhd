@@ -18,7 +18,8 @@ entity key_out is
         OUT_DSTL        : out    vl_logic_vector(7 downto 0);
         OUT_ALU_OP      : out    vl_logic_vector(3 downto 0);
         OUT_finish      : out    vl_logic;
-        OUT_state       : out    vl_logic_vector(1 downto 0)
+        OUT_state       : out    vl_logic_vector(1 downto 0);
+        OUT_flag        : out    vl_logic_vector(1 downto 0)
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of s0 : constant is 1;
