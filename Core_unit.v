@@ -1,0 +1,2 @@
+module Core_uint(input IN_clk, input IN_carry_in, input  [7:0] IN_SRCH, input  [7:0] IN_SRCL, input  [7:0] IN_DSTH, input  [7:0] IN_DSTL, input  [3:0] IN_ALU_OP, input  IN_finish, input  [1:0] IN_state,
+						output OUT_off_number);

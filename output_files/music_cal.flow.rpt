@@ -1,5 +1,5 @@
 Flow report for music_cal
-Tue Jun 27 21:45:45 2017
+Tue Jun 27 23:14:19 2017
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Jun 27 21:45:45 2017       ;
+; Flow Status                        ; Flow Failed - Tue Jun 27 23:14:19 2017      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; music_cal                                   ;
-; Top-level Entity Name              ; key_out                                     ;
+; Top-level Entity Name              ; BCD                                         ;
 ; Family                             ; Cyclone II                                  ;
 ; Device                             ; EP2C5Q208C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 94                                          ;
-;     Total combinational functions  ; 94                                          ;
-;     Dedicated logic registers      ; 43                                          ;
-; Total registers                    ; 43                                          ;
-; Total pins                         ; 46                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/27/2017 21:45:44 ;
+; Start date & time ; 06/27/2017 23:14:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; music_cal           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 190078352558919.149857114404480 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 190078352558919.149857645910136 ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; alu            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; key_out        ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; key_out                         ; --            ; --          ; eda_simulation ;
@@ -93,11 +93,11 @@ applicable agreement for further details.
 ; EDA_TIME_SCALE                       ; 1 ps                            ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                               ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                        ; --            ; key_out     ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING           ; --            ; key_out     ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                          ; --            ; key_out     ; Top            ;
+; PARTITION_COLOR                      ; 16764057                        ; --            ; BCD         ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING           ; --            ; BCD         ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                          ; --            ; BCD         ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                    ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; key_out                         ; music_cal     ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; BCD                             ; music_cal     ; --          ; --             ;
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
@@ -106,8 +106,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 448 MB              ; 00:00:01                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 439 MB              ; 00:00:01                           ;
+; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

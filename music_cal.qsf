@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C5Q208C8
-set_global_assignment -name TOP_LEVEL_ENTITY key_out
+set_global_assignment -name TOP_LEVEL_ENTITY BCD
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:03:46  JUNE 26, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.0
@@ -55,19 +55,22 @@ set_global_assignment -name EDA_TEST_BENCH_NAME alu -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id alu
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2 us" -section_id alu
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME alu_vlg_tst -section_id alu
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/key_out.vt
-set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/alu.vt
-set_global_assignment -name VERILOG_FILE keyboard.v
-set_global_assignment -name VERILOG_FILE key_out.v
-set_global_assignment -name VERILOG_FILE anti_shake.v
-set_global_assignment -name VERILOG_FILE alu.v
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/alu.vt -section_id alu
 set_global_assignment -name EDA_TEST_BENCH_NAME key_out -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id key_out
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2 us" -section_id key_out
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME key_out_vlg_tst -section_id key_out
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/key_out.vt -section_id key_out
+set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/key_out.vt
+set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/alu.vt
+set_global_assignment -name VERILOG_FILE display.v
+set_global_assignment -name VERILOG_FILE keyboard.v
+set_global_assignment -name VERILOG_FILE key_out.v
+set_global_assignment -name VERILOG_FILE anti_shake.v
+set_global_assignment -name VERILOG_FILE alu.v
+set_global_assignment -name VERILOG_FILE Core_unit.v
+set_global_assignment -name VERILOG_FILE BCD.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
