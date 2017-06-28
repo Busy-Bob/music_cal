@@ -17,9 +17,9 @@
 // debug 比较的时候不显示数字
 // 回去s0的条件是输入状态非s0；
 module Core_unit(input IN_clk, input IN_carry_in, input [7:0] IN_SRCH, input [7:0] IN_SRCL, input [7:0] IN_DSTH, input [7:0] IN_DSTL, 
-						input [7:0] IN_S, input [3:0] IN_ALU_OP, input IN_finish, input [1:0] IN_state, input [1:0] IN_flag, input IN_zero,
+						input [7:0] IN_S, input [3:0] IN_ALU_OP, input IN_finish, input [1:0] IN_state, input [1:0] IN_flag, input IN_zero, input IN_music_on,
 						output reg [15:0] OUT_value, output reg [2:0] OUT_off_number, output reg [7:0] OUT_data_a, output reg [7:0] OUT_data_b,
-						output reg [3:0] OUT_ALU_OP, output reg OUT_carry_out, output reg OUT_neg_ans, output reg OUT_less_than, output reg OUT_zero, output reg [1:0] OUT_state);
+						output reg [3:0] OUT_ALU_OP, output reg OUT_carry_out, output reg OUT_neg_ans, output reg OUT_less_than, output reg OUT_zero,output reg OUT_music_on);
 
 	reg [7:0] temp_h1 = 0;
 	reg [7:0] temp_h2 = 0;
@@ -32,7 +32,6 @@ module Core_unit(input IN_clk, input IN_carry_in, input [7:0] IN_SRCH, input [7:
 	// 输出变量清零 waiting
 	always @(posedge IN_clk)
 	begin
-	OUT_state = state;
 	case(state)
 		s0:begin
 			if(IN_finish)
@@ -122,6 +121,7 @@ module Core_unit(input IN_clk, input IN_carry_in, input [7:0] IN_SRCH, input [7:
 				OUT_neg_ans = 0;
 				OUT_less_than = 0;
 				OUT_zero = 0;
+				OUT_music_on = 0;
 				temp_h1 = 0;
 				temp_h2 = 0;
 				temp_op = 0;
@@ -221,6 +221,7 @@ module Core_unit(input IN_clk, input IN_carry_in, input [7:0] IN_SRCH, input [7:
 				OUT_off_number = 3'd2;
 			else
 				OUT_off_number = 3'd3;
+			OUT_music_on = 1'b1;
 			state = s3;
 		end
 		s3:begin
@@ -230,6 +231,10 @@ module Core_unit(input IN_clk, input IN_carry_in, input [7:0] IN_SRCH, input [7:
 			OUT_neg_ans = OUT_neg_ans;
 			OUT_less_than = OUT_less_than;
 			OUT_zero = OUT_zero;
+			if(IN_music_on == 1'b0)
+				OUT_music_on = 1'b0;
+			else
+				OUT_music_on = OUT_music_on;
 			if(IN_state == s2)
 			begin
 				state = s0;

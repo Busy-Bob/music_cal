@@ -1,5 +1,26 @@
 
-State Machine - |key_out|state
+State Machine - |music_cal|display:inst4|state
+Name state.S3 state.S2 state.S1 state.00 
+state.00 0 0 0 0 
+state.S1 0 0 1 1 
+state.S2 0 1 0 1 
+state.S3 1 0 0 1 
+
+State Machine - |music_cal|keyboard:inst7|state
+Name state.S3 state.S2 state.S1 state.00 
+state.00 0 0 0 0 
+state.S1 0 0 1 1 
+state.S2 0 1 0 1 
+state.S3 1 0 0 1 
+
+State Machine - |music_cal|key_out:inst6|state
+Name state.s3 state.s2 state.s1 state.00 
+state.00 0 0 0 0 
+state.s1 0 0 1 1 
+state.s2 0 1 0 1 
+state.s3 1 0 0 1 
+
+State Machine - |music_cal|Core_unit:inst|state
 Name state.s3 state.s2 state.s1 state.00 
 state.00 0 0 0 0 
 state.s1 0 0 1 1 

@@ -1,5 +1,5 @@
 Fitter report for music_cal
-Wed Jun 28 11:21:58 2017
+Thu Jun 29 03:25:09 2017
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -62,17 +62,17 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jun 28 11:21:58 2017       ;
+; Fitter Status                      ; Successful - Thu Jun 29 03:25:09 2017       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; music_cal                                   ;
 ; Top-level Entity Name              ; music_cal                                   ;
 ; Family                             ; Cyclone II                                  ;
 ; Device                             ; EP2C5Q208C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 688 / 4,608 ( 15 % )                        ;
-;     Total combinational functions  ; 675 / 4,608 ( 15 % )                        ;
-;     Dedicated logic registers      ; 251 / 4,608 ( 5 % )                         ;
-; Total registers                    ; 251                                         ;
+; Total logic elements               ; 1,757 / 4,608 ( 38 % )                      ;
+;     Total combinational functions  ; 1,741 / 4,608 ( 38 % )                      ;
+;     Dedicated logic registers      ; 657 / 4,608 ( 14 % )                        ;
+; Total registers                    ; 657                                         ;
 ; Total pins                         ; 28 / 142 ( 20 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                         ;
@@ -140,12 +140,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.40        ;
+; Average used               ; 1.10        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  40.0%      ;
+;     Processor 2            ;  10.0%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -156,8 +156,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 959 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 959 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 2430 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 2430 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -180,7 +180,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 956     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 2427    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -191,137 +191,138 @@ applicable agreement for further details.
 The pin-out file can be found in C:/altera/13.0/EX_music_cal/output_files/music_cal.pin.
 
 
-+--------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                      ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Total logic elements                        ; 688 / 4,608 ( 15 % ) ;
-;     -- Combinational with no register       ; 437                  ;
-;     -- Register only                        ; 13                   ;
-;     -- Combinational with a register        ; 238                  ;
-;                                             ;                      ;
-; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 322                  ;
-;     -- 3 input functions                    ; 165                  ;
-;     -- <=2 input functions                  ; 188                  ;
-;     -- Register only                        ; 13                   ;
-;                                             ;                      ;
-; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 495                  ;
-;     -- arithmetic mode                      ; 180                  ;
-;                                             ;                      ;
-; Total registers*                            ; 251 / 5,010 ( 5 % )  ;
-;     -- Dedicated logic registers            ; 251 / 4,608 ( 5 % )  ;
-;     -- I/O registers                        ; 0 / 402 ( 0 % )      ;
-;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 50 / 288 ( 17 % )    ;
-; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 28 / 142 ( 20 % )    ;
-;     -- Clock pins                           ; 1 / 4 ( 25 % )       ;
-;                                             ;                      ;
-; Global signals                              ; 2                    ;
-; M4Ks                                        ; 0 / 26 ( 0 % )       ;
-; Total block memory bits                     ; 0 / 119,808 ( 0 % )  ;
-; Total block memory implementation bits      ; 0 / 119,808 ( 0 % )  ;
-; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )       ;
-; PLLs                                        ; 0 / 2 ( 0 % )        ;
-; Global clocks                               ; 2 / 8 ( 25 % )       ;
-; JTAGs                                       ; 0 / 1 ( 0 % )        ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 2% / 2% / 2%         ;
-; Peak interconnect usage (total/H/V)         ; 4% / 4% / 5%         ;
-; Maximum fan-out                             ; 218                  ;
-; Highest non-global fan-out                  ; 48                   ;
-; Total fan-out                               ; 2893                 ;
-; Average fan-out                             ; 2.99                 ;
-+---------------------------------------------+----------------------+
++----------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                        ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Total logic elements                        ; 1,757 / 4,608 ( 38 % ) ;
+;     -- Combinational with no register       ; 1100                   ;
+;     -- Register only                        ; 16                     ;
+;     -- Combinational with a register        ; 641                    ;
+;                                             ;                        ;
+; Logic element usage by number of LUT inputs ;                        ;
+;     -- 4 input functions                    ; 637                    ;
+;     -- 3 input functions                    ; 324                    ;
+;     -- <=2 input functions                  ; 780                    ;
+;     -- Register only                        ; 16                     ;
+;                                             ;                        ;
+; Logic elements by mode                      ;                        ;
+;     -- normal mode                          ; 1185                   ;
+;     -- arithmetic mode                      ; 556                    ;
+;                                             ;                        ;
+; Total registers*                            ; 657 / 5,010 ( 13 % )   ;
+;     -- Dedicated logic registers            ; 657 / 4,608 ( 14 % )   ;
+;     -- I/O registers                        ; 0 / 402 ( 0 % )        ;
+;                                             ;                        ;
+; Total LABs:  partially or completely used   ; 133 / 288 ( 46 % )     ;
+; Virtual pins                                ; 0                      ;
+; I/O pins                                    ; 28 / 142 ( 20 % )      ;
+;     -- Clock pins                           ; 1 / 4 ( 25 % )         ;
+;                                             ;                        ;
+; Global signals                              ; 3                      ;
+; M4Ks                                        ; 0 / 26 ( 0 % )         ;
+; Total block memory bits                     ; 0 / 119,808 ( 0 % )    ;
+; Total block memory implementation bits      ; 0 / 119,808 ( 0 % )    ;
+; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )         ;
+; PLLs                                        ; 0 / 2 ( 0 % )          ;
+; Global clocks                               ; 3 / 8 ( 38 % )         ;
+; JTAGs                                       ; 0 / 1 ( 0 % )          ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
+; Average interconnect usage (total/H/V)      ; 5% / 5% / 5%           ;
+; Peak interconnect usage (total/H/V)         ; 6% / 7% / 5%           ;
+; Maximum fan-out                             ; 383                    ;
+; Highest non-global fan-out                  ; 60                     ;
+; Total fan-out                               ; 6685                   ;
+; Average fan-out                             ; 2.74                   ;
++---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+----------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                        ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Statistic                                   ; Top                 ; hard_block:auto_generated_inst ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                 ; Low                            ;
-;                                             ;                     ;                                ;
-; Total logic elements                        ; 688 / 4608 ( 15 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 437                 ; 0                              ;
-;     -- Register only                        ; 13                  ; 0                              ;
-;     -- Combinational with a register        ; 238                 ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 322                 ; 0                              ;
-;     -- 3 input functions                    ; 165                 ; 0                              ;
-;     -- <=2 input functions                  ; 188                 ; 0                              ;
-;     -- Register only                        ; 13                  ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 495                 ; 0                              ;
-;     -- arithmetic mode                      ; 180                 ; 0                              ;
-;                                             ;                     ;                                ;
-; Total registers                             ; 251                 ; 0                              ;
-;     -- Dedicated logic registers            ; 251 / 4608 ( 5 % )  ; 0 / 4608 ( 0 % )               ;
-;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 50 / 288 ( 17 % )   ; 0 / 288 ( 0 % )                ;
-;                                             ;                     ;                                ;
-; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 28                  ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )      ; 0 / 26 ( 0 % )                 ;
-; Total memory bits                           ; 0                   ; 0                              ;
-; Total RAM block bits                        ; 0                   ; 0                              ;
-; Clock control block                         ; 2 / 10 ( 20 % )     ; 0 / 10 ( 0 % )                 ;
-;                                             ;                     ;                                ;
-; Connections                                 ;                     ;                                ;
-;     -- Input Connections                    ; 0                   ; 0                              ;
-;     -- Registered Input Connections         ; 0                   ; 0                              ;
-;     -- Output Connections                   ; 0                   ; 0                              ;
-;     -- Registered Output Connections        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 2893                ; 0                              ;
-;     -- Registered Connections               ; 1140                ; 0                              ;
-;                                             ;                     ;                                ;
-; External Connections                        ;                     ;                                ;
-;     -- Top                                  ; 0                   ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 6                   ; 0                              ;
-;     -- Output Ports                         ; 22                  ; 0                              ;
-;     -- Bidir Ports                          ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Registered Ports                            ;                     ;                                ;
-;     -- Registered Input Ports               ; 0                   ; 0                              ;
-;     -- Registered Output Ports              ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Port Connectivity                           ;                     ;                                ;
-;     -- Input Ports driven by GND            ; 0                   ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                   ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                   ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                   ; 0                              ;
-;     -- Input Ports with no Source           ; 0                   ; 0                              ;
-;     -- Output Ports with no Source          ; 0                   ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                   ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                   ; 0                              ;
-+---------------------------------------------+---------------------+--------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                         ;
++---------------------------------------------+----------------------+--------------------------------+
+; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
++---------------------------------------------+----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                  ; Low                            ;
+;                                             ;                      ;                                ;
+; Total logic elements                        ; 1757 / 4608 ( 38 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 1100                 ; 0                              ;
+;     -- Register only                        ; 16                   ; 0                              ;
+;     -- Combinational with a register        ; 641                  ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic element usage by number of LUT inputs ;                      ;                                ;
+;     -- 4 input functions                    ; 637                  ; 0                              ;
+;     -- 3 input functions                    ; 324                  ; 0                              ;
+;     -- <=2 input functions                  ; 780                  ; 0                              ;
+;     -- Register only                        ; 16                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic elements by mode                      ;                      ;                                ;
+;     -- normal mode                          ; 1185                 ; 0                              ;
+;     -- arithmetic mode                      ; 556                  ; 0                              ;
+;                                             ;                      ;                                ;
+; Total registers                             ; 657                  ; 0                              ;
+;     -- Dedicated logic registers            ; 657 / 4608 ( 14 % )  ; 0 / 4608 ( 0 % )               ;
+;                                             ;                      ;                                ;
+; Total LABs:  partially or completely used   ; 133 / 288 ( 46 % )   ; 0 / 288 ( 0 % )                ;
+;                                             ;                      ;                                ;
+; Virtual pins                                ; 0                    ; 0                              ;
+; I/O pins                                    ; 28                   ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )       ; 0 / 26 ( 0 % )                 ;
+; Total memory bits                           ; 0                    ; 0                              ;
+; Total RAM block bits                        ; 0                    ; 0                              ;
+; Clock control block                         ; 3 / 10 ( 30 % )      ; 0 / 10 ( 0 % )                 ;
+;                                             ;                      ;                                ;
+; Connections                                 ;                      ;                                ;
+;     -- Input Connections                    ; 0                    ; 0                              ;
+;     -- Registered Input Connections         ; 0                    ; 0                              ;
+;     -- Output Connections                   ; 0                    ; 0                              ;
+;     -- Registered Output Connections        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Internal Connections                        ;                      ;                                ;
+;     -- Total Connections                    ; 6685                 ; 0                              ;
+;     -- Registered Connections               ; 1793                 ; 0                              ;
+;                                             ;                      ;                                ;
+; External Connections                        ;                      ;                                ;
+;     -- Top                                  ; 0                    ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Partition Interface                         ;                      ;                                ;
+;     -- Input Ports                          ; 7                    ; 0                              ;
+;     -- Output Ports                         ; 21                   ; 0                              ;
+;     -- Bidir Ports                          ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Registered Ports                            ;                      ;                                ;
+;     -- Registered Input Ports               ; 0                    ; 0                              ;
+;     -- Registered Output Ports              ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Port Connectivity                           ;                      ;                                ;
+;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
+;     -- Input Ports with no Source           ; 0                    ; 0                              ;
+;     -- Output Ports with no Source          ; 0                    ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
++---------------------------------------------+----------------------+--------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                   ;
-+--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; CLK    ; 132   ; 3        ; 28           ; 7            ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; RESET  ; 48    ; 1        ; 0            ; 2            ; 4           ; 43                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ROW[0] ; 110   ; 3        ; 28           ; 3            ; 2           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ROW[1] ; 112   ; 3        ; 28           ; 3            ; 1           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ROW[2] ; 113   ; 3        ; 28           ; 3            ; 0           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ROW[3] ; 114   ; 3        ; 28           ; 4            ; 2           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-+--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                     ;
++----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; CLK      ; 132   ; 3        ; 28           ; 7            ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; RESET    ; 48    ; 1        ; 0            ; 2            ; 4           ; 43                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ROW[0]   ; 110   ; 3        ; 28           ; 3            ; 2           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ROW[1]   ; 112   ; 3        ; 28           ; 3            ; 1           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ROW[2]   ; 113   ; 3        ; 28           ; 3            ; 0           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ROW[3]   ; 114   ; 3        ; 28           ; 4            ; 2           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; music_on ; 57    ; 4        ; 1            ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
++----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -349,8 +350,7 @@ The pin-out file can be found in C:/altera/13.0/EX_music_cal/output_files/music_
 ; SEG[6]    ; 162   ; 2        ; 26           ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; SEG[7]    ; 164   ; 2        ; 24           ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; ZERO      ; 142   ; 3        ; 28           ; 10           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; state[0]  ; 120   ; 3        ; 28           ; 5            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; state[1]  ; 134   ; 3        ; 28           ; 8            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; music     ; 119   ; 3        ; 28           ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -361,8 +361,8 @@ The pin-out file can be found in C:/altera/13.0/EX_music_cal/output_files/music_
 +----------+------------------+---------------+--------------+
 ; 1        ; 3 / 34 ( 9 % )   ; 3.3V          ; --           ;
 ; 2        ; 5 / 35 ( 14 % )  ; 3.3V          ; --           ;
-; 3        ; 23 / 37 ( 62 % ) ; 3.3V          ; --           ;
-; 4        ; 0 / 36 ( 0 % )   ; 3.3V          ; --           ;
+; 3        ; 22 / 37 ( 59 % ) ; 3.3V          ; --           ;
+; 4        ; 1 / 36 ( 3 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -427,7 +427,7 @@ The pin-out file can be found in C:/altera/13.0/EX_music_cal/output_files/music_
 ; 54       ;            ;          ; GNDA_PLL1                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 55       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 56       ; 43         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 57       ; 44         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 57       ; 44         ; 4        ; music_on                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 58       ; 45         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 59       ; 46         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 60       ; 47         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -489,8 +489,8 @@ The pin-out file can be found in C:/altera/13.0/EX_music_cal/output_files/music_
 ; 116      ; 94         ; 3        ; COL[2]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 117      ; 95         ; 3        ; COL[1]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 118      ; 96         ; 3        ; COL[0]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; 119      ; 97         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 120      ; 98         ; 3        ; state[0]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 119      ; 97         ; 3        ; music                                    ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 120      ; 98         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 121      ; 99         ; 3        ; ^nSTATUS                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 122      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 123      ; 100        ; 3        ; ^CONF_DONE                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -504,7 +504,7 @@ The pin-out file can be found in C:/altera/13.0/EX_music_cal/output_files/music_
 ; 131      ; 107        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 132      ; 108        ; 3        ; CLK                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 133      ; 109        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 134      ; 110        ; 3        ; state[1]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 134      ; 110        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 135      ; 111        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 136      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 137      ; 112        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -625,15 +625,16 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------+--------------+
-; |music_cal                 ; 688 (1)     ; 251 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 28   ; 0            ; 437 (1)      ; 13 (0)            ; 238 (0)          ; |music_cal                  ;              ;
+; |music_cal                 ; 1757 (1)    ; 657 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 28   ; 0            ; 1100 (1)     ; 16 (0)            ; 641 (0)          ; |music_cal                  ;              ;
 ;    |BCD:inst8|             ; 159 (159)   ; 67 (67)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 92 (92)      ; 2 (2)             ; 65 (65)          ; |music_cal|BCD:inst8        ;              ;
-;    |Core_unit:inst|        ; 183 (183)   ; 87 (87)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 96 (96)      ; 3 (3)             ; 84 (84)          ; |music_cal|Core_unit:inst   ;              ;
+;    |Core_unit:inst|        ; 185 (185)   ; 86 (86)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 99 (99)      ; 4 (4)             ; 82 (82)          ; |music_cal|Core_unit:inst   ;              ;
 ;    |alu:inst2|             ; 68 (68)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 68 (68)      ; 0 (0)             ; 0 (0)            ; |music_cal|alu:inst2        ;              ;
 ;    |anti_shake:inst3|      ; 6 (6)       ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 3 (3)            ; |music_cal|anti_shake:inst3 ;              ;
 ;    |display:inst4|         ; 70 (70)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (66)      ; 2 (2)             ; 2 (2)            ; |music_cal|display:inst4    ;              ;
 ;    |divider:inst5|         ; 73 (73)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 40 (40)      ; 0 (0)             ; 33 (33)          ; |music_cal|divider:inst5    ;              ;
 ;    |key_out:inst6|         ; 91 (91)     ; 43 (43)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 48 (48)      ; 0 (0)             ; 43 (43)          ; |music_cal|key_out:inst6    ;              ;
-;    |keyboard:inst7|        ; 37 (37)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 3 (3)             ; 8 (8)            ; |music_cal|keyboard:inst7   ;              ;
+;    |keyboard:inst7|        ; 36 (36)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 2 (2)             ; 9 (9)            ; |music_cal|keyboard:inst7   ;              ;
+;    |music:inst1|           ; 1068 (1068) ; 407 (407)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 661 (661)    ; 3 (3)             ; 404 (404)        ; |music_cal|music:inst1      ;              ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -647,6 +648,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ZERO      ; Output   ; --            ; --            ; --                    ; --  ;
 ; LESS_THAN ; Output   ; --            ; --            ; --                    ; --  ;
 ; NEG_ANS   ; Output   ; --            ; --            ; --                    ; --  ;
+; music     ; Output   ; --            ; --            ; --                    ; --  ;
 ; CHOICE[3] ; Output   ; --            ; --            ; --                    ; --  ;
 ; CHOICE[2] ; Output   ; --            ; --            ; --                    ; --  ;
 ; CHOICE[1] ; Output   ; --            ; --            ; --                    ; --  ;
@@ -663,10 +665,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SEG[2]    ; Output   ; --            ; --            ; --                    ; --  ;
 ; SEG[1]    ; Output   ; --            ; --            ; --                    ; --  ;
 ; SEG[0]    ; Output   ; --            ; --            ; --                    ; --  ;
-; state[1]  ; Output   ; --            ; --            ; --                    ; --  ;
-; state[0]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; CLK       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; RESET     ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; music_on  ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; ROW[0]    ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; ROW[1]    ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; ROW[2]    ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
@@ -724,6 +725,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - key_out:inst6|temp1[14]       ; 1                 ; 6       ;
 ;      - key_out:inst6|OUT_flag[0]     ; 1                 ; 6       ;
 ;      - key_out:inst6|state.s3        ; 1                 ; 6       ;
+; music_on                             ;                   ;         ;
+;      - Core_unit:inst|Selector46~0   ; 0                 ; 6       ;
 ; ROW[0]                               ;                   ;         ;
 ;      - keyboard:inst7|WideOr0~0      ; 0                 ; 6       ;
 ;      - keyboard:inst7|Mux2~0         ; 0                 ; 6       ;
@@ -749,17 +752,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - keyboard:inst7|Selector1~6    ; 1                 ; 6       ;
 ;      - keyboard:inst7|Selector1~7    ; 1                 ; 6       ;
 ; ROW[2]                               ;                   ;         ;
-;      - keyboard:inst7|WideOr0~0      ; 0                 ; 6       ;
-;      - keyboard:inst7|Mux3~0         ; 0                 ; 6       ;
-;      - keyboard:inst7|Mux3~1         ; 0                 ; 6       ;
-;      - keyboard:inst7|Mux6~0         ; 0                 ; 6       ;
-;      - keyboard:inst7|Mux2~4         ; 0                 ; 6       ;
-;      - keyboard:inst7|Mux2~5         ; 0                 ; 6       ;
-;      - keyboard:inst7|Selector2~0    ; 0                 ; 6       ;
-;      - keyboard:inst7|OUT_value[1]~0 ; 0                 ; 6       ;
-;      - keyboard:inst7|OUT_value[1]~2 ; 0                 ; 6       ;
-;      - keyboard:inst7|Selector1~0    ; 0                 ; 6       ;
-;      - keyboard:inst7|Selector1~3    ; 0                 ; 6       ;
+;      - keyboard:inst7|WideOr0~0      ; 1                 ; 6       ;
+;      - keyboard:inst7|Mux3~0         ; 1                 ; 6       ;
+;      - keyboard:inst7|Mux3~1         ; 1                 ; 6       ;
+;      - keyboard:inst7|Mux6~0         ; 1                 ; 6       ;
+;      - keyboard:inst7|Mux2~4         ; 1                 ; 6       ;
+;      - keyboard:inst7|Mux2~5         ; 1                 ; 6       ;
+;      - keyboard:inst7|Selector2~0    ; 1                 ; 6       ;
+;      - keyboard:inst7|OUT_value[1]~0 ; 1                 ; 6       ;
+;      - keyboard:inst7|OUT_value[1]~2 ; 1                 ; 6       ;
+;      - keyboard:inst7|Selector1~0    ; 1                 ; 6       ;
+;      - keyboard:inst7|Selector1~3    ; 1                 ; 6       ;
 ; ROW[3]                               ;                   ;         ;
 ;      - keyboard:inst7|WideOr0~0      ; 0                 ; 6       ;
 ;      - keyboard:inst7|Mux3~0         ; 0                 ; 6       ;
@@ -774,41 +777,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                      ;
-+--------------------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
-; Name                           ; Location           ; Fan-Out ; Usage                                 ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
-; CLK                            ; PIN_132            ; 33      ; Clock                                 ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; Core_unit:inst|OUT_data_a~0    ; LCCOMB_X19_Y9_N6   ; 20      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Core_unit:inst|OUT_value[12]~9 ; LCCOMB_X20_Y11_N12 ; 9       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Core_unit:inst|OUT_value[15]   ; LCFF_X20_Y10_N21   ; 20      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
-; Core_unit:inst|OUT_value[1]~8  ; LCCOMB_X20_Y9_N30  ; 9       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Core_unit:inst|Selector42~4    ; LCCOMB_X21_Y10_N20 ; 2       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Core_unit:inst|Selector45~0    ; LCCOMB_X21_Y9_N14  ; 2       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; Core_unit:inst|state.00        ; LCFF_X19_Y9_N29    ; 39      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; Core_unit:inst|state.s2        ; LCFF_X19_Y9_N1     ; 33      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
-; RESET                          ; PIN_48             ; 43      ; Async. clear                          ; no     ; --                   ; --               ; --                        ;
-; anti_shake:inst3|OUT_key       ; LCFF_X22_Y9_N21    ; 17      ; Clock enable, Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; divider:inst5|OUT_clk1         ; LCFF_X12_Y6_N29    ; 218     ; Clock                                 ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; key_out:inst6|OUT_ALU_OP[1]~9  ; LCCOMB_X21_Y7_N2   ; 4       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; key_out:inst6|OUT_finish       ; LCFF_X21_Y7_N23    ; 48      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
-; key_out:inst6|OUT_flag~0       ; LCCOMB_X20_Y7_N20  ; 2       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; key_out:inst6|temp1[0]~17      ; LCCOMB_X22_Y9_N2   ; 16      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
-; key_out:inst6|temp1[0]~51      ; LCCOMB_X21_Y7_N18  ; 16      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; key_out:inst6|temp2[0]~32      ; LCCOMB_X21_Y7_N12  ; 16      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
-; key_out:inst6|temp2[0]~52      ; LCCOMB_X21_Y7_N24  ; 16      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-+--------------------------------+--------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                     ;
++--------------------------------+-------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
+; Name                           ; Location          ; Fan-Out ; Usage                                 ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------+-------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
+; CLK                            ; PIN_132           ; 383     ; Clock                                 ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; Core_unit:inst|OUT_data_a~0    ; LCCOMB_X13_Y8_N0  ; 20      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Core_unit:inst|OUT_music_on    ; LCFF_X9_Y5_N15    ; 60      ; Sync. clear, Sync. load               ; no     ; --                   ; --               ; --                        ;
+; Core_unit:inst|OUT_value[15]   ; LCFF_X17_Y6_N5    ; 20      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
+; Core_unit:inst|OUT_value[15]~9 ; LCCOMB_X14_Y7_N22 ; 9       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Core_unit:inst|OUT_value[4]~8  ; LCCOMB_X18_Y7_N6  ; 9       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Core_unit:inst|Selector42~5    ; LCCOMB_X18_Y7_N26 ; 2       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Core_unit:inst|Selector45~0    ; LCCOMB_X18_Y7_N20 ; 2       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; Core_unit:inst|state.00        ; LCFF_X14_Y4_N29   ; 39      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; Core_unit:inst|state.s2        ; LCFF_X13_Y8_N19   ; 32      ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
+; RESET                          ; PIN_48            ; 43      ; Async. clear                          ; no     ; --                   ; --               ; --                        ;
+; anti_shake:inst3|OUT_key       ; LCFF_X24_Y7_N9    ; 17      ; Clock enable, Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; divider:inst5|OUT_clk1         ; LCFF_X4_Y12_N29   ; 217     ; Clock                                 ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; key_out:inst6|OUT_ALU_OP[2]~9  ; LCCOMB_X21_Y8_N14 ; 4       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; key_out:inst6|OUT_finish       ; LCFF_X21_Y8_N3    ; 49      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
+; key_out:inst6|OUT_flag~0       ; LCCOMB_X19_Y7_N4  ; 2       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; key_out:inst6|temp1[4]~17      ; LCCOMB_X21_Y8_N28 ; 16      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
+; key_out:inst6|temp1[4]~51      ; LCCOMB_X21_Y8_N0  ; 16      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; key_out:inst6|temp2[9]~32      ; LCCOMB_X19_Y7_N14 ; 16      ; Sync. clear                           ; no     ; --                   ; --               ; --                        ;
+; key_out:inst6|temp2[9]~52      ; LCCOMB_X20_Y8_N0  ; 16      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; music:inst1|clk_interval       ; LCFF_X21_Y7_N9    ; 57      ; Clock                                 ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; music:inst1|song1[8]~43        ; LCCOMB_X9_Y5_N16  ; 26      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; music:inst1|song2[29]~53       ; LCCOMB_X9_Y5_N22  ; 26      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
++--------------------------------+-------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                              ;
-+------------------------+-----------------+---------+----------------------+------------------+---------------------------+
-; Name                   ; Location        ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------+-----------------+---------+----------------------+------------------+---------------------------+
-; CLK                    ; PIN_132         ; 33      ; Global Clock         ; GCLK6            ; --                        ;
-; divider:inst5|OUT_clk1 ; LCFF_X12_Y6_N29 ; 218     ; Global Clock         ; GCLK0            ; --                        ;
-+------------------------+-----------------+---------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                ;
++--------------------------+-----------------+---------+----------------------+------------------+---------------------------+
+; Name                     ; Location        ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------+-----------------+---------+----------------------+------------------+---------------------------+
+; CLK                      ; PIN_132         ; 383     ; Global Clock         ; GCLK6            ; --                        ;
+; divider:inst5|OUT_clk1   ; LCFF_X4_Y12_N29 ; 217     ; Global Clock         ; GCLK3            ; --                        ;
+; music:inst1|clk_interval ; LCFF_X21_Y7_N9  ; 57      ; Global Clock         ; GCLK7            ; --                        ;
++--------------------------+-----------------+---------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------+
@@ -816,44 +824,100 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------+---------+
 ; Name                             ; Fan-Out ;
 +----------------------------------+---------+
-; key_out:inst6|OUT_finish         ; 48      ;
+; Core_unit:inst|OUT_music_on      ; 60      ;
+; key_out:inst6|OUT_finish         ; 49      ;
 ; RESET                            ; 43      ;
 ; Core_unit:inst|state.00          ; 39      ;
-; Core_unit:inst|state.s2          ; 33      ;
 ; divider:inst5|Add0~62            ; 33      ;
+; Core_unit:inst|state.s2          ; 32      ;
+; music:inst1|LessThan23~9         ; 30      ;
+; music:inst1|LessThan22~10        ; 29      ;
+; music:inst1|song1~26             ; 29      ;
+; music:inst1|song1~28             ; 28      ;
 ; Core_unit:inst|state.s1          ; 28      ;
+; music:inst1|song2~28             ; 27      ;
+; music:inst1|song2[29]~53         ; 26      ;
+; music:inst1|song1[8]~43          ; 26      ;
+; music:inst1|song1~29             ; 23      ;
 ; Core_unit:inst|OUT_off_number[2] ; 23      ;
+; music:inst1|song2~32             ; 22      ;
+; music:inst1|song2~27             ; 22      ;
+; key_out:inst6|state.00           ; 21      ;
+; music:inst1|song2~33             ; 21      ;
+; music:inst1|song2~29             ; 21      ;
 ; Core_unit:inst|OUT_data_a~0      ; 20      ;
-; key_out:inst6|state.00           ; 20      ;
+; music:inst1|LessThan22~5         ; 20      ;
 ; Core_unit:inst|OUT_value[15]     ; 20      ;
+; music:inst1|LessThan21~6         ; 19      ;
+; music:inst1|song1~31             ; 19      ;
+; music:inst1|LessThan22~9         ; 19      ;
 ; key_out:inst6|Equal0~0           ; 18      ;
+; music:inst1|song2~34             ; 18      ;
+; Core_unit:inst|Selector46~1      ; 17      ;
 ; anti_shake:inst3|OUT_key         ; 17      ;
 ; Core_unit:inst|flag              ; 17      ;
 ; divider:inst5|LessThan0~8        ; 17      ;
-; divider:inst5|LessThan0~3        ; 17      ;
-; key_out:inst6|temp2[0]~52        ; 16      ;
-; key_out:inst6|temp1[0]~51        ; 16      ;
-; key_out:inst6|temp2[0]~32        ; 16      ;
-; Core_unit:inst|temp_ans~0        ; 16      ;
-; key_out:inst6|temp1[0]~17        ; 16      ;
-; Core_unit:inst|OUT_value~10      ; 16      ;
+; Core_unit:inst|OUT_value~10      ; 17      ;
+; music:inst1|LessThan0~4          ; 17      ;
+; music:inst1|LessThan1~4          ; 17      ;
+; music:inst1|song2~31             ; 17      ;
+; music:inst1|song1~27             ; 17      ;
+; music:inst1|Add1~32              ; 17      ;
+; music:inst1|Add1~30              ; 17      ;
+; music:inst1|Add2~32              ; 17      ;
+; key_out:inst6|temp2[9]~52        ; 16      ;
+; key_out:inst6|temp1[4]~51        ; 16      ;
+; key_out:inst6|temp2[9]~32        ; 16      ;
+; key_out:inst6|temp1[4]~17        ; 16      ;
+; music:inst1|LessThan3~4          ; 16      ;
+; music:inst1|LessThan7~3          ; 16      ;
+; music:inst1|LessThan2~5          ; 16      ;
+; music:inst1|Add8~30              ; 16      ;
+; music:inst1|Add8~28              ; 16      ;
 ; key_out:inst6|LessThan0~0        ; 15      ;
-; alu:inst2|OUT_S[0]~1             ; 15      ;
+; music:inst1|LessThan16~3         ; 15      ;
+; music:inst1|LessThan17~3         ; 15      ;
+; music:inst1|LessThan4~3          ; 15      ;
+; music:inst1|LessThan14~3         ; 15      ;
+; music:inst1|LessThan10~4         ; 15      ;
+; music:inst1|LessThan9~4          ; 15      ;
+; music:inst1|song1~34             ; 15      ;
+; music:inst1|LessThan5~5          ; 15      ;
+; Core_unit:inst|OUT_ALU_OP[1]     ; 15      ;
 ; Core_unit:inst|OUT_off_number[1] ; 15      ;
+; music:inst1|Add17~28             ; 15      ;
+; music:inst1|Add17~26             ; 15      ;
+; music:inst1|Add18~28             ; 15      ;
+; music:inst1|Add15~28             ; 15      ;
+; music:inst1|Add15~26             ; 15      ;
+; music:inst1|song2[25]            ; 15      ;
+; music:inst1|LessThan11~3         ; 14      ;
+; music:inst1|LessThan8~4          ; 14      ;
+; music:inst1|LessThan6~5          ; 14      ;
+; music:inst1|LessThan23~8         ; 14      ;
+; music:inst1|song1~30             ; 14      ;
 ; Core_unit:inst|OUT_off_number[0] ; 14      ;
 ; ROW[1]                           ; 13      ;
+; music:inst1|LessThan19~4         ; 13      ;
+; music:inst1|LessThan18~3         ; 13      ;
+; music:inst1|LessThan15~4         ; 13      ;
+; music:inst1|LessThan12~4         ; 13      ;
+; music:inst1|LessThan13~4         ; 13      ;
+; music:inst1|song1~32             ; 13      ;
 ; Core_unit:inst|OUT_ALU_OP[3]     ; 13      ;
-; Core_unit:inst|OUT_ALU_OP[1]     ; 13      ;
 ; Core_unit:inst|OUT_ALU_OP[2]     ; 13      ;
-; key_out:inst6|temp2[0]~17        ; 12      ;
+; key_out:inst6|temp2[9]~17        ; 12      ;
+; key_out:inst6|state.s2           ; 12      ;
+; music:inst1|LessThan20~4         ; 12      ;
 ; ROW[2]                           ; 11      ;
-; Core_unit:inst|OUT_value[1]~19   ; 11      ;
+; Core_unit:inst|OUT_value[4]~18   ; 11      ;
 ; keyboard:inst7|OUT_value[0]      ; 11      ;
-; key_out:inst6|state.s2           ; 11      ;
+; alu:inst2|OUT_zero~13            ; 11      ;
 ; display:inst4|state.S3           ; 11      ;
+; Core_unit:inst|OUT_neg_ans       ; 11      ;
 ; BCD:inst8|rhex[2][3]             ; 11      ;
 ; ROW[3]                           ; 10      ;
-; Core_unit:inst|OUT_value[1]~18   ; 10      ;
+; Core_unit:inst|OUT_value[4]~19   ; 10      ;
 ; key_out:inst6|state.s1           ; 10      ;
 ; Core_unit:inst|WideOr1~0         ; 10      ;
 ; display:inst4|state.S2           ; 10      ;
@@ -865,11 +929,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ROW[0]                           ; 9       ;
 ; keyboard:inst7|OUT_value[2]      ; 9       ;
 ; keyboard:inst7|OUT_value[3]      ; 9       ;
-; Core_unit:inst|OUT_value[12]~9   ; 9       ;
-; Core_unit:inst|OUT_value[1]~8    ; 9       ;
-; alu:inst2|OUT_S[0]~0             ; 9       ;
+; Core_unit:inst|OUT_value[15]~9   ; 9       ;
+; Core_unit:inst|OUT_value[4]~8    ; 9       ;
+; alu:inst2|OUT_zero~0             ; 9       ;
 ; display:inst4|state.00           ; 9       ;
 ; BCD:inst8|rhex[3][0]             ; 9       ;
+; music:inst1|song2[1]             ; 9       ;
 ; keyboard:inst7|OUT_value[1]      ; 8       ;
 ; key_out:inst6|OUT_flag[0]        ; 8       ;
 ; BCD:inst8|rhex[1][3]             ; 8       ;
@@ -878,7 +943,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BCD:inst8|rhex[1][0]             ; 8       ;
 ; BCD:inst8|Add9~12                ; 8       ;
 ; BCD:inst8|Add3~2                 ; 8       ;
+; music:inst1|song1[6]             ; 8       ;
+; music:inst1|song1[7]             ; 8       ;
+; music:inst1|song1[2]             ; 8       ;
 ; Core_unit:inst|state.s3          ; 7       ;
+; music:inst1|song2~26             ; 7       ;
+; music:inst1|song1~33             ; 7       ;
 ; display:inst4|Selector1~2        ; 7       ;
 ; display:inst4|Selector1~1        ; 7       ;
 ; BCD:inst8|resd[3]                ; 7       ;
@@ -902,17 +972,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BCD:inst8|rhex[2][2]             ; 7       ;
 ; BCD:inst8|Add9~6                 ; 7       ;
 ; BCD:inst8|Add3~4                 ; 7       ;
+; music:inst1|song2[5]             ; 7       ;
+; music:inst1|now_Hz[3]            ; 7       ;
+; music:inst1|now_Hz[2]            ; 7       ;
 ; key_out:inst6|state.s3           ; 6       ;
-; BCD:inst8|resb[3]~1              ; 6       ;
+; BCD:inst8|resb[2]~1              ; 6       ;
 ; BCD:inst8|LessThan3~0            ; 6       ;
-; Core_unit:inst|OUT_value[3]      ; 6       ;
-; Core_unit:inst|OUT_value[2]      ; 6       ;
-; Core_unit:inst|OUT_value[1]      ; 6       ;
-; Core_unit:inst|OUT_value[0]      ; 6       ;
+; music:inst1|song2~30             ; 6       ;
 ; Core_unit:inst|OUT_value[7]      ; 6       ;
 ; Core_unit:inst|OUT_value[6]      ; 6       ;
 ; Core_unit:inst|OUT_value[5]      ; 6       ;
 ; Core_unit:inst|OUT_value[4]      ; 6       ;
+; Core_unit:inst|OUT_value[3]      ; 6       ;
+; Core_unit:inst|OUT_value[2]      ; 6       ;
+; Core_unit:inst|OUT_value[1]      ; 6       ;
+; Core_unit:inst|OUT_value[0]      ; 6       ;
+; Core_unit:inst|OUT_ALU_OP[0]     ; 6       ;
 ; BCD:inst8|Add16~8                ; 6       ;
 ; BCD:inst8|Add16~6                ; 6       ;
 ; BCD:inst8|Add16~4                ; 6       ;
@@ -920,11 +995,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BCD:inst8|Add3~8                 ; 6       ;
 ; BCD:inst8|Add3~6                 ; 6       ;
 ; key_out:inst6|OUT_flag[1]        ; 6       ;
+; music:inst1|song2[3]             ; 6       ;
+; music:inst1|song2[4]             ; 6       ;
+; music:inst1|song1[1]             ; 6       ;
+; music:inst1|song1[5]             ; 6       ;
+; music:inst1|song1[8]             ; 6       ;
+; music:inst1|song1[3]             ; 6       ;
 ; key_out:inst6|temp2[0]           ; 5       ;
 ; key_out:inst6|temp1[0]           ; 5       ;
 ; BCD:inst8|resa[3]~1              ; 5       ;
-; key_out:inst6|OUT_state~0        ; 5       ;
-; alu:inst2|OUT_S[7]~4             ; 5       ;
+; music:inst1|Mux4~4               ; 5       ;
+; alu:inst2|OUT_S[7]~17            ; 5       ;
 ; Core_unit:inst|temp_op[3]        ; 5       ;
 ; Core_unit:inst|temp_op[1]        ; 5       ;
 ; Core_unit:inst|temp_op[2]        ; 5       ;
@@ -948,30 +1029,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BCD:inst8|Add9~10                ; 5       ;
 ; BCD:inst8|Add9~4                 ; 5       ;
 ; BCD:inst8|Add3~0                 ; 5       ;
+; music:inst1|song2[2]             ; 5       ;
+; music:inst1|song2[6]             ; 5       ;
+; music:inst1|song2[8]             ; 5       ;
+; music:inst1|song1[4]             ; 5       ;
 ; Core_unit:inst|OUT_carry_out     ; 5       ;
-; key_out:inst6|OUT_ALU_OP[1]~9    ; 4       ;
+; key_out:inst6|OUT_ALU_OP[2]~9    ; 4       ;
 ; keyboard:inst7|Selector1~0       ; 4       ;
 ; keyboard:inst7|WideOr0~0         ; 4       ;
 ; BCD:inst8|addbcd4~23             ; 4       ;
 ; BCD:inst8|rhexc[12]              ; 4       ;
-; Core_unit:inst|Add1~19           ; 4       ;
-; Core_unit:inst|Add1~16           ; 4       ;
-; Core_unit:inst|Add1~13           ; 4       ;
-; Core_unit:inst|Add1~10           ; 4       ;
+; Core_unit:inst|Add1~29           ; 4       ;
+; Core_unit:inst|Add1~28           ; 4       ;
+; Core_unit:inst|Add1~27           ; 4       ;
+; Core_unit:inst|Add1~26           ; 4       ;
+; Core_unit:inst|OUT_value~11      ; 4       ;
+; Core_unit:inst|Add1~18           ; 4       ;
 ; BCD:inst8|LessThan4~0            ; 4       ;
 ; BCD:inst8|resa[3]~2              ; 4       ;
+; key_out:inst6|OUT_state~0        ; 4       ;
 ; Core_unit:inst|Selector6~2       ; 4       ;
-; Core_unit:inst|OUT_ALU_OP[0]     ; 4       ;
 ; key_out:inst6|temp1[10]          ; 4       ;
 ; key_out:inst6|temp2[10]          ; 4       ;
 ; key_out:inst6|temp1[11]          ; 4       ;
 ; key_out:inst6|temp2[11]          ; 4       ;
 ; key_out:inst6|temp1[12]          ; 4       ;
 ; key_out:inst6|temp2[12]          ; 4       ;
-; key_out:inst6|temp1[9]           ; 4       ;
-; key_out:inst6|temp2[9]           ; 4       ;
 ; key_out:inst6|temp1[8]           ; 4       ;
 ; key_out:inst6|temp2[8]           ; 4       ;
+; key_out:inst6|temp1[9]           ; 4       ;
+; key_out:inst6|temp2[9]           ; 4       ;
 ; BCD:inst8|rhex[0][3]             ; 4       ;
 ; BCD:inst8|rhex[0][1]             ; 4       ;
 ; BCD:inst8|rhex[0][2]             ; 4       ;
@@ -990,11 +1077,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; key_out:inst6|temp2[7]           ; 4       ;
 ; key_out:inst6|temp1[7]           ; 4       ;
 ; BCD:inst8|Add16~2                ; 4       ;
+; music:inst1|song2[7]             ; 4       ;
 ; keyboard:inst7|flag[0]           ; 3       ;
 ; keyboard:inst7|OUT_key           ; 3       ;
 ; keyboard:inst7|Mux2~0            ; 3       ;
 ; keyboard:inst7|Selector0~1       ; 3       ;
-; Core_unit:inst|always0~0         ; 3       ;
 ; BCD:inst8|Add21~2                ; 3       ;
 ; BCD:inst8|Add21~1                ; 3       ;
 ; BCD:inst8|rhexd[15]              ; 3       ;
@@ -1002,29 +1089,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BCD:inst8|rhexc[13]              ; 3       ;
 ; BCD:inst8|rhexd[13]              ; 3       ;
 ; BCD:inst8|rhexb[8]               ; 3       ;
-; Core_unit:inst|Add1~46           ; 3       ;
 ; Core_unit:inst|OUT_value~17      ; 3       ;
 ; Core_unit:inst|OUT_value~16      ; 3       ;
 ; Core_unit:inst|OUT_value~15      ; 3       ;
 ; Core_unit:inst|OUT_value~14      ; 3       ;
 ; Core_unit:inst|OUT_value~13      ; 3       ;
-; Core_unit:inst|Add1~28           ; 3       ;
-; Core_unit:inst|OUT_value~12      ; 3       ;
-; Core_unit:inst|Add1~25           ; 3       ;
+; Core_unit:inst|Add1~30           ; 3       ;
 ; Core_unit:inst|Add1~24           ; 3       ;
-; Core_unit:inst|OUT_value~11      ; 3       ;
-; BCD:inst8|resb[3]~2              ; 3       ;
-; BCD:inst8|resb[3]~0              ; 3       ;
+; Core_unit:inst|Add1~23           ; 3       ;
+; Core_unit:inst|OUT_value~12      ; 3       ;
+; BCD:inst8|resb[2]~2              ; 3       ;
+; BCD:inst8|resb[2]~0              ; 3       ;
 ; BCD:inst8|LessThan0~0            ; 3       ;
 ; BCD:inst8|resa[3]~0              ; 3       ;
 ; BCD:inst8|rhexd[14]              ; 3       ;
-; alu:inst2|OUT_S[5]~25            ; 3       ;
-; alu:inst2|OUT_S[6]~22            ; 3       ;
-; alu:inst2|OUT_S[0]~19            ; 3       ;
-; alu:inst2|OUT_S[1]~16            ; 3       ;
-; alu:inst2|OUT_S[2]~13            ; 3       ;
-; alu:inst2|OUT_S[3]~10            ; 3       ;
-; alu:inst2|OUT_S[4]~7             ; 3       ;
+; music:inst1|LessThan20~3         ; 3       ;
+; music:inst1|LessThan12~3         ; 3       ;
+; music:inst1|LessThan6~4          ; 3       ;
+; music:inst1|Mux9~0               ; 3       ;
+; music:inst1|LessThan13~3         ; 3       ;
+; music:inst1|Mux5~16              ; 3       ;
+; alu:inst2|OUT_S[5]~23            ; 3       ;
+; alu:inst2|OUT_S[6]~20            ; 3       ;
+; alu:inst2|OUT_S[0]~14            ; 3       ;
+; alu:inst2|OUT_S[1]~11            ; 3       ;
+; alu:inst2|OUT_S[2]~8             ; 3       ;
+; alu:inst2|OUT_S[3]~5             ; 3       ;
+; alu:inst2|OUT_S[4]~2             ; 3       ;
 ; key_out:inst6|OUT_ALU_OP[2]      ; 3       ;
 ; key_out:inst6|OUT_ALU_OP[0]      ; 3       ;
 ; key_out:inst6|OUT_ALU_OP[3]      ; 3       ;
@@ -1032,13 +1123,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; key_out:inst6|temp2[13]          ; 3       ;
 ; key_out:inst6|temp1[14]          ; 3       ;
 ; key_out:inst6|temp2[14]          ; 3       ;
+; music:inst1|Add0~40              ; 3       ;
+; music:inst1|Add0~38              ; 3       ;
+; music:inst1|Add0~36              ; 3       ;
 ; Core_unit:inst|OUT_value[10]     ; 3       ;
 ; Core_unit:inst|OUT_value[11]     ; 3       ;
 ; Core_unit:inst|OUT_value[12]     ; 3       ;
 ; Core_unit:inst|OUT_value[13]     ; 3       ;
 ; Core_unit:inst|OUT_value[14]     ; 3       ;
-; Core_unit:inst|OUT_value[9]      ; 3       ;
 ; Core_unit:inst|OUT_value[8]      ; 3       ;
+; Core_unit:inst|OUT_value[9]      ; 3       ;
+; music:inst1|Add21~26             ; 3       ;
+; music:inst1|Add21~24             ; 3       ;
+; music:inst1|Add21~22             ; 3       ;
+; music:inst1|Add20~24             ; 3       ;
+; music:inst1|Add20~22             ; 3       ;
+; music:inst1|Add16~28             ; 3       ;
+; music:inst1|Add16~26             ; 3       ;
+; music:inst1|Add16~24             ; 3       ;
+; music:inst1|Add13~28             ; 3       ;
+; music:inst1|Add13~26             ; 3       ;
+; music:inst1|Add13~24             ; 3       ;
+; music:inst1|Add9~30              ; 3       ;
+; music:inst1|Add9~28              ; 3       ;
+; music:inst1|Add9~26              ; 3       ;
+; music:inst1|Add7~30              ; 3       ;
+; music:inst1|Add7~28              ; 3       ;
+; music:inst1|Add7~26              ; 3       ;
+; music:inst1|Add14~28             ; 3       ;
+; music:inst1|Add14~26             ; 3       ;
+; music:inst1|Add14~24             ; 3       ;
+; music:inst1|song2[0]             ; 3       ;
+; music:inst1|song1[9]             ; 3       ;
+; music:inst1|Add6~28              ; 3       ;
+; music:inst1|Add6~26              ; 3       ;
+; music:inst1|now_Hz[1]            ; 3       ;
+; music:inst1|now_Hz[0]            ; 3       ;
 ; Core_unit:inst|Add1~48           ; 2       ;
 ; keyboard:inst7|flag[1]           ; 2       ;
 ; keyboard:inst7|Selector1~5       ; 2       ;
@@ -1053,8 +1173,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Core_unit:inst|temp_ans[12]      ; 2       ;
 ; Core_unit:inst|temp_ans[13]      ; 2       ;
 ; Core_unit:inst|temp_ans[14]      ; 2       ;
-; key_out:inst6|temp1[0]~32        ; 2       ;
+; key_out:inst6|temp1[4]~32        ; 2       ;
 ; Core_unit:inst|temp_ans[15]      ; 2       ;
+; Core_unit:inst|Selector7~0       ; 2       ;
+; music:inst1|LessThan21~5         ; 2       ;
+; Core_unit:inst|always0~0         ; 2       ;
 ; key_out:inst6|OUT_flag~0         ; 2       ;
 ; Core_unit:inst|temp_ans[0]       ; 2       ;
 ; Core_unit:inst|temp_ans[1]       ; 2       ;
@@ -1064,7 +1187,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Core_unit:inst|temp_ans[5]       ; 2       ;
 ; Core_unit:inst|temp_ans[6]       ; 2       ;
 ; Core_unit:inst|temp_ans[7]       ; 2       ;
-; Core_unit:inst|OUT_state~4       ; 2       ;
 ; BCD:inst8|Add20~2                ; 2       ;
 ; BCD:inst8|Add20~1                ; 2       ;
 ; BCD:inst8|LessThan7~0            ; 2       ;
@@ -1073,26 +1195,99 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BCD:inst8|rhexb[9]               ; 2       ;
 ; BCD:inst8|addbcd4~16             ; 2       ;
 ; BCD:inst8|addbcd4~15             ; 2       ;
-; Core_unit:inst|Selector42~4      ; 2       ;
-; Core_unit:inst|Selector41~3      ; 2       ;
+; Core_unit:inst|Selector42~5      ; 2       ;
+; Core_unit:inst|Selector41~2      ; 2       ;
 ; Core_unit:inst|Add1~47           ; 2       ;
-; Core_unit:inst|Selector41~1      ; 2       ;
+; Core_unit:inst|Add1~46           ; 2       ;
 ; Core_unit:inst|Add1~45           ; 2       ;
-; Core_unit:inst|Add1~44           ; 2       ;
-; Core_unit:inst|Add1~43           ; 2       ;
-; Core_unit:inst|Add1~40           ; 2       ;
-; Core_unit:inst|Add1~39           ; 2       ;
+; Core_unit:inst|Add1~42           ; 2       ;
+; Core_unit:inst|Add1~41           ; 2       ;
+; Core_unit:inst|Selector41~0      ; 2       ;
+; Core_unit:inst|Add1~25           ; 2       ;
 ; BCD:inst8|rhexd[6]               ; 2       ;
 ; BCD:inst8|rhexd[4]               ; 2       ;
 ; BCD:inst8|rhexc[4]               ; 2       ;
 ; BCD:inst8|rhexb[4]               ; 2       ;
+; music:inst1|LessThan18~2         ; 2       ;
+; music:inst1|LessThan18~1         ; 2       ;
+; music:inst1|LessThan15~3         ; 2       ;
+; music:inst1|LessThan3~3          ; 2       ;
+; music:inst1|LessThan3~2          ; 2       ;
+; music:inst1|LessThan11~2         ; 2       ;
+; music:inst1|LessThan11~1         ; 2       ;
+; music:inst1|LessThan4~2          ; 2       ;
+; music:inst1|LessThan4~1          ; 2       ;
+; music:inst1|LessThan8~3          ; 2       ;
+; music:inst1|Mux4~9               ; 2       ;
+; music:inst1|LessThan2~4          ; 2       ;
+; music:inst1|LessThan2~3          ; 2       ;
+; music:inst1|LessThan10~3         ; 2       ;
+; music:inst1|LessThan10~2         ; 2       ;
+; music:inst1|Mux10~8              ; 2       ;
+; music:inst1|Mux9~1               ; 2       ;
+; music:inst1|now_Hz~17            ; 2       ;
+; music:inst1|Mux5~29              ; 2       ;
+; music:inst1|now_Hz~15            ; 2       ;
+; music:inst1|Mux7~2               ; 2       ;
+; music:inst1|Mux6~9               ; 2       ;
+; music:inst1|Mux6~3               ; 2       ;
+; music:inst1|Mux4~6               ; 2       ;
+; music:inst1|LessThan9~3          ; 2       ;
+; music:inst1|LessThan9~2          ; 2       ;
+; music:inst1|Mux8~10              ; 2       ;
+; music:inst1|Mux6~0               ; 2       ;
+; music:inst1|LessThan23~4         ; 2       ;
+; music:inst1|Mux4~5               ; 2       ;
+; music:inst1|Mux3~2               ; 2       ;
+; music:inst1|LessThan22~8         ; 2       ;
+; music:inst1|LessThan22~7         ; 2       ;
+; music:inst1|LessThan22~6         ; 2       ;
 ; Core_unit:inst|Selector45~0      ; 2       ;
 ; alu:inst2|OUT_zero               ; 2       ;
 ; Core_unit:inst|temp_zero         ; 2       ;
 ; Core_unit:inst|OUT_ALU_OP~0      ; 2       ;
 ; key_out:inst6|OUT_ALU_OP[1]      ; 2       ;
 ; alu:inst2|OUT_carry_out~1        ; 2       ;
+; music:inst1|clk[16]              ; 2       ;
+; music:inst1|clk[20]              ; 2       ;
+; music:inst1|Mux0~10              ; 2       ;
+; music:inst1|clk[19]              ; 2       ;
+; music:inst1|clk[18]              ; 2       ;
+; music:inst1|clk[17]              ; 2       ;
+; music:inst1|clk[15]              ; 2       ;
+; music:inst1|clk[3]               ; 2       ;
+; music:inst1|clk[11]              ; 2       ;
+; music:inst1|clk[7]               ; 2       ;
+; music:inst1|clk[12]              ; 2       ;
+; music:inst1|clk[0]               ; 2       ;
+; music:inst1|clk[4]               ; 2       ;
+; music:inst1|clk[8]               ; 2       ;
+; music:inst1|clk[14]              ; 2       ;
+; music:inst1|clk[2]               ; 2       ;
+; music:inst1|clk[6]               ; 2       ;
+; music:inst1|clk[10]              ; 2       ;
+; music:inst1|clk[13]              ; 2       ;
+; music:inst1|clk[1]               ; 2       ;
+; music:inst1|clk[9]               ; 2       ;
+; music:inst1|clk[5]               ; 2       ;
 ; Core_unit:inst|OUT_less_than     ; 2       ;
+; music:inst1|Add0~34              ; 2       ;
+; music:inst1|Add0~32              ; 2       ;
+; music:inst1|Add0~30              ; 2       ;
+; music:inst1|Add0~28              ; 2       ;
+; music:inst1|Add0~26              ; 2       ;
+; music:inst1|Add0~24              ; 2       ;
+; music:inst1|Add0~22              ; 2       ;
+; music:inst1|Add0~20              ; 2       ;
+; music:inst1|Add0~18              ; 2       ;
+; music:inst1|Add0~16              ; 2       ;
+; music:inst1|Add0~14              ; 2       ;
+; music:inst1|Add0~12              ; 2       ;
+; music:inst1|Add0~10              ; 2       ;
+; music:inst1|Add0~8               ; 2       ;
+; music:inst1|Add0~6               ; 2       ;
+; music:inst1|Add0~4               ; 2       ;
+; music:inst1|Add0~2               ; 2       ;
 ; key_out:inst6|temp1[15]          ; 2       ;
 ; key_out:inst6|temp2[15]          ; 2       ;
 ; divider:inst5|Add0~60            ; 2       ;
@@ -1123,7 +1318,310 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; divider:inst5|Add0~10            ; 2       ;
 ; divider:inst5|Add0~8             ; 2       ;
 ; BCD:inst8|Add11~8                ; 2       ;
+; Core_unit:inst|Add1~21           ; 2       ;
 ; BCD:inst8|Add4~8                 ; 2       ;
+; music:inst1|Add17~24             ; 2       ;
+; music:inst1|Add17~22             ; 2       ;
+; music:inst1|Add17~20             ; 2       ;
+; music:inst1|Add17~18             ; 2       ;
+; music:inst1|Add17~16             ; 2       ;
+; music:inst1|Add17~14             ; 2       ;
+; music:inst1|Add17~12             ; 2       ;
+; music:inst1|Add17~10             ; 2       ;
+; music:inst1|Add17~8              ; 2       ;
+; music:inst1|Add17~6              ; 2       ;
+; music:inst1|Add17~4              ; 2       ;
+; music:inst1|Add17~2              ; 2       ;
+; music:inst1|Add17~0              ; 2       ;
+; music:inst1|Add21~20             ; 2       ;
+; music:inst1|Add21~18             ; 2       ;
+; music:inst1|Add21~16             ; 2       ;
+; music:inst1|Add21~14             ; 2       ;
+; music:inst1|Add21~12             ; 2       ;
+; music:inst1|Add21~10             ; 2       ;
+; music:inst1|Add21~8              ; 2       ;
+; music:inst1|Add21~6              ; 2       ;
+; music:inst1|Add21~4              ; 2       ;
+; music:inst1|Add21~2              ; 2       ;
+; music:inst1|Add21~0              ; 2       ;
+; music:inst1|Add20~26             ; 2       ;
+; music:inst1|Add20~20             ; 2       ;
+; music:inst1|Add20~18             ; 2       ;
+; music:inst1|Add20~16             ; 2       ;
+; music:inst1|Add20~14             ; 2       ;
+; music:inst1|Add20~12             ; 2       ;
+; music:inst1|Add20~10             ; 2       ;
+; music:inst1|Add20~8              ; 2       ;
+; music:inst1|Add20~6              ; 2       ;
+; music:inst1|Add20~4              ; 2       ;
+; music:inst1|Add20~2              ; 2       ;
+; music:inst1|Add19~26             ; 2       ;
+; music:inst1|Add19~24             ; 2       ;
+; music:inst1|Add19~22             ; 2       ;
+; music:inst1|Add19~20             ; 2       ;
+; music:inst1|Add19~18             ; 2       ;
+; music:inst1|Add19~16             ; 2       ;
+; music:inst1|Add19~14             ; 2       ;
+; music:inst1|Add19~12             ; 2       ;
+; music:inst1|Add19~10             ; 2       ;
+; music:inst1|Add19~8              ; 2       ;
+; music:inst1|Add19~6              ; 2       ;
+; music:inst1|Add19~4              ; 2       ;
+; music:inst1|Add18~26             ; 2       ;
+; music:inst1|Add18~24             ; 2       ;
+; music:inst1|Add18~22             ; 2       ;
+; music:inst1|Add18~20             ; 2       ;
+; music:inst1|Add18~18             ; 2       ;
+; music:inst1|Add18~16             ; 2       ;
+; music:inst1|Add18~14             ; 2       ;
+; music:inst1|Add18~12             ; 2       ;
+; music:inst1|Add18~10             ; 2       ;
+; music:inst1|Add18~8              ; 2       ;
+; music:inst1|Add18~6              ; 2       ;
+; music:inst1|Add18~4              ; 2       ;
+; music:inst1|Add16~22             ; 2       ;
+; music:inst1|Add16~20             ; 2       ;
+; music:inst1|Add16~18             ; 2       ;
+; music:inst1|Add16~16             ; 2       ;
+; music:inst1|Add16~14             ; 2       ;
+; music:inst1|Add16~12             ; 2       ;
+; music:inst1|Add16~10             ; 2       ;
+; music:inst1|Add16~8              ; 2       ;
+; music:inst1|Add16~6              ; 2       ;
+; music:inst1|Add16~4              ; 2       ;
+; music:inst1|Add16~2              ; 2       ;
+; music:inst1|Add4~32              ; 2       ;
+; music:inst1|Add4~30              ; 2       ;
+; music:inst1|Add4~28              ; 2       ;
+; music:inst1|Add4~26              ; 2       ;
+; music:inst1|Add4~24              ; 2       ;
+; music:inst1|Add4~22              ; 2       ;
+; music:inst1|Add4~20              ; 2       ;
+; music:inst1|Add4~18              ; 2       ;
+; music:inst1|Add4~16              ; 2       ;
+; music:inst1|Add4~14              ; 2       ;
+; music:inst1|Add4~12              ; 2       ;
+; music:inst1|Add4~10              ; 2       ;
+; music:inst1|Add4~8               ; 2       ;
+; music:inst1|Add4~6               ; 2       ;
+; music:inst1|Add12~28             ; 2       ;
+; music:inst1|Add12~26             ; 2       ;
+; music:inst1|Add12~24             ; 2       ;
+; music:inst1|Add12~22             ; 2       ;
+; music:inst1|Add12~20             ; 2       ;
+; music:inst1|Add12~18             ; 2       ;
+; music:inst1|Add12~16             ; 2       ;
+; music:inst1|Add12~14             ; 2       ;
+; music:inst1|Add12~12             ; 2       ;
+; music:inst1|Add12~10             ; 2       ;
+; music:inst1|Add12~8              ; 2       ;
+; music:inst1|Add12~6              ; 2       ;
+; music:inst1|Add8~26              ; 2       ;
+; music:inst1|Add8~24              ; 2       ;
+; music:inst1|Add8~22              ; 2       ;
+; music:inst1|Add8~20              ; 2       ;
+; music:inst1|Add8~18              ; 2       ;
+; music:inst1|Add8~16              ; 2       ;
+; music:inst1|Add8~14              ; 2       ;
+; music:inst1|Add8~12              ; 2       ;
+; music:inst1|Add8~10              ; 2       ;
+; music:inst1|Add8~8               ; 2       ;
+; music:inst1|Add8~6               ; 2       ;
+; music:inst1|Add8~4               ; 2       ;
+; music:inst1|Add13~22             ; 2       ;
+; music:inst1|Add13~20             ; 2       ;
+; music:inst1|Add13~18             ; 2       ;
+; music:inst1|Add13~16             ; 2       ;
+; music:inst1|Add13~14             ; 2       ;
+; music:inst1|Add13~12             ; 2       ;
+; music:inst1|Add13~10             ; 2       ;
+; music:inst1|Add13~8              ; 2       ;
+; music:inst1|Add13~6              ; 2       ;
+; music:inst1|Add13~4              ; 2       ;
+; music:inst1|Add13~2              ; 2       ;
+; music:inst1|Add13~0              ; 2       ;
+; music:inst1|Add1~28              ; 2       ;
+; music:inst1|Add1~26              ; 2       ;
+; music:inst1|Add1~24              ; 2       ;
+; music:inst1|Add1~22              ; 2       ;
+; music:inst1|Add1~20              ; 2       ;
+; music:inst1|Add1~18              ; 2       ;
+; music:inst1|Add1~16              ; 2       ;
+; music:inst1|Add1~14              ; 2       ;
+; music:inst1|Add1~12              ; 2       ;
+; music:inst1|Add1~10              ; 2       ;
+; music:inst1|Add1~8               ; 2       ;
+; music:inst1|Add1~6               ; 2       ;
+; music:inst1|Add1~4               ; 2       ;
+; music:inst1|Add1~2               ; 2       ;
+; music:inst1|Add5~30              ; 2       ;
+; music:inst1|Add5~28              ; 2       ;
+; music:inst1|Add5~26              ; 2       ;
+; music:inst1|Add5~24              ; 2       ;
+; music:inst1|Add5~22              ; 2       ;
+; music:inst1|Add5~20              ; 2       ;
+; music:inst1|Add5~18              ; 2       ;
+; music:inst1|Add5~16              ; 2       ;
+; music:inst1|Add5~14              ; 2       ;
+; music:inst1|Add5~12              ; 2       ;
+; music:inst1|Add5~10              ; 2       ;
+; music:inst1|Add5~8               ; 2       ;
+; music:inst1|Add9~24              ; 2       ;
+; music:inst1|Add9~22              ; 2       ;
+; music:inst1|Add9~20              ; 2       ;
+; music:inst1|Add9~18              ; 2       ;
+; music:inst1|Add9~16              ; 2       ;
+; music:inst1|Add9~14              ; 2       ;
+; music:inst1|Add9~12              ; 2       ;
+; music:inst1|Add9~10              ; 2       ;
+; music:inst1|Add9~8               ; 2       ;
+; music:inst1|Add9~6               ; 2       ;
+; music:inst1|Add9~4               ; 2       ;
+; music:inst1|Add9~2               ; 2       ;
+; music:inst1|Add9~0               ; 2       ;
+; music:inst1|Add15~24             ; 2       ;
+; music:inst1|Add15~22             ; 2       ;
+; music:inst1|Add15~20             ; 2       ;
+; music:inst1|Add15~18             ; 2       ;
+; music:inst1|Add15~16             ; 2       ;
+; music:inst1|Add15~14             ; 2       ;
+; music:inst1|Add15~12             ; 2       ;
+; music:inst1|Add15~10             ; 2       ;
+; music:inst1|Add15~8              ; 2       ;
+; music:inst1|Add15~6              ; 2       ;
+; music:inst1|Add15~4              ; 2       ;
+; music:inst1|Add15~2              ; 2       ;
+; music:inst1|Add3~32              ; 2       ;
+; music:inst1|Add3~30              ; 2       ;
+; music:inst1|Add3~28              ; 2       ;
+; music:inst1|Add3~26              ; 2       ;
+; music:inst1|Add3~24              ; 2       ;
+; music:inst1|Add3~22              ; 2       ;
+; music:inst1|Add3~20              ; 2       ;
+; music:inst1|Add3~18              ; 2       ;
+; music:inst1|Add3~16              ; 2       ;
+; music:inst1|Add3~14              ; 2       ;
+; music:inst1|Add3~12              ; 2       ;
+; music:inst1|Add3~10              ; 2       ;
+; music:inst1|Add3~8               ; 2       ;
+; music:inst1|Add3~6               ; 2       ;
+; music:inst1|Add3~4               ; 2       ;
+; music:inst1|Add3~2               ; 2       ;
+; music:inst1|Add3~0               ; 2       ;
+; music:inst1|Add7~24              ; 2       ;
+; music:inst1|Add7~22              ; 2       ;
+; music:inst1|Add7~20              ; 2       ;
+; music:inst1|Add7~18              ; 2       ;
+; music:inst1|Add7~16              ; 2       ;
+; music:inst1|Add7~14              ; 2       ;
+; music:inst1|Add7~12              ; 2       ;
+; music:inst1|Add7~10              ; 2       ;
+; music:inst1|Add7~8               ; 2       ;
+; music:inst1|Add7~6               ; 2       ;
+; music:inst1|Add7~4               ; 2       ;
+; music:inst1|Add7~2               ; 2       ;
+; music:inst1|Add7~0               ; 2       ;
+; music:inst1|Add11~30             ; 2       ;
+; music:inst1|Add11~28             ; 2       ;
+; music:inst1|Add11~26             ; 2       ;
+; music:inst1|Add11~24             ; 2       ;
+; music:inst1|Add11~22             ; 2       ;
+; music:inst1|Add11~20             ; 2       ;
+; music:inst1|Add11~18             ; 2       ;
+; music:inst1|Add11~16             ; 2       ;
+; music:inst1|Add11~14             ; 2       ;
+; music:inst1|Add11~12             ; 2       ;
+; music:inst1|Add11~10             ; 2       ;
+; music:inst1|Add11~8              ; 2       ;
+; music:inst1|Add11~6              ; 2       ;
+; music:inst1|Add11~4              ; 2       ;
+; music:inst1|Add14~22             ; 2       ;
+; music:inst1|Add14~20             ; 2       ;
+; music:inst1|Add14~18             ; 2       ;
+; music:inst1|Add14~16             ; 2       ;
+; music:inst1|Add14~14             ; 2       ;
+; music:inst1|Add14~12             ; 2       ;
+; music:inst1|Add14~10             ; 2       ;
+; music:inst1|Add14~8              ; 2       ;
+; music:inst1|Add14~6              ; 2       ;
+; music:inst1|Add14~4              ; 2       ;
+; music:inst1|Add14~2              ; 2       ;
+; music:inst1|Add14~0              ; 2       ;
+; music:inst1|Add2~30              ; 2       ;
+; music:inst1|Add2~28              ; 2       ;
+; music:inst1|Add2~26              ; 2       ;
+; music:inst1|Add2~24              ; 2       ;
+; music:inst1|Add2~22              ; 2       ;
+; music:inst1|Add2~20              ; 2       ;
+; music:inst1|Add2~18              ; 2       ;
+; music:inst1|Add2~16              ; 2       ;
+; music:inst1|Add2~14              ; 2       ;
+; music:inst1|Add2~12              ; 2       ;
+; music:inst1|Add2~10              ; 2       ;
+; music:inst1|Add2~8               ; 2       ;
+; music:inst1|Add2~6               ; 2       ;
+; music:inst1|Add2~4               ; 2       ;
+; music:inst1|Add2~2               ; 2       ;
+; music:inst1|Add2~0               ; 2       ;
+; music:inst1|Add10~30             ; 2       ;
+; music:inst1|Add10~28             ; 2       ;
+; music:inst1|Add10~26             ; 2       ;
+; music:inst1|Add10~24             ; 2       ;
+; music:inst1|Add10~22             ; 2       ;
+; music:inst1|Add10~20             ; 2       ;
+; music:inst1|Add10~18             ; 2       ;
+; music:inst1|Add10~16             ; 2       ;
+; music:inst1|Add10~14             ; 2       ;
+; music:inst1|Add10~12             ; 2       ;
+; music:inst1|Add10~10             ; 2       ;
+; music:inst1|Add10~8              ; 2       ;
+; music:inst1|Add10~6              ; 2       ;
+; music:inst1|song2[24]            ; 2       ;
+; music:inst1|song2[23]            ; 2       ;
+; music:inst1|song2[22]            ; 2       ;
+; music:inst1|song2[21]            ; 2       ;
+; music:inst1|song2[20]            ; 2       ;
+; music:inst1|song2[19]            ; 2       ;
+; music:inst1|song2[18]            ; 2       ;
+; music:inst1|song2[17]            ; 2       ;
+; music:inst1|song2[16]            ; 2       ;
+; music:inst1|song2[15]            ; 2       ;
+; music:inst1|song2[14]            ; 2       ;
+; music:inst1|song2[13]            ; 2       ;
+; music:inst1|song2[12]            ; 2       ;
+; music:inst1|song2[11]            ; 2       ;
+; music:inst1|song2[10]            ; 2       ;
+; music:inst1|song2[9]             ; 2       ;
+; music:inst1|song1[0]             ; 2       ;
+; music:inst1|song1[24]            ; 2       ;
+; music:inst1|song1[23]            ; 2       ;
+; music:inst1|song1[22]            ; 2       ;
+; music:inst1|song1[21]            ; 2       ;
+; music:inst1|song1[20]            ; 2       ;
+; music:inst1|song1[19]            ; 2       ;
+; music:inst1|song1[18]            ; 2       ;
+; music:inst1|song1[17]            ; 2       ;
+; music:inst1|song1[16]            ; 2       ;
+; music:inst1|song1[15]            ; 2       ;
+; music:inst1|song1[14]            ; 2       ;
+; music:inst1|song1[13]            ; 2       ;
+; music:inst1|song1[12]            ; 2       ;
+; music:inst1|song1[11]            ; 2       ;
+; music:inst1|song1[10]            ; 2       ;
+; music:inst1|Add6~30              ; 2       ;
+; music:inst1|Add6~24              ; 2       ;
+; music:inst1|Add6~22              ; 2       ;
+; music:inst1|Add6~20              ; 2       ;
+; music:inst1|Add6~18              ; 2       ;
+; music:inst1|Add6~16              ; 2       ;
+; music:inst1|Add6~14              ; 2       ;
+; music:inst1|Add6~12              ; 2       ;
+; music:inst1|Add6~10              ; 2       ;
+; music:inst1|Add6~8               ; 2       ;
+; music:inst1|Add6~6               ; 2       ;
+; music:inst1|Add6~4               ; 2       ;
+; music:inst1|Add6~2               ; 2       ;
+; music:inst1|Add6~0               ; 2       ;
 ; alu:inst2|Add2~16                ; 2       ;
 ; alu:inst2|Add2~14                ; 2       ;
 ; alu:inst2|Add2~12                ; 2       ;
@@ -1140,17 +1638,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:inst2|Add0~6                 ; 2       ;
 ; alu:inst2|Add0~4                 ; 2       ;
 ; alu:inst2|Add0~2                 ; 2       ;
+; music:inst1|MAX_song2[0]~feeder  ; 1       ;
+; music:inst1|MAX_song2[6]~feeder  ; 1       ;
+; music_on                         ; 1       ;
 ; ~GND                             ; 1       ;
 ; keyboard:inst7|OUT_col[2]~0      ; 1       ;
 ; display:inst4|state.00~0         ; 1       ;
 ; display:inst4|state.S1~0         ; 1       ;
+; music:inst1|Mux8~13              ; 1       ;
+; music:inst1|Mux8~12              ; 1       ;
+; music:inst1|Mux2~5               ; 1       ;
+; music:inst1|Mux2~4               ; 1       ;
 ; keyboard:inst7|Selector3~1       ; 1       ;
 ; keyboard:inst7|Selector3~0       ; 1       ;
+; music:inst1|Mux4~27              ; 1       ;
+; music:inst1|Mux5~37              ; 1       ;
 ; key_out:inst6|Selector1~2        ; 1       ;
+; music:inst1|n~309                ; 1       ;
+; music:inst1|n~308                ; 1       ;
 ; Core_unit:inst|Selector6~3       ; 1       ;
+; music:inst1|Mux10~16             ; 1       ;
+; music:inst1|Mux3~13              ; 1       ;
 ; keyboard:inst7|flag~1            ; 1       ;
 ; keyboard:inst7|flag~0            ; 1       ;
 ; keyboard:inst7|OUT_key~0         ; 1       ;
+; Core_unit:inst|Selector56~0      ; 1       ;
 ; Core_unit:inst|Selector55~0      ; 1       ;
 ; Core_unit:inst|Selector54~0      ; 1       ;
 ; Core_unit:inst|Selector53~0      ; 1       ;
@@ -1158,7 +1670,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Core_unit:inst|Selector51~0      ; 1       ;
 ; Core_unit:inst|Selector50~0      ; 1       ;
 ; Core_unit:inst|Selector49~0      ; 1       ;
-; Core_unit:inst|Selector48~0      ; 1       ;
+; music:inst1|n_interval~19        ; 1       ;
+; music:inst1|n_interval~18        ; 1       ;
+; music:inst1|n_interval~17        ; 1       ;
+; music:inst1|n_interval~16        ; 1       ;
+; music:inst1|n_interval~15        ; 1       ;
+; music:inst1|n_interval~14        ; 1       ;
+; music:inst1|n_interval~13        ; 1       ;
+; music:inst1|n_interval~12        ; 1       ;
+; music:inst1|n_interval~11        ; 1       ;
+; music:inst1|n_interval~10        ; 1       ;
+; music:inst1|n_interval~9         ; 1       ;
+; music:inst1|n_interval~8         ; 1       ;
+; music:inst1|n_interval~7         ; 1       ;
+; music:inst1|n_interval~6         ; 1       ;
+; music:inst1|n_interval~5         ; 1       ;
+; music:inst1|n_interval~4         ; 1       ;
+; music:inst1|n_interval~3         ; 1       ;
+; music:inst1|n_interval~2         ; 1       ;
+; music:inst1|n_interval~1         ; 1       ;
+; music:inst1|n_interval~0         ; 1       ;
 ; key_out:inst6|state~14           ; 1       ;
 ; keyboard:inst7|Selector1~8       ; 1       ;
 ; keyboard:inst7|Selector1~7       ; 1       ;
@@ -1190,33 +1721,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; key_out:inst6|temp2[0]~35        ; 1       ;
 ; Core_unit:inst|temp_h2~7         ; 1       ;
 ; key_out:inst6|temp1[0]~34        ; 1       ;
-; Core_unit:inst|Selector63~0      ; 1       ;
+; Core_unit:inst|Selector64~0      ; 1       ;
 ; Core_unit:inst|temp_h1~7         ; 1       ;
 ; Core_unit:inst|temp_h2~6         ; 1       ;
-; Core_unit:inst|Selector62~0      ; 1       ;
+; Core_unit:inst|Selector63~0      ; 1       ;
 ; Core_unit:inst|temp_h1~6         ; 1       ;
 ; Core_unit:inst|temp_h2~5         ; 1       ;
-; Core_unit:inst|Selector61~0      ; 1       ;
+; Core_unit:inst|Selector62~0      ; 1       ;
 ; Core_unit:inst|temp_h1~5         ; 1       ;
 ; Core_unit:inst|temp_h2~4         ; 1       ;
-; Core_unit:inst|Selector60~0      ; 1       ;
+; Core_unit:inst|Selector61~0      ; 1       ;
 ; Core_unit:inst|temp_h1~4         ; 1       ;
 ; Core_unit:inst|temp_h2~3         ; 1       ;
-; Core_unit:inst|Selector59~0      ; 1       ;
+; Core_unit:inst|Selector60~0      ; 1       ;
 ; Core_unit:inst|temp_h1~3         ; 1       ;
 ; Core_unit:inst|temp_h2~2         ; 1       ;
-; Core_unit:inst|Selector58~0      ; 1       ;
+; Core_unit:inst|Selector59~0      ; 1       ;
 ; Core_unit:inst|temp_h1~2         ; 1       ;
 ; Core_unit:inst|temp_h2~1         ; 1       ;
-; Core_unit:inst|Selector57~0      ; 1       ;
+; Core_unit:inst|Selector58~0      ; 1       ;
 ; Core_unit:inst|temp_h1~1         ; 1       ;
-; key_out:inst6|temp2[0]~34        ; 1       ;
-; key_out:inst6|temp2[0]~33        ; 1       ;
+; key_out:inst6|temp2[9]~34        ; 1       ;
+; key_out:inst6|temp2[9]~33        ; 1       ;
 ; Core_unit:inst|temp_h2~0         ; 1       ;
-; Core_unit:inst|Selector47~1      ; 1       ;
-; Core_unit:inst|Selector47~0      ; 1       ;
-; key_out:inst6|temp1[0]~33        ; 1       ;
-; Core_unit:inst|Selector56~0      ; 1       ;
+; Core_unit:inst|Selector48~1      ; 1       ;
+; Core_unit:inst|Selector48~0      ; 1       ;
+; key_out:inst6|temp1[4]~33        ; 1       ;
+; Core_unit:inst|Selector57~0      ; 1       ;
 ; Core_unit:inst|temp_h1~0         ; 1       ;
 ; divider:inst5|n1~30              ; 1       ;
 ; divider:inst5|n1~29              ; 1       ;
@@ -1281,7 +1812,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BCD:inst8|WideOr12~0             ; 1       ;
 ; BCD:inst8|WideOr20~0             ; 1       ;
 ; BCD:inst8|WideOr25~0             ; 1       ;
-; Core_unit:inst|Selector7~0       ; 1       ;
 ; key_out:inst6|Selector36~2       ; 1       ;
 ; key_out:inst6|Selector36~1       ; 1       ;
 ; key_out:inst6|Selector36~0       ; 1       ;
@@ -1292,691 +1822,171 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; key_out:inst6|OUT_flag~3         ; 1       ;
 ; key_out:inst6|OUT_flag~2         ; 1       ;
 ; key_out:inst6|OUT_flag~1         ; 1       ;
-; Core_unit:inst|Selector36~1      ; 1       ;
-; Core_unit:inst|Selector36~0      ; 1       ;
-; Core_unit:inst|Selector37~1      ; 1       ;
-; Core_unit:inst|Selector37~0      ; 1       ;
-; Core_unit:inst|Selector38~1      ; 1       ;
-; Core_unit:inst|Selector38~0      ; 1       ;
-; Core_unit:inst|Selector39~3      ; 1       ;
-; Core_unit:inst|Selector39~2      ; 1       ;
-; Core_unit:inst|Selector39~1      ; 1       ;
-; Core_unit:inst|Selector39~0      ; 1       ;
-; Core_unit:inst|Selector32~1      ; 1       ;
-; Core_unit:inst|Selector32~0      ; 1       ;
-; Core_unit:inst|Selector33~1      ; 1       ;
-; Core_unit:inst|Selector33~0      ; 1       ;
-; Core_unit:inst|Selector34~1      ; 1       ;
-; Core_unit:inst|Selector34~0      ; 1       ;
-; Core_unit:inst|Selector35~1      ; 1       ;
-; Core_unit:inst|Selector35~0      ; 1       ;
-; Core_unit:inst|temp_zero~0       ; 1       ;
-; Core_unit:inst|Selector46~0      ; 1       ;
-; key_out:inst6|OUT_ALU_OP~8       ; 1       ;
-; key_out:inst6|OUT_ALU_OP~7       ; 1       ;
-; key_out:inst6|OUT_ALU_OP~6       ; 1       ;
-; key_out:inst6|OUT_finish~1       ; 1       ;
-; key_out:inst6|OUT_finish~0       ; 1       ;
-; key_out:inst6|OUT_ALU_OP[1]~5    ; 1       ;
-; key_out:inst6|OUT_ALU_OP~4       ; 1       ;
-; Core_unit:inst|OUT_ALU_OP~3      ; 1       ;
-; Core_unit:inst|state~8           ; 1       ;
-; Core_unit:inst|OUT_ALU_OP~2      ; 1       ;
-; Core_unit:inst|Selector2~0       ; 1       ;
-; Core_unit:inst|Selector4~0       ; 1       ;
-; Core_unit:inst|Selector5~0       ; 1       ;
-; Core_unit:inst|Selector3~0       ; 1       ;
-; Core_unit:inst|Selector23~0      ; 1       ;
-; Core_unit:inst|temp_h2[0]        ; 1       ;
-; Core_unit:inst|Selector15~1      ; 1       ;
-; Core_unit:inst|Selector15~0      ; 1       ;
-; Core_unit:inst|Selector22~0      ; 1       ;
-; Core_unit:inst|temp_h2[1]        ; 1       ;
-; Core_unit:inst|Selector14~1      ; 1       ;
-; Core_unit:inst|Selector14~0      ; 1       ;
-; Core_unit:inst|Selector21~0      ; 1       ;
-; Core_unit:inst|temp_h2[2]        ; 1       ;
-; Core_unit:inst|Selector13~1      ; 1       ;
-; Core_unit:inst|Selector13~0      ; 1       ;
-; Core_unit:inst|Selector20~0      ; 1       ;
-; Core_unit:inst|temp_h2[3]        ; 1       ;
-; Core_unit:inst|Selector12~1      ; 1       ;
-; Core_unit:inst|Selector12~0      ; 1       ;
-; Core_unit:inst|Selector19~0      ; 1       ;
-; Core_unit:inst|temp_h2[4]        ; 1       ;
-; Core_unit:inst|Selector11~1      ; 1       ;
-; Core_unit:inst|Selector11~0      ; 1       ;
-; Core_unit:inst|Selector18~0      ; 1       ;
-; Core_unit:inst|temp_h2[5]        ; 1       ;
-; Core_unit:inst|Selector10~1      ; 1       ;
-; Core_unit:inst|Selector10~0      ; 1       ;
-; Core_unit:inst|Selector17~0      ; 1       ;
-; Core_unit:inst|temp_h2[6]        ; 1       ;
-; Core_unit:inst|Selector9~1       ; 1       ;
-; Core_unit:inst|Selector9~0       ; 1       ;
-; Core_unit:inst|Selector16~0      ; 1       ;
-; Core_unit:inst|temp_h2[7]        ; 1       ;
-; Core_unit:inst|Selector8~1       ; 1       ;
-; Core_unit:inst|Selector8~0       ; 1       ;
-; Core_unit:inst|OUT_ALU_OP~1      ; 1       ;
-; divider:inst5|OUT_clk1~0         ; 1       ;
-; divider:inst5|n1[31]             ; 1       ;
-; divider:inst5|LessThan0~7        ; 1       ;
-; divider:inst5|n1[30]             ; 1       ;
-; divider:inst5|n1[29]             ; 1       ;
-; divider:inst5|n1[28]             ; 1       ;
-; divider:inst5|LessThan0~6        ; 1       ;
-; divider:inst5|n1[27]             ; 1       ;
-; divider:inst5|n1[26]             ; 1       ;
-; divider:inst5|n1[25]             ; 1       ;
-; divider:inst5|n1[24]             ; 1       ;
-; divider:inst5|LessThan0~5        ; 1       ;
-; divider:inst5|n1[23]             ; 1       ;
-; divider:inst5|n1[22]             ; 1       ;
-; divider:inst5|n1[21]             ; 1       ;
-; divider:inst5|n1[20]             ; 1       ;
-; divider:inst5|LessThan0~4        ; 1       ;
-; divider:inst5|n1[19]             ; 1       ;
-; divider:inst5|n1[18]             ; 1       ;
-; divider:inst5|n1[17]             ; 1       ;
-; divider:inst5|n1[16]             ; 1       ;
-; divider:inst5|n1[15]             ; 1       ;
-; divider:inst5|n1[14]             ; 1       ;
-; divider:inst5|LessThan0~2        ; 1       ;
-; divider:inst5|n1[13]             ; 1       ;
-; divider:inst5|n1[12]             ; 1       ;
-; divider:inst5|n1[11]             ; 1       ;
-; divider:inst5|n1[10]             ; 1       ;
-; divider:inst5|LessThan0~1        ; 1       ;
-; divider:inst5|n1[9]              ; 1       ;
-; divider:inst5|n1[8]              ; 1       ;
-; divider:inst5|n1[7]              ; 1       ;
-; divider:inst5|LessThan0~0        ; 1       ;
-; divider:inst5|n1[6]              ; 1       ;
-; divider:inst5|n1[5]              ; 1       ;
-; divider:inst5|n1[0]              ; 1       ;
-; divider:inst5|n1[1]              ; 1       ;
-; divider:inst5|n1[2]              ; 1       ;
-; divider:inst5|n1[3]              ; 1       ;
-; divider:inst5|n1[4]              ; 1       ;
-; Core_unit:inst|OUT_state~3       ; 1       ;
-; BCD:inst8|addbcd4~26             ; 1       ;
-; BCD:inst8|addbcd4~25             ; 1       ;
-; BCD:inst8|addbcd4~24             ; 1       ;
-; BCD:inst8|Add20~3                ; 1       ;
-; BCD:inst8|Add20~0                ; 1       ;
-; BCD:inst8|addbcd4~22             ; 1       ;
-; BCD:inst8|addbcd4~21             ; 1       ;
-; BCD:inst8|addbcd4~20             ; 1       ;
-; BCD:inst8|rhexd[9]               ; 1       ;
-; BCD:inst8|rhexd[10]              ; 1       ;
-; BCD:inst8|rhexc[9]               ; 1       ;
-; BCD:inst8|Add14~2                ; 1       ;
-; BCD:inst8|rhexc[10]              ; 1       ;
-; BCD:inst8|Add14~1                ; 1       ;
-; BCD:inst8|addbcd4~17             ; 1       ;
-; BCD:inst8|rhexc[11]              ; 1       ;
-; BCD:inst8|rhexd[8]               ; 1       ;
-; BCD:inst8|rhexc[8]               ; 1       ;
-; BCD:inst8|Add14~0                ; 1       ;
-; Core_unit:inst|Selector41~5      ; 1       ;
-; Core_unit:inst|Selector41~4      ; 1       ;
-; Core_unit:inst|Selector44~2      ; 1       ;
-; Core_unit:inst|Selector42~3      ; 1       ;
-; Core_unit:inst|Selector42~2      ; 1       ;
-; Core_unit:inst|Selector41~2      ; 1       ;
-; Core_unit:inst|LessThan1~0       ; 1       ;
-; Core_unit:inst|Selector42~1      ; 1       ;
-; Core_unit:inst|Selector42~0      ; 1       ;
-; Core_unit:inst|Selector41~0      ; 1       ;
-; Core_unit:inst|LessThan0~1       ; 1       ;
-; Core_unit:inst|LessThan0~0       ; 1       ;
-; BCD:inst8|addbcd4~14             ; 1       ;
-; BCD:inst8|addbcd4~13             ; 1       ;
-; BCD:inst8|addbcd4~12             ; 1       ;
-; BCD:inst8|addbcd4~11             ; 1       ;
-; BCD:inst8|addbcd4~10             ; 1       ;
-; BCD:inst8|addbcd4~9              ; 1       ;
-; BCD:inst8|rhexc[6]               ; 1       ;
-; BCD:inst8|rhexd[7]               ; 1       ;
-; BCD:inst8|rhexc[7]               ; 1       ;
-; BCD:inst8|rhexb[6]               ; 1       ;
-; BCD:inst8|rhexb[7]               ; 1       ;
-; BCD:inst8|rhexc[5]               ; 1       ;
-; BCD:inst8|rhexb[5]               ; 1       ;
-; BCD:inst8|addbcd4~8              ; 1       ;
-; BCD:inst8|addbcd4~7              ; 1       ;
-; BCD:inst8|LessThan1~0            ; 1       ;
-; BCD:inst8|rhexa[4]               ; 1       ;
-; BCD:inst8|addbcd4~6              ; 1       ;
-; BCD:inst8|addbcd4~5              ; 1       ;
-; BCD:inst8|addbcd4~4              ; 1       ;
-; BCD:inst8|addbcd4~3              ; 1       ;
-; BCD:inst8|addbcd4~2              ; 1       ;
-; BCD:inst8|addbcd4~1              ; 1       ;
-; BCD:inst8|addbcd4~0              ; 1       ;
-; BCD:inst8|rhexd[3]               ; 1       ;
-; BCD:inst8|rhexc[2]               ; 1       ;
-; BCD:inst8|rhexc[3]               ; 1       ;
-; BCD:inst8|rhexb[2]               ; 1       ;
-; BCD:inst8|rhexa[2]               ; 1       ;
-; BCD:inst8|rhexb[3]               ; 1       ;
-; BCD:inst8|rhexa[3]               ; 1       ;
-; BCD:inst8|rhexa[1]               ; 1       ;
-; BCD:inst8|rhexa[0]               ; 1       ;
-; Core_unit:inst|Selector40~1      ; 1       ;
-; Core_unit:inst|Selector40~0      ; 1       ;
-; Core_unit:inst|Selector43~0      ; 1       ;
-; Core_unit:inst|OUT_less_than~0   ; 1       ;
-; Core_unit:inst|Selector44~1      ; 1       ;
-; Core_unit:inst|Selector44~0      ; 1       ;
-; Core_unit:inst|OUT_zero~5        ; 1       ;
-; Core_unit:inst|OUT_zero~4        ; 1       ;
-; Core_unit:inst|OUT_zero~3        ; 1       ;
-; Core_unit:inst|OUT_zero~2        ; 1       ;
-; alu:inst2|OUT_S[5]~24            ; 1       ;
-; alu:inst2|OUT_S[5]~23            ; 1       ;
-; alu:inst2|OUT_S[6]~21            ; 1       ;
-; alu:inst2|OUT_S[6]~20            ; 1       ;
-; alu:inst2|OUT_S[0]~18            ; 1       ;
-; alu:inst2|OUT_S[0]~17            ; 1       ;
-; Core_unit:inst|OUT_zero~1        ; 1       ;
-; alu:inst2|OUT_S[1]~15            ; 1       ;
-; alu:inst2|OUT_S[1]~14            ; 1       ;
-; alu:inst2|OUT_S[2]~12            ; 1       ;
-; alu:inst2|OUT_S[2]~11            ; 1       ;
-; alu:inst2|OUT_S[3]~9             ; 1       ;
-; alu:inst2|OUT_S[3]~8             ; 1       ;
-; alu:inst2|OUT_S[4]~6             ; 1       ;
-; alu:inst2|OUT_S[4]~5             ; 1       ;
-; Core_unit:inst|OUT_zero~0        ; 1       ;
-; alu:inst2|OUT_S[7]~3             ; 1       ;
-; alu:inst2|OUT_S[7]~2             ; 1       ;
-; alu:inst2|OUT_zero~12            ; 1       ;
-; alu:inst2|OUT_zero~11            ; 1       ;
-; alu:inst2|OUT_zero~10            ; 1       ;
-; alu:inst2|OUT_zero~9             ; 1       ;
-; alu:inst2|OUT_zero~8             ; 1       ;
-; alu:inst2|OUT_zero~7             ; 1       ;
-; alu:inst2|OUT_zero~6             ; 1       ;
-; alu:inst2|OUT_zero~5             ; 1       ;
-; alu:inst2|OUT_zero~4             ; 1       ;
-; alu:inst2|OUT_zero~3             ; 1       ;
-; alu:inst2|OUT_zero~2             ; 1       ;
-; alu:inst2|OUT_zero~1             ; 1       ;
-; alu:inst2|OUT_zero~0             ; 1       ;
-; alu:inst2|Equal8~2               ; 1       ;
-; alu:inst2|Equal8~1               ; 1       ;
-; alu:inst2|Equal8~0               ; 1       ;
-; alu:inst2|Equal1~2               ; 1       ;
-; alu:inst2|Equal1~1               ; 1       ;
-; alu:inst2|Equal1~0               ; 1       ;
-; Core_unit:inst|Decoder0~0        ; 1       ;
-; Core_unit:inst|OUT_carry_out~1   ; 1       ;
-; Core_unit:inst|Selector1~0       ; 1       ;
-; Core_unit:inst|Selector0~0       ; 1       ;
-; alu:inst2|OUT_carry_out~0        ; 1       ;
-; divider:inst5|OUT_clk1           ; 1       ;
-; Core_unit:inst|OUT_state[0]      ; 1       ;
-; Core_unit:inst|OUT_state[1]      ; 1       ;
-; display:inst4|Selector6          ; 1       ;
-; display:inst4|Selector6~2        ; 1       ;
-; display:inst4|Selector6~1        ; 1       ;
-; display:inst4|WideOr27~0         ; 1       ;
-; display:inst4|WideOr20~0         ; 1       ;
-; display:inst4|Selector6~0        ; 1       ;
-; display:inst4|WideOr13~0         ; 1       ;
-; display:inst4|WideOr6~1          ; 1       ;
-; display:inst4|WideOr6~0          ; 1       ;
-; display:inst4|Selector5          ; 1       ;
-; display:inst4|Selector5~2        ; 1       ;
-; display:inst4|Selector5~1        ; 1       ;
-; display:inst4|WideOr26~0         ; 1       ;
-; display:inst4|WideOr19~0         ; 1       ;
-; display:inst4|Selector5~0        ; 1       ;
-; display:inst4|WideOr12~0         ; 1       ;
-; display:inst4|WideOr5~1          ; 1       ;
-; display:inst4|WideOr5~0          ; 1       ;
-; display:inst4|Selector4          ; 1       ;
-; display:inst4|Selector4~2        ; 1       ;
-; display:inst4|Selector4~1        ; 1       ;
-; display:inst4|WideOr25~0         ; 1       ;
-; display:inst4|WideOr18~0         ; 1       ;
-; display:inst4|Selector4~0        ; 1       ;
-; display:inst4|WideOr11~0         ; 1       ;
-; display:inst4|WideOr4~1          ; 1       ;
-; display:inst4|WideOr4~0          ; 1       ;
-; display:inst4|Selector3          ; 1       ;
-; display:inst4|Selector3~2        ; 1       ;
-; display:inst4|Selector3~1        ; 1       ;
-; display:inst4|WideOr24~0         ; 1       ;
-; display:inst4|WideOr17~0         ; 1       ;
-; display:inst4|Selector3~0        ; 1       ;
-; display:inst4|WideOr10~0         ; 1       ;
-; display:inst4|WideOr3~1          ; 1       ;
-; display:inst4|WideOr3~0          ; 1       ;
-; display:inst4|Selector2          ; 1       ;
-; display:inst4|Selector2~2        ; 1       ;
-; display:inst4|Selector2~1        ; 1       ;
-; display:inst4|WideOr23~0         ; 1       ;
-; display:inst4|WideOr16~0         ; 1       ;
-; display:inst4|Selector2~0        ; 1       ;
-; display:inst4|WideOr9~0          ; 1       ;
-; display:inst4|WideOr2~1          ; 1       ;
-; display:inst4|WideOr2~0          ; 1       ;
-; display:inst4|Selector1          ; 1       ;
-; display:inst4|Selector1~5        ; 1       ;
-; display:inst4|Selector1~4        ; 1       ;
-; display:inst4|WideOr22~0         ; 1       ;
-; display:inst4|WideOr15~0         ; 1       ;
-; display:inst4|Selector1~3        ; 1       ;
-; display:inst4|WideOr8~0          ; 1       ;
-; display:inst4|WideOr1~1          ; 1       ;
-; display:inst4|WideOr1~0          ; 1       ;
-; display:inst4|Selector0          ; 1       ;
-; display:inst4|Selector0~2        ; 1       ;
-; display:inst4|Selector0~1        ; 1       ;
-; display:inst4|WideOr21~0         ; 1       ;
-; display:inst4|WideOr14~0         ; 1       ;
-; display:inst4|Selector0~0        ; 1       ;
-; display:inst4|WideOr7~0          ; 1       ;
-; display:inst4|WideOr0~1          ; 1       ;
-; display:inst4|WideOr0~0          ; 1       ;
-; keyboard:inst7|OUT_col[0]        ; 1       ;
-; keyboard:inst7|OUT_col[1]        ; 1       ;
-; keyboard:inst7|OUT_col[2]        ; 1       ;
-; keyboard:inst7|OUT_col[3]        ; 1       ;
-; Core_unit:inst|OUT_neg_ans       ; 1       ;
-; BCD:inst8|rhex[3][3]~46          ; 1       ;
-; BCD:inst8|rhex[3][2]~45          ; 1       ;
-; BCD:inst8|rhex[3][2]~44          ; 1       ;
-; BCD:inst8|rhex[3][1]~43          ; 1       ;
-; BCD:inst8|rhex[3][1]~42          ; 1       ;
-; BCD:inst8|rhex[3][0]~41          ; 1       ;
-; BCD:inst8|rhex[3][0]~40          ; 1       ;
-; BCD:inst8|rhex[2][3]~39          ; 1       ;
-; BCD:inst8|rhex[2][3]~38          ; 1       ;
-; BCD:inst8|rhex[2][2]~37          ; 1       ;
-; BCD:inst8|rhex[2][2]~36          ; 1       ;
-; BCD:inst8|rhex[2][1]~35          ; 1       ;
-; BCD:inst8|rhex[2][1]~34          ; 1       ;
-; BCD:inst8|rhex[2][0]~33          ; 1       ;
-; BCD:inst8|rhex[2][0]~32          ; 1       ;
-; BCD:inst8|rhex[1][3]~31          ; 1       ;
-; BCD:inst8|rhex[1][3]~30          ; 1       ;
-; BCD:inst8|rhex[1][2]~29          ; 1       ;
-; BCD:inst8|rhex[1][2]~28          ; 1       ;
-; BCD:inst8|rhex[1][1]~27          ; 1       ;
-; BCD:inst8|rhex[1][1]~26          ; 1       ;
-; BCD:inst8|rhex[1][0]~25          ; 1       ;
-; BCD:inst8|rhex[1][0]~24          ; 1       ;
-; BCD:inst8|rhex[0][3]~23          ; 1       ;
-; BCD:inst8|rhex[0][3]~22          ; 1       ;
-; BCD:inst8|rhex[0][2]~21          ; 1       ;
-; BCD:inst8|rhex[0][2]~20          ; 1       ;
-; BCD:inst8|rhex[0][1]~19          ; 1       ;
-; BCD:inst8|rhex[0][1]~18          ; 1       ;
-; BCD:inst8|rhex[0][0]~17          ; 1       ;
-; BCD:inst8|rhex[0][0]~16          ; 1       ;
-; key_out:inst6|temp1[15]~49       ; 1       ;
-; key_out:inst6|temp1[14]~48       ; 1       ;
-; key_out:inst6|temp1[14]~47       ; 1       ;
-; key_out:inst6|temp1[13]~46       ; 1       ;
-; key_out:inst6|temp1[13]~45       ; 1       ;
-; key_out:inst6|temp1[12]~44       ; 1       ;
-; key_out:inst6|temp1[12]~43       ; 1       ;
-; key_out:inst6|temp1[11]~42       ; 1       ;
-; key_out:inst6|temp1[11]~41       ; 1       ;
-; key_out:inst6|temp1[10]~40       ; 1       ;
-; key_out:inst6|temp1[10]~39       ; 1       ;
-; key_out:inst6|temp1[9]~38        ; 1       ;
-; key_out:inst6|temp1[9]~37        ; 1       ;
-; key_out:inst6|temp1[8]~36        ; 1       ;
-; key_out:inst6|temp1[8]~35        ; 1       ;
-; key_out:inst6|Add0~24            ; 1       ;
-; key_out:inst6|Add0~23            ; 1       ;
-; key_out:inst6|Add0~22            ; 1       ;
-; key_out:inst6|Add0~21            ; 1       ;
-; key_out:inst6|Add0~20            ; 1       ;
-; key_out:inst6|Add0~19            ; 1       ;
-; key_out:inst6|Add0~18            ; 1       ;
-; key_out:inst6|Add0~17            ; 1       ;
-; key_out:inst6|Add0~16            ; 1       ;
-; key_out:inst6|Add0~15            ; 1       ;
-; key_out:inst6|Add0~14            ; 1       ;
-; key_out:inst6|Add0~13            ; 1       ;
-; key_out:inst6|Add0~12            ; 1       ;
-; key_out:inst6|Add0~11            ; 1       ;
-; key_out:inst6|Add0~10            ; 1       ;
-; key_out:inst6|temp2[15]~50       ; 1       ;
-; key_out:inst6|temp2[14]~49       ; 1       ;
-; key_out:inst6|temp2[14]~48       ; 1       ;
-; key_out:inst6|temp2[13]~47       ; 1       ;
-; key_out:inst6|temp2[13]~46       ; 1       ;
-; key_out:inst6|temp2[12]~45       ; 1       ;
-; key_out:inst6|temp2[12]~44       ; 1       ;
-; key_out:inst6|temp2[11]~43       ; 1       ;
-; key_out:inst6|temp2[11]~42       ; 1       ;
-; key_out:inst6|temp2[10]~41       ; 1       ;
-; key_out:inst6|temp2[10]~40       ; 1       ;
-; key_out:inst6|temp2[9]~39        ; 1       ;
-; key_out:inst6|temp2[9]~38        ; 1       ;
-; key_out:inst6|temp2[8]~37        ; 1       ;
-; key_out:inst6|temp2[8]~36        ; 1       ;
-; key_out:inst6|Add3~24            ; 1       ;
-; key_out:inst6|Add3~23            ; 1       ;
-; key_out:inst6|Add3~22            ; 1       ;
-; key_out:inst6|Add3~21            ; 1       ;
-; key_out:inst6|Add3~20            ; 1       ;
-; key_out:inst6|Add3~19            ; 1       ;
-; key_out:inst6|Add3~18            ; 1       ;
-; key_out:inst6|Add3~17            ; 1       ;
-; key_out:inst6|Add3~16            ; 1       ;
-; key_out:inst6|Add3~15            ; 1       ;
-; key_out:inst6|Add3~14            ; 1       ;
-; key_out:inst6|Add3~13            ; 1       ;
-; key_out:inst6|Add3~12            ; 1       ;
-; key_out:inst6|Add3~11            ; 1       ;
-; key_out:inst6|Add3~10            ; 1       ;
-; key_out:inst6|temp2[7]~31        ; 1       ;
-; key_out:inst6|temp2[7]~30        ; 1       ;
-; key_out:inst6|temp2[6]~29        ; 1       ;
-; key_out:inst6|temp2[6]~28        ; 1       ;
-; key_out:inst6|temp2[5]~27        ; 1       ;
-; key_out:inst6|temp2[5]~26        ; 1       ;
-; key_out:inst6|temp2[4]~25        ; 1       ;
-; key_out:inst6|temp2[4]~24        ; 1       ;
-; key_out:inst6|temp2[3]~23        ; 1       ;
-; key_out:inst6|temp2[3]~22        ; 1       ;
-; key_out:inst6|temp2[2]~21        ; 1       ;
-; key_out:inst6|temp2[2]~20        ; 1       ;
-; key_out:inst6|temp2[1]~19        ; 1       ;
-; key_out:inst6|temp2[1]~18        ; 1       ;
-; key_out:inst6|Add3~9             ; 1       ;
-; key_out:inst6|Add3~8             ; 1       ;
-; key_out:inst6|Add3~7             ; 1       ;
-; key_out:inst6|Add3~6             ; 1       ;
-; key_out:inst6|Add3~5             ; 1       ;
-; key_out:inst6|Add3~4             ; 1       ;
-; key_out:inst6|Add3~3             ; 1       ;
-; key_out:inst6|Add3~2             ; 1       ;
-; key_out:inst6|Add3~1             ; 1       ;
-; key_out:inst6|Add3~0             ; 1       ;
-; key_out:inst6|temp1[7]~31        ; 1       ;
-; key_out:inst6|temp1[7]~30        ; 1       ;
-; key_out:inst6|temp1[6]~29        ; 1       ;
-; key_out:inst6|temp1[6]~28        ; 1       ;
-; key_out:inst6|temp1[5]~27        ; 1       ;
-; key_out:inst6|temp1[5]~26        ; 1       ;
-; key_out:inst6|temp1[4]~25        ; 1       ;
-; key_out:inst6|temp1[4]~24        ; 1       ;
-; key_out:inst6|temp1[3]~23        ; 1       ;
-; key_out:inst6|temp1[3]~22        ; 1       ;
-; key_out:inst6|temp1[2]~21        ; 1       ;
-; key_out:inst6|temp1[2]~20        ; 1       ;
-; key_out:inst6|temp1[1]~19        ; 1       ;
-; key_out:inst6|temp1[1]~18        ; 1       ;
-; key_out:inst6|Add0~9             ; 1       ;
-; key_out:inst6|Add0~8             ; 1       ;
-; key_out:inst6|Add0~7             ; 1       ;
-; key_out:inst6|Add0~6             ; 1       ;
-; key_out:inst6|Add0~5             ; 1       ;
-; key_out:inst6|Add0~4             ; 1       ;
-; key_out:inst6|Add0~3             ; 1       ;
-; key_out:inst6|Add0~2             ; 1       ;
-; key_out:inst6|Add0~1             ; 1       ;
-; key_out:inst6|Add0~0             ; 1       ;
-; Core_unit:inst|OUT_value[10]~3   ; 1       ;
-; Core_unit:inst|OUT_value[11]~4   ; 1       ;
-; Core_unit:inst|OUT_value[12]~5   ; 1       ;
-; Core_unit:inst|OUT_value[13]~6   ; 1       ;
-; Core_unit:inst|OUT_value[14]~7   ; 1       ;
-; Core_unit:inst|OUT_value[9]~2    ; 1       ;
-; Core_unit:inst|OUT_value[8]~1    ; 1       ;
-; BCD:inst8|rhex[0][0]             ; 1       ;
-; Core_unit:inst|OUT_value[15]~0   ; 1       ;
-; Core_unit:inst|temp_h1[0]        ; 1       ;
-; Core_unit:inst|temp_h1[1]        ; 1       ;
-; Core_unit:inst|temp_h1[2]        ; 1       ;
-; Core_unit:inst|temp_h1[3]        ; 1       ;
-; Core_unit:inst|temp_h1[4]        ; 1       ;
-; Core_unit:inst|temp_h1[5]        ; 1       ;
-; Core_unit:inst|temp_h1[6]        ; 1       ;
-; Core_unit:inst|temp_h1[7]        ; 1       ;
-; divider:inst5|Add0~61            ; 1       ;
-; divider:inst5|Add0~59            ; 1       ;
-; divider:inst5|Add0~57            ; 1       ;
-; divider:inst5|Add0~55            ; 1       ;
-; divider:inst5|Add0~53            ; 1       ;
-; divider:inst5|Add0~51            ; 1       ;
-; divider:inst5|Add0~49            ; 1       ;
-; divider:inst5|Add0~47            ; 1       ;
-; divider:inst5|Add0~45            ; 1       ;
-; divider:inst5|Add0~43            ; 1       ;
-; divider:inst5|Add0~41            ; 1       ;
-; divider:inst5|Add0~39            ; 1       ;
-; divider:inst5|Add0~37            ; 1       ;
-; divider:inst5|Add0~35            ; 1       ;
-; divider:inst5|Add0~33            ; 1       ;
-; divider:inst5|Add0~31            ; 1       ;
-; divider:inst5|Add0~29            ; 1       ;
-; divider:inst5|Add0~27            ; 1       ;
-; divider:inst5|Add0~25            ; 1       ;
-; divider:inst5|Add0~23            ; 1       ;
-; divider:inst5|Add0~21            ; 1       ;
-; divider:inst5|Add0~19            ; 1       ;
-; divider:inst5|Add0~17            ; 1       ;
-; divider:inst5|Add0~15            ; 1       ;
-; divider:inst5|Add0~13            ; 1       ;
-; divider:inst5|Add0~11            ; 1       ;
-; divider:inst5|Add0~9             ; 1       ;
-; divider:inst5|Add0~7             ; 1       ;
-; divider:inst5|Add0~6             ; 1       ;
-; divider:inst5|Add0~5             ; 1       ;
-; divider:inst5|Add0~4             ; 1       ;
-; divider:inst5|Add0~3             ; 1       ;
-; divider:inst5|Add0~2             ; 1       ;
-; divider:inst5|Add0~1             ; 1       ;
-; divider:inst5|Add0~0             ; 1       ;
-; BCD:inst8|Add15~8                ; 1       ;
-; BCD:inst8|Add16~7                ; 1       ;
-; BCD:inst8|Add16~5                ; 1       ;
-; BCD:inst8|Add16~3                ; 1       ;
-; BCD:inst8|Add15~7                ; 1       ;
-; BCD:inst8|Add15~6                ; 1       ;
-; BCD:inst8|Add15~5                ; 1       ;
-; BCD:inst8|Add15~4                ; 1       ;
-; BCD:inst8|Add15~3                ; 1       ;
-; BCD:inst8|Add15~2                ; 1       ;
-; BCD:inst8|Add13~8                ; 1       ;
-; BCD:inst8|Add16~1                ; 1       ;
-; BCD:inst8|Add16~0                ; 1       ;
-; BCD:inst8|Add15~1                ; 1       ;
-; BCD:inst8|Add15~0                ; 1       ;
-; BCD:inst8|Add11~7                ; 1       ;
-; BCD:inst8|Add11~6                ; 1       ;
-; BCD:inst8|Add13~7                ; 1       ;
-; BCD:inst8|Add13~6                ; 1       ;
-; Core_unit:inst|Add1~41           ; 1       ;
-; Core_unit:inst|Add1~38           ; 1       ;
-; Core_unit:inst|Add1~37           ; 1       ;
-; Core_unit:inst|Add1~36           ; 1       ;
-; Core_unit:inst|Add1~35           ; 1       ;
-; Core_unit:inst|Add1~34           ; 1       ;
-; Core_unit:inst|Add1~33           ; 1       ;
-; Core_unit:inst|Add1~32           ; 1       ;
-; Core_unit:inst|Add1~31           ; 1       ;
-; Core_unit:inst|Add1~30           ; 1       ;
-; Core_unit:inst|Add1~29           ; 1       ;
-; Core_unit:inst|Add1~27           ; 1       ;
-; Core_unit:inst|Add1~26           ; 1       ;
-; Core_unit:inst|Add1~23           ; 1       ;
-; Core_unit:inst|Add1~22           ; 1       ;
-; Core_unit:inst|Add1~21           ; 1       ;
-; Core_unit:inst|Add1~20           ; 1       ;
-; Core_unit:inst|Add1~18           ; 1       ;
-; Core_unit:inst|Add1~17           ; 1       ;
+; music:inst1|n~307                ; 1       ;
+; music:inst1|n~306                ; 1       ;
 +----------------------------------+---------+
 
 
-+----------------------------------------------------+
-; Other Routing Usage Summary                        ;
-+-----------------------------+----------------------+
-; Other Routing Resource Type ; Usage                ;
-+-----------------------------+----------------------+
-; Block interconnects         ; 891 / 15,666 ( 6 % ) ;
-; C16 interconnects           ; 2 / 812 ( < 1 % )    ;
-; C4 interconnects            ; 320 / 11,424 ( 3 % ) ;
-; Direct links                ; 288 / 15,666 ( 2 % ) ;
-; Global clocks               ; 2 / 8 ( 25 % )       ;
-; Local interconnects         ; 271 / 4,608 ( 6 % )  ;
-; R24 interconnects           ; 5 / 652 ( < 1 % )    ;
-; R4 interconnects            ; 358 / 13,328 ( 3 % ) ;
-+-----------------------------+----------------------+
-
-
-+----------------------------------------------------------------------------+
-; LAB Logic Elements                                                         ;
-+---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.76) ; Number of LABs  (Total = 50) ;
-+---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 4                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 2                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 7                            ;
-; 16                                          ; 30                           ;
-+---------------------------------------------+------------------------------+
-
-
-+-------------------------------------------------------------------+
-; LAB-wide Signals                                                  ;
-+------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.36) ; Number of LABs  (Total = 50) ;
-+------------------------------------+------------------------------+
-; 1 Async. clear                     ; 6                            ;
-; 1 Clock                            ; 40                           ;
-; 1 Clock enable                     ; 13                           ;
-; 1 Sync. clear                      ; 5                            ;
-; 1 Sync. load                       ; 1                            ;
-; 2 Clock enables                    ; 3                            ;
-+------------------------------------+------------------------------+
++-------------------------------------------------------+
+; Other Routing Usage Summary                           ;
++-----------------------------+-------------------------+
+; Other Routing Resource Type ; Usage                   ;
++-----------------------------+-------------------------+
+; Block interconnects         ; 2,029 / 15,666 ( 13 % ) ;
+; C16 interconnects           ; 2 / 812 ( < 1 % )       ;
+; C4 interconnects            ; 559 / 11,424 ( 5 % )    ;
+; Direct links                ; 842 / 15,666 ( 5 % )    ;
+; Global clocks               ; 3 / 8 ( 38 % )          ;
+; Local interconnects         ; 731 / 4,608 ( 16 % )    ;
+; R24 interconnects           ; 4 / 652 ( < 1 % )       ;
+; R4 interconnects            ; 824 / 13,328 ( 6 % )    ;
++-----------------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 18.62) ; Number of LABs  (Total = 50) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 2                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 2                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 2                            ;
-; 15                                           ; 4                            ;
-; 16                                           ; 7                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 4                            ;
-; 19                                           ; 5                            ;
-; 20                                           ; 5                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 3                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 1                            ;
-; 29                                           ; 2                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 1                            ;
-; 32                                           ; 2                            ;
-+----------------------------------------------+------------------------------+
+; LAB Logic Elements                                                          ;
++---------------------------------------------+-------------------------------+
+; Number of Logic Elements  (Average = 13.21) ; Number of LABs  (Total = 133) ;
++---------------------------------------------+-------------------------------+
+; 1                                           ; 3                             ;
+; 2                                           ; 6                             ;
+; 3                                           ; 3                             ;
+; 4                                           ; 5                             ;
+; 5                                           ; 2                             ;
+; 6                                           ; 1                             ;
+; 7                                           ; 2                             ;
+; 8                                           ; 2                             ;
+; 9                                           ; 4                             ;
+; 10                                          ; 2                             ;
+; 11                                          ; 2                             ;
+; 12                                          ; 2                             ;
+; 13                                          ; 1                             ;
+; 14                                          ; 4                             ;
+; 15                                          ; 8                             ;
+; 16                                          ; 86                            ;
++---------------------------------------------+-------------------------------+
+
+
++--------------------------------------------------------------------+
+; LAB-wide Signals                                                   ;
++------------------------------------+-------------------------------+
+; LAB-wide Signals  (Average = 1.08) ; Number of LABs  (Total = 133) ;
++------------------------------------+-------------------------------+
+; 1 Async. clear                     ; 4                             ;
+; 1 Clock                            ; 106                           ;
+; 1 Clock enable                     ; 15                            ;
+; 1 Sync. clear                      ; 10                            ;
+; 1 Sync. load                       ; 5                             ;
+; 2 Clock enables                    ; 1                             ;
+; 2 Clocks                           ; 2                             ;
++------------------------------------+-------------------------------+
+
+
++------------------------------------------------------------------------------+
+; LAB Signals Sourced                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Signals Sourced  (Average = 18.08) ; Number of LABs  (Total = 133) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 1                             ;
+; 2                                            ; 3                             ;
+; 3                                            ; 1                             ;
+; 4                                            ; 5                             ;
+; 5                                            ; 0                             ;
+; 6                                            ; 3                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 4                             ;
+; 9                                            ; 0                             ;
+; 10                                           ; 4                             ;
+; 11                                           ; 1                             ;
+; 12                                           ; 2                             ;
+; 13                                           ; 1                             ;
+; 14                                           ; 3                             ;
+; 15                                           ; 3                             ;
+; 16                                           ; 23                            ;
+; 17                                           ; 12                            ;
+; 18                                           ; 8                             ;
+; 19                                           ; 8                             ;
+; 20                                           ; 5                             ;
+; 21                                           ; 3                             ;
+; 22                                           ; 6                             ;
+; 23                                           ; 5                             ;
+; 24                                           ; 1                             ;
+; 25                                           ; 1                             ;
+; 26                                           ; 2                             ;
+; 27                                           ; 10                            ;
+; 28                                           ; 10                            ;
+; 29                                           ; 2                             ;
+; 30                                           ; 1                             ;
+; 31                                           ; 2                             ;
+; 32                                           ; 2                             ;
++----------------------------------------------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
-+--------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 10.18) ; Number of LABs  (Total = 50) ;
-+--------------------------------------------------+------------------------------+
-; 0                                                ; 0                            ;
-; 1                                                ; 0                            ;
-; 2                                                ; 4                            ;
-; 3                                                ; 1                            ;
-; 4                                                ; 1                            ;
-; 5                                                ; 1                            ;
-; 6                                                ; 1                            ;
-; 7                                                ; 4                            ;
-; 8                                                ; 5                            ;
-; 9                                                ; 5                            ;
-; 10                                               ; 3                            ;
-; 11                                               ; 5                            ;
-; 12                                               ; 6                            ;
-; 13                                               ; 1                            ;
-; 14                                               ; 3                            ;
-; 15                                               ; 2                            ;
-; 16                                               ; 8                            ;
-+--------------------------------------------------+------------------------------+
++-------------------------------------------------+-------------------------------+
+; Number of Signals Sourced Out  (Average = 9.41) ; Number of LABs  (Total = 133) ;
++-------------------------------------------------+-------------------------------+
+; 0                                               ; 0                             ;
+; 1                                               ; 5                             ;
+; 2                                               ; 10                            ;
+; 3                                               ; 6                             ;
+; 4                                               ; 7                             ;
+; 5                                               ; 7                             ;
+; 6                                               ; 4                             ;
+; 7                                               ; 8                             ;
+; 8                                               ; 9                             ;
+; 9                                               ; 6                             ;
+; 10                                              ; 9                             ;
+; 11                                              ; 9                             ;
+; 12                                              ; 9                             ;
+; 13                                              ; 12                            ;
+; 14                                              ; 8                             ;
+; 15                                              ; 10                            ;
+; 16                                              ; 14                            ;
++-------------------------------------------------+-------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 17.08) ; Number of LABs  (Total = 50) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 4                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 5                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 4                            ;
-; 17                                           ; 2                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 3                            ;
-; 20                                           ; 3                            ;
-; 21                                           ; 2                            ;
-; 22                                           ; 4                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 4                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 2                            ;
-; 29                                           ; 1                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
++------------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Distinct Inputs  (Average = 14.18) ; Number of LABs  (Total = 133) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 0                             ;
+; 2                                            ; 0                             ;
+; 3                                            ; 3                             ;
+; 4                                            ; 6                             ;
+; 5                                            ; 7                             ;
+; 6                                            ; 8                             ;
+; 7                                            ; 3                             ;
+; 8                                            ; 6                             ;
+; 9                                            ; 6                             ;
+; 10                                           ; 7                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 3                             ;
+; 13                                           ; 5                             ;
+; 14                                           ; 3                             ;
+; 15                                           ; 21                            ;
+; 16                                           ; 8                             ;
+; 17                                           ; 10                            ;
+; 18                                           ; 5                             ;
+; 19                                           ; 3                             ;
+; 20                                           ; 4                             ;
+; 21                                           ; 2                             ;
+; 22                                           ; 4                             ;
+; 23                                           ; 2                             ;
+; 24                                           ; 1                             ;
+; 25                                           ; 4                             ;
+; 26                                           ; 1                             ;
+; 27                                           ; 2                             ;
+; 28                                           ; 1                             ;
+; 29                                           ; 0                             ;
+; 30                                           ; 3                             ;
+; 31                                           ; 1                             ;
+; 32                                           ; 1                             ;
++----------------------------------------------+-------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -2033,28 +2043,33 @@ Info (176353): Automatically promoted node divider:inst5|OUT_clk1
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node divider:inst5|OUT_clk1~0
+Info (176353): Automatically promoted node music:inst1|clk_interval 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node music:inst1|clk_interval~0
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 2% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 4% of the available device resources in the region that extends from location X14_Y0 to location X28_Y14
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (170195): Router estimated average interconnect usage is 4% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X14_Y0 to location X28_Y14
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.75 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.64 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 22 output pins without output pin load capacitance assignment
+Warning (306006): Found 21 output pins without output pin load capacitance assignment
     Info (306007): Pin "CARRY_OUT" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "ZERO" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "LESS_THAN" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "NEG_ANS" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "music" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "CHOICE[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "CHOICE[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "CHOICE[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2071,8 +2086,6 @@ Warning (306006): Found 22 output pins without output pin load capacitance assig
     Info (306007): Pin "SEG[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "SEG[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "SEG[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "state[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "state[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
@@ -2081,9 +2094,9 @@ Warning (169174): The Reserve All Unused Pins setting has not been specified, an
 Info (144001): Generated suppressed messages file C:/altera/13.0/EX_music_cal/output_files/music_cal.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 796 megabytes
-    Info: Processing ended: Wed Jun 28 11:21:58 2017
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Processing ended: Thu Jun 29 03:25:09 2017
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +----------------------------+
