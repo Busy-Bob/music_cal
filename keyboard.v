@@ -94,7 +94,7 @@ module keyboard(input IN_clk, input[3:0] IN_row,
                     endcase
                 S2:
                     case(IN_row)
-                        4'b1000: begin OUT_value <= 1; OUT_key <= 1; flag <= 0; end
+                        4'b1000: begin OUT_value <= 3; OUT_key <= 1; flag <= 0; end
                         4'b0100: begin OUT_value <= 6; OUT_key <= 1; flag <= 0; end
                         4'b0010: begin OUT_value <= 9; OUT_key <= 1; flag <= 0; end
                         4'b0001: begin OUT_value <= 14; OUT_key <= 1; flag <= 0; end

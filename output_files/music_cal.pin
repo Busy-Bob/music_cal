@@ -183,7 +183,7 @@ COL[2]                       : 116       : output : 3.3-V LVTTL       :         
 COL[1]                       : 117       : output : 3.3-V LVTTL       :         : 3         : Y              
 COL[0]                       : 118       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : 119       :        :                   :         : 3         :                
-GND*                         : 120       :        :                   :         : 3         :                
+state[0]                     : 120       : output : 3.3-V LVTTL       :         : 3         : Y              
 nSTATUS                      : 121       :        :                   :         : 3         :                
 VCCIO3                       : 122       : power  :                   : 3.3V    : 3         :                
 CONF_DONE                    : 123       :        :                   :         : 3         :                
@@ -197,7 +197,7 @@ GND+                         : 130       :        :                   :         
 GND+                         : 131       :        :                   :         : 3         :                
 CLK                          : 132       : input  : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : 133       :        :                   :         : 3         :                
-GND*                         : 134       :        :                   :         : 3         :                
+state[1]                     : 134       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : 135       :        :                   :         : 3         :                
 VCCIO3                       : 136       : power  :                   : 3.3V    : 3         :                
 GND*                         : 137       :        :                   :         : 3         :                

@@ -20,7 +20,7 @@ module key_out(input IN_clk, input [3:0] IN_value, input IN_key, input IN_reset,
 				state = s0;
 				temp1 = 16'b0;
 				temp2 = 16'b0;
-				OUT_flag = 2'b0;
+				OUT_flag = 2'b01;
 				OUT_finish = 1'b0;
 				OUT_ALU_OP = 0;
 			end
@@ -39,10 +39,10 @@ module key_out(input IN_clk, input [3:0] IN_value, input IN_key, input IN_reset,
 					else if(IN_value > 4'h9)
 					begin
 						temp1 = 16'b0;
-						state = s2;
 						OUT_ALU_OP = IN_value;
 						OUT_flag = 2'b00;
 						temp2 = 8'b0;
+						state = s2;
 					end
 					else
 					begin
@@ -114,6 +114,7 @@ module key_out(input IN_clk, input [3:0] IN_value, input IN_key, input IN_reset,
 				begin
 					OUT_finish = 1'b1;
 					state = s0;
+					OUT_flag = 0;
 					OUT_ALU_OP = OUT_ALU_OP;
 				end
 				else if(IN_value > 4'h9)

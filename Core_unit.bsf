@@ -170,6 +170,13 @@ applicable agreement for further details.
 		(text "OUT_zero" (rect 209 155 251 167)(font "Arial" ))
 		(line (pt 272 160)(pt 256 160)(line_width 1))
 	)
+	(port
+		(pt 272 176)
+		(output)
+		(text "OUT_state[1..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "OUT_state[1..0]" (rect 188 171 251 183)(font "Arial" ))
+		(line (pt 272 176)(pt 256 176)(line_width 3))
+	)
 	(parameter
 		"s0"
 		"0"

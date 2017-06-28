@@ -50,8 +50,11 @@ module alu(input [3:0] IN_CS, input [7:0] IN_data_a, input [7:0] IN_data_b, inpu
 	end
 	else if(IN_CS == 4'hE)
 		begin
-		{OUT_carry_out,OUT_S} = IN_data_a - IN_data_b;
-		OUT_zero = 1'b0;
+		{OUT_carry_out,OUT_S} = IN_data_a - IN_data_b - !IN_carry_in;
+		if(OUT_S == 0)
+			OUT_zero = 1'b1;
+		else
+			OUT_zero = 1'b0;
 		end
 	else
 		begin
