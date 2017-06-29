@@ -9,14 +9,14 @@ module music(input IN_clk, input IN_neg_ans, input IN_music_on,
 	reg clk_interval = 0;
 	reg clk [21:0];
 	reg [19:0] MAX_n [20:0]; 
-	reg [31:0] MAX_n_interval = 781250; //16Hz
+	reg [31:0] MAX_n_interval = 1562500; //8Hz
 	
-	reg [31:0] MAX_song1 = 516; //未定
-	reg [31:0] MAX_song2 = 320; //未定
+	reg [31:0] MAX_song1 = 515; //未定
+	reg [31:0] MAX_song2 = 351; //未定
 	reg [31:0] song1 = 0;
 	reg [31:0] song2 = 0;
-	reg [5:0] content1 [515:0]; //未定
-	reg [5:0] content2 [319:0]; //未定	
+	reg [5:0] content1 [514:0]; //未定
+	reg [5:0] content2 [350:0]; //未定	
 	reg [5:0] now_Hz = 0;
 	
 	assign OUT_music = clk[now_Hz];
@@ -42,12 +42,14 @@ module music(input IN_clk, input IN_neg_ans, input IN_music_on,
 	//高音
 		MAX_n[14] = 11938;
 		MAX_n[15] = 10638;
-		MAX_n[16] = 9477;
+		MAX_n[16] = 9484;
 		MAX_n[17] = 8948;
 		MAX_n[18] = 7972;
 		MAX_n[19] = 7102;
 		MAX_n[20] = 6355;
-		MAX_n_interval = 781250;
+		
+		
+		MAX_n_interval = 1562500;
 		clk[21] = 1;
 		
 		n_interval = n_interval + 1;
@@ -101,8 +103,8 @@ module music(input IN_clk, input IN_neg_ans, input IN_music_on,
 	// 歌曲内容，最大长度
 	always @(posedge IN_clk)
 	begin
-		MAX_song1 = 516;
-		MAX_song2 = 319;
+		MAX_song1 = 515;
+		MAX_song2 = 351;
 		//每个内容占时1/16s
 		//下划线是2个重复（简谱）
 		//双下划线1个
@@ -268,8 +270,8 @@ module music(input IN_clk, input IN_neg_ans, input IN_music_on,
 		content1[147] = 9;
 		// 10
 		*/
-		$readmemh("1.txt",content1);
-		$readmemh("2.txt",content2);
+		$readmemh("3.txt",content1);
+		$readmemh("1.txt",content2);
 		
 		// content2[0] = 12;
 		// content2[1] = 15;

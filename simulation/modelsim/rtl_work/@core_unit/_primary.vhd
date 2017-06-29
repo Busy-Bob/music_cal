@@ -20,6 +20,7 @@ entity Core_unit is
         IN_state        : in     vl_logic_vector(1 downto 0);
         IN_flag         : in     vl_logic_vector(1 downto 0);
         IN_zero         : in     vl_logic;
+        IN_music_on     : in     vl_logic;
         OUT_value       : out    vl_logic_vector(15 downto 0);
         OUT_off_number  : out    vl_logic_vector(2 downto 0);
         OUT_data_a      : out    vl_logic_vector(7 downto 0);
@@ -28,7 +29,8 @@ entity Core_unit is
         OUT_carry_out   : out    vl_logic;
         OUT_neg_ans     : out    vl_logic;
         OUT_less_than   : out    vl_logic;
-        OUT_zero        : out    vl_logic
+        OUT_zero        : out    vl_logic;
+        OUT_music_on    : out    vl_logic
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of s0 : constant is 1;
