@@ -76,7 +76,7 @@ GND                          : 9         : gnd    :                   :         
 GND*                         : 10        :        :                   :         : 1         :                
 GND*                         : 11        :        :                   :         : 1         :                
 GND*                         : 12        :        :                   :         : 1         :                
-pin_name1                    : 13        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 13        :        :                   :         : 1         :                
 GND*                         : 14        :        :                   :         : 1         :                
 GND*                         : 15        :        :                   :         : 1         :                
 TDO                          : 16        : output :                   :         : 1         :                

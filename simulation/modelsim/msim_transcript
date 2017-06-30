@@ -10,197 +10,199 @@
 # ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/debug.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module debug
+# 
+# Top level modules:
+# 	debug
 # vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/key_out.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module key_out
 # 
 # Top level modules:
 # 	key_out
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim {C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/alu.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_out_vlg_tst
+# -- Compiling module alu
 # 
 # Top level modules:
-# 	key_out_vlg_tst
+# 	alu
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/Core_unit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Core_unit
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  key_out_vlg_tst
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps key_out_vlg_tst 
-# Loading work.key_out_vlg_tst
+# Top level modules:
+# 	Core_unit
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim {C:/altera/13.0/EX_music_cal/simulation/modelsim/debug.vt}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module debug_vlg_tst
+# 
+# Top level modules:
+# 	debug_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  debug_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps debug_vlg_tst 
+# Loading work.debug_vlg_tst
+# Loading work.debug
 # Loading work.key_out
+# Loading work.alu
+# Loading work.Core_unit
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 2 us
-add wave -position end  sim:/key_out_vlg_tst/i1/number_flag
-add wave -position end  sim:/key_out_vlg_tst/i1/ans_delay
-add wave -position end  sim:/key_out_vlg_tst/i1/number_stack
-add wave -position end  sim:/key_out_vlg_tst/i1/op_stack
+# run 2 ns
+restart
+do music_cal_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/debug.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module debug
+# 
+# Top level modules:
+# 	debug
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/key_out.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_out
+# 
+# Top level modules:
+# 	key_out
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/Core_unit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Core_unit
+# 
+# Top level modules:
+# 	Core_unit
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim {C:/altera/13.0/EX_music_cal/simulation/modelsim/debug.vt}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module debug_vlg_tst
+# 
+# Top level modules:
+# 	debug_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  debug_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps debug_vlg_tst 
+# Loading work.debug_vlg_tst
+# Loading work.debug
+# Loading work.key_out
+# Loading work.alu
+# Loading work.Core_unit
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 2 ns
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/number_flag
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/op_stack
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/number_stack
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_finish
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_SRCH
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_SRCL
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_DSTH
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_DSTL
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_ALU_OP
 restart
 run
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/IN_ans
+restart
 run
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/ans_delay
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/state
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/temp1
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/temp2
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_calculating
+restart
 run
+do music_cal_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/debug.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module debug
+# 
+# Top level modules:
+# 	debug
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/key_out.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_out
+# 
+# Top level modules:
+# 	key_out
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/Core_unit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Core_unit
+# 
+# Top level modules:
+# 	Core_unit
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim {C:/altera/13.0/EX_music_cal/simulation/modelsim/debug.vt}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module debug_vlg_tst
+# 
+# Top level modules:
+# 	debug_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  debug_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps debug_vlg_tst 
+# Loading work.debug_vlg_tst
+# Loading work.debug
+# Loading work.key_out
+# Loading work.alu
+# Loading work.Core_unit
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 2 ns
 run
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/IN_ans
+restart
 run
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_finish
+restart
 run
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_SRCH
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_SRCL
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_DSTH
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_DSTL
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/OUT_ALU_OP
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/op_stack
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/number_stack
+restart
 run
-run
-run
-run
+add wave -position end  sim:/debug_vlg_tst/i1/b2v_inst/state
+restart
 run
 # WARNING: No extended dataflow license exists
-do music_cal_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/key_out.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_out
-# 
-# Top level modules:
-# 	key_out
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim {C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_out_vlg_tst
-# 
-# Top level modules:
-# 	key_out_vlg_tst
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  key_out_vlg_tst
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps key_out_vlg_tst 
-# Loading work.key_out_vlg_tst
-# Loading work.key_out
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 2 us
-add wave -position end  sim:/key_out_vlg_tst/i1/number_stack
-restart
-add wave -position end  sim:/key_out_vlg_tst/i1/ans_delay
-add wave -position end  sim:/key_out_vlg_tst/i1/op_stack
-add wave -position end  sim:/key_out_vlg_tst/i1/temp1
-add wave -position end  sim:/key_out_vlg_tst/i1/temp2
-add wave -position 16  sim:/key_out_vlg_tst/i1/number_flag
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-do music_cal_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/key_out.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_out
-# 
-# Top level modules:
-# 	key_out
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim {C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_out_vlg_tst
-# 
-# Top level modules:
-# 	key_out_vlg_tst
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  key_out_vlg_tst
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps key_out_vlg_tst 
-# Loading work.key_out_vlg_tst
-# Loading work.key_out
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 2 us
-do music_cal_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/key_out.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_out
-# 
-# Top level modules:
-# 	key_out
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim {C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_out_vlg_tst
-# 
-# Top level modules:
-# 	key_out_vlg_tst
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  key_out_vlg_tst
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps key_out_vlg_tst 
-# Loading work.key_out_vlg_tst
-# Loading work.key_out
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 2 us
-do music_cal_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal {C:/altera/13.0/EX_music_cal/key_out.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_out
-# 
-# Top level modules:
-# 	key_out
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0/EX_music_cal/simulation/modelsim {C:/altera/13.0/EX_music_cal/simulation/modelsim/key_out.vt}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_out_vlg_tst
-# 
-# Top level modules:
-# 	key_out_vlg_tst
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  key_out_vlg_tst
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps key_out_vlg_tst 
-# Loading work.key_out_vlg_tst
-# Loading work.key_out
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 2 us

@@ -1,5 +1,5 @@
 Flow report for music_cal
-Fri Jun 30 20:55:48 2017
+Sat Jul 01 00:40:25 2017
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Jun 30 20:55:48 2017       ;
+; Flow Status                        ; Successful - Sat Jul 01 00:40:25 2017       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; music_cal                                   ;
 ; Top-level Entity Name              ; music_cal                                   ;
 ; Family                             ; Cyclone II                                  ;
 ; Device                             ; EP2C5Q208C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,538 / 4,608 ( 55 % )                      ;
-;     Total combinational functions  ; 2,521 / 4,608 ( 55 % )                      ;
-;     Dedicated logic registers      ; 775 / 4,608 ( 17 % )                        ;
-; Total registers                    ; 775                                         ;
-; Total pins                         ; 34 / 142 ( 24 % )                           ;
+; Total logic elements               ; 2,614 / 4,608 ( 57 % )                      ;
+;     Total combinational functions  ; 2,588 / 4,608 ( 56 % )                      ;
+;     Dedicated logic registers      ; 780 / 4,608 ( 17 % )                        ;
+; Total registers                    ; 780                                         ;
+; Total pins                         ; 33 / 142 ( 23 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                              ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/30/2017 20:55:10 ;
+; Start date & time ; 07/01/2017 00:39:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; music_cal           ;
 +-------------------+---------------------+
@@ -75,27 +75,32 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 190078352558919.149882731005188 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 190078352558919.149884078700556 ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; alu            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; key_out        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; BCD            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; debug          ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                              ; --            ; --          ; eda_simulation ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; key_out                         ; --            ; --          ; eda_simulation ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; debug                           ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                 ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/alu.vt      ; --            ; --          ; alu            ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/key_out.vt  ; --            ; --          ; key_out        ;
 ; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/BCD.vt      ; --            ; --          ; BCD            ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/debug.vt    ; --            ; --          ; debug          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; alu_vlg_tst                     ; --            ; --          ; alu            ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; key_out_vlg_tst                 ; --            ; --          ; key_out        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; BCD_vlg_tst                     ; --            ; --          ; BCD            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; debug_vlg_tst                   ; --            ; --          ; debug          ;
 ; EDA_TEST_BENCH_NAME                  ; alu                             ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; key_out                         ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; BCD                             ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; debug                           ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 2 us                            ; --            ; --          ; alu            ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 2 us                            ; --            ; --          ; key_out        ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 2 us                            ; --            ; --          ; BCD            ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 2 ns                            ; --            ; --          ; debug          ;
 ; EDA_TIME_SCALE                       ; 1 ps                            ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                               ; --            ; --          ; --             ;
@@ -111,12 +116,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 462 MB              ; 00:00:10                           ;
-; Fitter                    ; 00:00:16     ; 1.3                     ; 793 MB              ; 00:00:18                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 470 MB              ; 00:00:11                           ;
+; Fitter                    ; 00:00:16     ; 1.2                     ; 800 MB              ; 00:00:18                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 427 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 443 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 409 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:31                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 443 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 398 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:33                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -28,7 +28,7 @@
 module key_out_vlg_tst();
 // constants                                           
 // general purpose registers
-reg eachvec;
+//reg eachvec;
 // test vector input registers
 reg [15:0] IN_ans;
 reg IN_clk;
@@ -45,6 +45,7 @@ wire [7:0]  OUT_SRCL;
 wire OUT_finish;
 wire [1:0]  OUT_flag;
 wire [1:0]  OUT_state;
+wire [3:0] OUT_calculating;
 
 // assign statements (if any)                          
 key_out i1 (
@@ -62,7 +63,8 @@ key_out i1 (
 	.OUT_SRCL(OUT_SRCL),
 	.OUT_finish(OUT_finish),
 	.OUT_flag(OUT_flag),
-	.OUT_state(OUT_state)
+	.OUT_state(OUT_state),
+	.OUT_calculating(OUT_calculating)
 );
 initial                                                
 begin                                                  
@@ -80,16 +82,16 @@ begin
 #80 IN_value = 4'h1;
 #0 IN_key = 1;
 #40  IN_key = 0;    
-//#80 IN_value = 4'hB;
-//#0 IN_key = 1;
-//#40  IN_key = 0;  
-//#80 IN_value = 4'h1;
-//#0 IN_key = 1;
-//#40  IN_key = 0; 
-//#40 IN_ans = 4'h2; 
+#80 IN_value = 4'hC;
+#0 IN_key = 1;
+#40  IN_key = 0;  
+#80 IN_value = 4'h1;
+#0 IN_key = 1;
+#40  IN_key = 0; 
 #160 IN_value = 4'hF;
 #0 IN_key = 1;
 #40  IN_key = 0; 
+#80 IN_ans = 4'h2; 
                                                       
 // --> end                                             
 //$display("Running testbench");                       

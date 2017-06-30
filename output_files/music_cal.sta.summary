@@ -3,27 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'divider:inst5|OUT_clk1'
-Slack : -21.801
-TNS   : -2486.870
+Slack : -21.761
+TNS   : -2740.047
 
 Type  : Slow Model Setup 'music:inst1|clk_interval'
-Slack : -9.711
-TNS   : -368.383
+Slack : -9.597
+TNS   : -359.311
 
 Type  : Slow Model Setup 'CLK'
-Slack : -7.687
-TNS   : -2095.371
+Slack : -7.753
+TNS   : -2101.257
 
 Type  : Slow Model Hold 'CLK'
-Slack : -2.610
-TNS   : -5.210
+Slack : -2.624
+TNS   : -5.216
+
+Type  : Slow Model Hold 'music:inst1|clk_interval'
+Slack : 0.276
+TNS   : 0.000
 
 Type  : Slow Model Hold 'divider:inst5|OUT_clk1'
 Slack : 0.499
-TNS   : 0.000
-
-Type  : Slow Model Hold 'music:inst1|clk_interval'
-Slack : 1.164
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLK'
@@ -32,34 +32,34 @@ TNS   : -568.829
 
 Type  : Slow Model Minimum Pulse Width 'divider:inst5|OUT_clk1'
 Slack : -0.742
-TNS   : -498.624
+TNS   : -506.044
 
 Type  : Slow Model Minimum Pulse Width 'music:inst1|clk_interval'
 Slack : -0.742
 TNS   : -84.588
 
 Type  : Fast Model Setup 'divider:inst5|OUT_clk1'
-Slack : -5.758
-TNS   : -557.617
+Slack : -5.720
+TNS   : -648.308
 
 Type  : Fast Model Setup 'music:inst1|clk_interval'
-Slack : -2.255
-TNS   : -82.158
+Slack : -2.295
+TNS   : -80.201
 
 Type  : Fast Model Setup 'CLK'
-Slack : -1.906
-TNS   : -408.766
+Slack : -1.960
+TNS   : -415.689
 
 Type  : Fast Model Hold 'CLK'
-Slack : -1.413
-TNS   : -2.822
+Slack : -1.427
+TNS   : -2.824
+
+Type  : Fast Model Hold 'music:inst1|clk_interval'
+Slack : 0.080
+TNS   : 0.000
 
 Type  : Fast Model Hold 'divider:inst5|OUT_clk1'
 Slack : 0.215
-TNS   : 0.000
-
-Type  : Fast Model Hold 'music:inst1|clk_interval'
-Slack : 0.357
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLK'
@@ -68,7 +68,7 @@ TNS   : -383.380
 
 Type  : Fast Model Minimum Pulse Width 'divider:inst5|OUT_clk1'
 Slack : -0.500
-TNS   : -336.000
+TNS   : -341.000
 
 Type  : Fast Model Minimum Pulse Width 'music:inst1|clk_interval'
 Slack : -0.500
