@@ -13,23 +13,23 @@
 // s1 第二列 2 5 8 =(F)
 // s2 第三列 3 6 9 cmp(E)
 // s3 第四列 +(A) -(B) and(C) or(D) 
-
-// debug 比较的时候不显示数字
+ 
 // 回去s0的条件是输入状态非s0；
 module Core_unit(input IN_clk, input IN_carry_in, input [7:0] IN_SRCH, input [7:0] IN_SRCL, input [7:0] IN_DSTH, input [7:0] IN_DSTL, 
 						input [7:0] IN_S, input [3:0] IN_ALU_OP, input IN_finish, input [1:0] IN_state, input [1:0] IN_flag, input IN_zero, input IN_music_on,
 						output reg [15:0] OUT_value, output reg [2:0] OUT_off_number, output reg [7:0] OUT_data_a, output reg [7:0] OUT_data_b,
-						output reg [3:0] OUT_ALU_OP, output reg OUT_carry_out, output reg OUT_neg_ans, output reg OUT_less_than, output reg OUT_zero,output reg OUT_music_on);
+						output reg [3:0] OUT_ALU_OP, output reg OUT_carry_out, output reg OUT_neg_ans, output reg OUT_less_than, output reg  OUT_zero,output reg OUT_music_on, output reg [1:0] state);
 
 	reg [7:0] temp_h1 = 0;
 	reg [7:0] temp_h2 = 0;
 	reg [3:0] temp_op = 0;
 	reg [15:0] temp_ans = 0;
 	reg temp_zero = 0;
-	reg [1:0] state = 0;
+	//reg [1:0] state = 0;
 	reg flag = 0; // 用于检测是否在结果之后再次按了一个符号
 	parameter s0 = 0, s1 = 1, s2 = 2, s3 = 3;
 	// 输出变量清零 waiting
+	// 加一个 out_value清零情况
 	always @(posedge IN_clk)
 	begin
 	case(state)
@@ -43,21 +43,10 @@ module Core_unit(input IN_clk, input IN_carry_in, input [7:0] IN_SRCH, input [7:
 				temp_op = IN_ALU_OP;
 				OUT_ALU_OP = IN_ALU_OP;
 				state = s1;
-				if(!flag)
-				begin
-					OUT_data_a = IN_SRCL;
-					OUT_data_b = IN_DSTL;
-					temp_h1 = IN_SRCH;
-					temp_h2 = IN_DSTH;
-				end
-				else
-				begin
-					OUT_data_a = temp_ans[7:0];
-					OUT_data_b = IN_DSTL;
-					temp_h1 = temp_ans[15:8];
-					temp_h2 = IN_DSTH;
-				end
-
+				OUT_data_a = IN_SRCL;
+				OUT_data_b = IN_DSTL;
+				temp_h1 = IN_SRCH;
+				temp_h2 = IN_DSTH;
 			end
 			else
 /*			begin
@@ -209,15 +198,15 @@ module Core_unit(input IN_clk, input IN_carry_in, input [7:0] IN_SRCH, input [7:
 			else
 				OUT_neg_ans = 1'b0;
 			temp_ans = OUT_value;
-			if(OUT_value[15])
-				OUT_value = ~OUT_value + 1;
+			if(temp_ans[15])
+				temp_ans = ~temp_ans + 1;
 			else
-				OUT_value = OUT_value;
-			if(OUT_value >= 1000)
+				temp_ans = temp_ans;
+			if(temp_ans >= 1000)
 				OUT_off_number = 0;
-			else if(OUT_value >= 100)
+			else if(temp_ans >= 100)
 				OUT_off_number = 3'd1;
-			else if(OUT_value >= 10)
+			else if(temp_ans >= 10)
 				OUT_off_number = 3'd2;
 			else
 				OUT_off_number = 3'd3;
@@ -235,18 +224,10 @@ module Core_unit(input IN_clk, input IN_carry_in, input [7:0] IN_SRCH, input [7:
 				OUT_music_on = 1'b0;
 			else
 				OUT_music_on = OUT_music_on;
-			if(IN_state == s2)
-			begin
-				state = s0;
-				flag = 1'b1;
-			end
-			else if(IN_state != s0 || IN_flag != 0)
-			begin
-				state = s0;
-				flag = 0;
-			end
-			else
+			if((IN_state == s0 && IN_flag != 3)) //增加清零 与reset配合
 				state = s3;
+			else
+				state = s0;
 		end
 		default:
 		begin

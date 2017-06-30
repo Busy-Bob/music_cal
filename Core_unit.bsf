@@ -184,6 +184,13 @@ applicable agreement for further details.
 		(text "OUT_music_on" (rect 187 171 251 183)(font "Arial" ))
 		(line (pt 272 176)(pt 256 176)(line_width 1))
 	)
+	(port
+		(pt 272 192)
+		(output)
+		(text "state[1..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "state[1..0]" (rect 214 187 251 199)(font "Arial" ))
+		(line (pt 272 192)(pt 256 192)(line_width 3))
+	)
 	(parameter
 		"s0"
 		"0"

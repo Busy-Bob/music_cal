@@ -1,5 +1,5 @@
 Analysis & Synthesis report for music_cal
-Thu Jun 29 10:15:51 2017
+Fri Jun 30 20:55:20 2017
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -15,20 +15,19 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |music_cal|display:inst4|state
   9. State Machine - |music_cal|keyboard:inst7|state
- 10. State Machine - |music_cal|key_out:inst6|state
- 11. State Machine - |music_cal|Core_unit:inst|state
- 12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Parameter Settings for User Entity Instance: Core_unit:inst
- 18. Parameter Settings for User Entity Instance: key_out:inst6
- 19. Parameter Settings for User Entity Instance: anti_shake:inst3
- 20. Parameter Settings for User Entity Instance: keyboard:inst7
- 21. Parameter Settings for User Entity Instance: display:inst4
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 10. State Machine - |music_cal|key_out:inst9|state
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: Core_unit:inst6
+ 17. Parameter Settings for User Entity Instance: key_out:inst9
+ 18. Parameter Settings for User Entity Instance: anti_shake:inst3
+ 19. Parameter Settings for User Entity Instance: keyboard:inst7
+ 20. Parameter Settings for User Entity Instance: display:inst4
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -54,16 +53,16 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 29 10:15:51 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 30 20:55:20 2017       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; music_cal                                   ;
 ; Top-level Entity Name              ; music_cal                                   ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 1,780                                       ;
-;     Total combinational functions  ; 1,765                                       ;
-;     Dedicated logic registers      ; 656                                         ;
-; Total registers                    ; 656                                         ;
-; Total pins                         ; 28                                          ;
+; Total logic elements               ; 2,535                                       ;
+;     Total combinational functions  ; 2,521                                       ;
+;     Dedicated logic registers      ; 775                                         ;
+; Total registers                    ; 775                                         ;
+; Total pins                         ; 34                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -198,28 +197,28 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,780 ;
+; Estimated Total logic elements              ; 2,535 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1765  ;
+; Total combinational functions               ; 2521  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 669   ;
-;     -- 3 input functions                    ; 295   ;
-;     -- <=2 input functions                  ; 801   ;
+;     -- 4 input functions                    ; 1284  ;
+;     -- 3 input functions                    ; 382   ;
+;     -- <=2 input functions                  ; 855   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1208  ;
-;     -- arithmetic mode                      ; 557   ;
+;     -- normal mode                          ; 1965  ;
+;     -- arithmetic mode                      ; 556   ;
 ;                                             ;       ;
-; Total registers                             ; 656   ;
-;     -- Dedicated logic registers            ; 656   ;
+; Total registers                             ; 775   ;
+;     -- Dedicated logic registers            ; 775   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 28    ;
+; I/O pins                                    ; 34    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; CLK   ;
 ; Maximum fan-out                             ; 382   ;
-; Total fan-out                               ; 6756  ;
-; Average fan-out                             ; 2.76  ;
+; Total fan-out                               ; 10164 ;
+; Average fan-out                             ; 3.05  ;
 +---------------------------------------------+-------+
 
 
@@ -228,16 +227,16 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
-; |music_cal                 ; 1765 (1)          ; 656 (0)      ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |music_cal                  ;              ;
+; |music_cal                 ; 2521 (1)          ; 775 (0)      ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |music_cal                  ;              ;
 ;    |BCD:inst8|             ; 157 (157)         ; 67 (67)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|BCD:inst8        ;              ;
-;    |Core_unit:inst|        ; 188 (188)         ; 86 (86)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|Core_unit:inst   ;              ;
-;    |alu:inst2|             ; 68 (68)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|alu:inst2        ;              ;
+;    |Core_unit:inst6|       ; 145 (145)         ; 67 (67)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|Core_unit:inst6  ;              ;
+;    |alu:inst2|             ; 78 (78)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|alu:inst2        ;              ;
 ;    |anti_shake:inst3|      ; 3 (3)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|anti_shake:inst3 ;              ;
 ;    |display:inst4|         ; 68 (68)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|display:inst4    ;              ;
 ;    |divider:inst5|         ; 74 (74)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|divider:inst5    ;              ;
-;    |key_out:inst6|         ; 91 (91)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|key_out:inst6    ;              ;
-;    |keyboard:inst7|        ; 34 (34)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|keyboard:inst7   ;              ;
-;    |music:inst1|           ; 1081 (1081)       ; 406 (406)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|music:inst1      ;              ;
+;    |key_out:inst9|         ; 870 (870)         ; 181 (181)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|key_out:inst9    ;              ;
+;    |keyboard:inst7|        ; 33 (33)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|keyboard:inst7   ;              ;
+;    |music:inst1|           ; 1092 (1092)       ; 406 (406)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |music_cal|music:inst1      ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -270,20 +269,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +------------------------------------------------------+
-; State Machine - |music_cal|key_out:inst6|state       ;
-+----------+----------+----------+----------+----------+
-; Name     ; state.s3 ; state.s2 ; state.s1 ; state.00 ;
-+----------+----------+----------+----------+----------+
-; state.00 ; 0        ; 0        ; 0        ; 0        ;
-; state.s1 ; 0        ; 0        ; 1        ; 1        ;
-; state.s2 ; 0        ; 1        ; 0        ; 1        ;
-; state.s3 ; 1        ; 0        ; 0        ; 1        ;
-+----------+----------+----------+----------+----------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------+
-; State Machine - |music_cal|Core_unit:inst|state      ;
+; State Machine - |music_cal|key_out:inst9|state       ;
 +----------+----------+----------+----------+----------+
 ; Name     ; state.s3 ; state.s2 ; state.s1 ; state.00 ;
 +----------+----------+----------+----------+----------+
@@ -3317,16 +3303,14 @@ Encoding Type:  One-Hot
 ; display:inst4|state~3                    ; Lost fanout                            ;
 ; keyboard:inst7|state~2                   ; Lost fanout                            ;
 ; keyboard:inst7|state~3                   ; Lost fanout                            ;
-; key_out:inst6|state~8                    ; Lost fanout                            ;
-; key_out:inst6|state~9                    ; Lost fanout                            ;
-; Core_unit:inst|state~3                   ; Lost fanout                            ;
-; Core_unit:inst|state~4                   ; Lost fanout                            ;
+; key_out:inst9|state~6                    ; Lost fanout                            ;
+; key_out:inst9|state~7                    ; Lost fanout                            ;
 ; keyboard:inst7|state.S3                  ; Merged with display:inst4|state.S3     ;
 ; keyboard:inst7|state.S2                  ; Merged with display:inst4|state.S2     ;
 ; keyboard:inst7|state.S1                  ; Merged with display:inst4|state.S1     ;
 ; keyboard:inst7|state.00                  ; Merged with display:inst4|state.00     ;
 ; music:inst1|n_interval[21..24]           ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 3099 ;                                        ;
+; Total Number of Removed Registers = 3097 ;                                        ;
 +------------------------------------------+----------------------------------------+
 
 
@@ -3384,12 +3368,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 656   ;
-; Number of registers using Synchronous Clear  ; 94    ;
-; Number of registers using Synchronous Load   ; 28    ;
-; Number of registers using Asynchronous Clear ; 43    ;
+; Total registers                              ; 775   ;
+; Number of registers using Synchronous Clear  ; 76    ;
+; Number of registers using Synchronous Load   ; 85    ;
+; Number of registers using Asynchronous Clear ; 147   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 151   ;
+; Number of registers using Clock Enable       ; 288   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -3399,55 +3383,72 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; key_out:inst6|OUT_flag[0]              ; 10      ;
-; Total number of inverted registers = 1 ;         ;
+; key_out:inst9|OUT_flag[1]              ; 40      ;
+; key_out:inst9|OUT_flag[0]              ; 42      ;
+; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |music_cal|music:inst1|song1[8]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |music_cal|music:inst1|song2[29]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |music_cal|Core_unit:inst|temp_h1[7]    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |music_cal|keyboard:inst7|flag[1]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |music_cal|Core_unit:inst|OUT_ALU_OP[3] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |music_cal|BCD:inst8|resa[3]            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |music_cal|BCD:inst8|resb[2]            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |music_cal|BCD:inst8|resd[2]            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |music_cal|BCD:inst8|resc[3]            ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |music_cal|Core_unit:inst|OUT_data_b[3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |music_cal|Core_unit:inst|OUT_data_a[5] ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |music_cal|Core_unit:inst|OUT_value[15] ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |music_cal|Core_unit:inst|OUT_value[4]  ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |music_cal|key_out:inst6|OUT_ALU_OP[2]  ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 16 LEs               ; 80 LEs                 ; Yes        ; |music_cal|key_out:inst6|temp1[4]       ;
-; 10:1               ; 16 bits   ; 96 LEs        ; 16 LEs               ; 80 LEs                 ; Yes        ; |music_cal|key_out:inst6|temp2[9]       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |music_cal|key_out:inst6|state          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |music_cal|BCD:inst8|addbcd4            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |music_cal|BCD:inst8|addbcd4            ;
-; 16:1               ; 9 bits    ; 90 LEs        ; 36 LEs               ; 54 LEs                 ; No         ; |music_cal|alu:inst2|OUT_zero           ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |music_cal|display:inst4|Selector1      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |music_cal|music:inst1|song1[24]          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |music_cal|music:inst1|song2[1]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |music_cal|Core_unit:inst6|OUT_ALU_OP[2]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |music_cal|keyboard:inst7|flag[0]         ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |music_cal|Core_unit:inst6|OUT_data_b[3]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |music_cal|BCD:inst8|resa[3]              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |music_cal|BCD:inst8|resb[3]              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |music_cal|BCD:inst8|resd[2]              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |music_cal|BCD:inst8|resc[3]              ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |music_cal|Core_unit:inst6|OUT_value[15]  ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |music_cal|Core_unit:inst6|OUT_value[2]   ;
+; 10:1               ; 12 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |music_cal|key_out:inst9|temp2[4]         ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |music_cal|key_out:inst9|temp2[2]         ;
+; 10:1               ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |music_cal|key_out:inst9|temp1[14]        ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 8 LEs                ; 28 LEs                 ; Yes        ; |music_cal|key_out:inst9|temp_op[0]       ;
+; 19:1               ; 4 bits    ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; Yes        ; |music_cal|key_out:inst9|op_stack[0]      ;
+; 19:1               ; 24 bits   ; 288 LEs       ; 96 LEs               ; 192 LEs                ; Yes        ; |music_cal|key_out:inst9|op_stack[24]     ;
+; 21:1               ; 16 bits   ; 224 LEs       ; 32 LEs               ; 192 LEs                ; Yes        ; |music_cal|key_out:inst9|number_stack[49] ;
+; 21:1               ; 16 bits   ; 224 LEs       ; 32 LEs               ; 192 LEs                ; Yes        ; |music_cal|key_out:inst9|number_stack[41] ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |music_cal|key_out:inst9|op_stack[29]     ;
+; 22:1               ; 16 bits   ; 224 LEs       ; 32 LEs               ; 192 LEs                ; Yes        ; |music_cal|key_out:inst9|number_stack[28] ;
+; 21:1               ; 16 bits   ; 224 LEs       ; 64 LEs               ; 160 LEs                ; Yes        ; |music_cal|key_out:inst9|OUT_SRCH[4]      ;
+; 21:1               ; 16 bits   ; 224 LEs       ; 48 LEs               ; 176 LEs                ; Yes        ; |music_cal|key_out:inst9|OUT_DSTH[0]      ;
+; 25:1               ; 16 bits   ; 256 LEs       ; 64 LEs               ; 192 LEs                ; Yes        ; |music_cal|key_out:inst9|number_stack[0]  ;
+; 25:1               ; 3 bits    ; 48 LEs        ; 9 LEs                ; 39 LEs                 ; Yes        ; |music_cal|key_out:inst9|number_flag[3]   ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 8 LEs                ; 52 LEs                 ; Yes        ; |music_cal|key_out:inst9|OUT_ALU_OP[2]    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |music_cal|key_out:inst9|state            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |music_cal|key_out:inst9|temp1            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |music_cal|key_out:inst9|ans_delay        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |music_cal|BCD:inst8|addbcd4              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |music_cal|BCD:inst8|addbcd4              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |music_cal|key_out:inst9|state            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |music_cal|key_out:inst9|temp_op          ;
+; 16:1               ; 9 bits    ; 90 LEs        ; 36 LEs               ; 54 LEs                 ; No         ; |music_cal|alu:inst2|OUT_S[1]             ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; No         ; |music_cal|key_out:inst9|temp1            ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; No         ; |music_cal|key_out:inst9|temp2            ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |music_cal|display:inst4|Selector6        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Core_unit:inst ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; s0             ; 0     ; Signed Integer                     ;
-; s1             ; 1     ; Signed Integer                     ;
-; s2             ; 2     ; Signed Integer                     ;
-; s3             ; 3     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Core_unit:inst6 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; s0             ; 0     ; Signed Integer                      ;
+; s1             ; 1     ; Signed Integer                      ;
+; s2             ; 2     ; Signed Integer                      ;
+; s3             ; 3     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: key_out:inst6 ;
+; Parameter Settings for User Entity Instance: key_out:inst9 ;
 +----------------+-------+-----------------------------------+
 ; Parameter Name ; Value ; Type                              ;
 +----------------+-------+-----------------------------------+
@@ -3518,7 +3519,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -3528,7 +3529,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu Jun 29 10:15:42 2017
+    Info: Processing started: Fri Jun 30 20:55:09 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off music_cal -c music_cal
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file divider.v
@@ -3537,6 +3538,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file display
     Info (12023): Found entity 1: display
 Info (12021): Found 1 design units, including 1 entities, in source file keyboard.v
     Info (12023): Found entity 1: keyboard
+Warning (10463): Verilog HDL Declaration warning at key_out.v(489): "priority" is SystemVerilog-2005 keyword
 Info (12021): Found 1 design units, including 1 entities, in source file key_out.v
     Info (12023): Found entity 1: key_out
 Info (12021): Found 1 design units, including 1 entities, in source file anti_shake.v
@@ -3551,14 +3553,36 @@ Info (12021): Found 1 design units, including 1 entities, in source file music_c
     Info (12023): Found entity 1: music_cal
 Info (12021): Found 1 design units, including 1 entities, in source file music.v
     Info (12023): Found entity 1: music
+Info (12021): Found 1 design units, including 1 entities, in source file test.v
+    Info (12023): Found entity 1: test
 Info (12127): Elaborating entity "music_cal" for the top level hierarchy
 Warning (275011): Block or symbol "alu" of instance "inst2" overlaps another block or symbol
 Warning (275011): Block or symbol "anti_shake" of instance "inst3" overlaps another block or symbol
-Info (12128): Elaborating entity "Core_unit" for hierarchy "Core_unit:inst"
-Warning (10230): Verilog HDL assignment warning at Core_unit.v(213): truncated value with size 32 to match size of target (16)
+Warning (275043): Pin "pin_name1" is missing source
+Info (12128): Elaborating entity "Core_unit" for hierarchy "Core_unit:inst6"
+Warning (10036): Verilog HDL or VHDL warning at Core_unit.v(29): object "flag" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at Core_unit.v(45): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Core_unit.v(118): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Core_unit.v(151): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Core_unit.v(202): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at Core_unit.v(214): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Core_unit.v(228): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Core_unit.v(230): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Core_unit.v(234): truncated value with size 32 to match size of target (2)
 Info (12128): Elaborating entity "divider" for hierarchy "divider:inst5"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:inst2"
-Info (12128): Elaborating entity "key_out" for hierarchy "key_out:inst6"
+Info (12128): Elaborating entity "key_out" for hierarchy "key_out:inst9"
+Warning (10230): Verilog HDL assignment warning at key_out.v(172): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at key_out.v(278): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at key_out.v(306): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at key_out.v(316): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at key_out.v(327): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at key_out.v(363): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at key_out.v(371): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at key_out.v(381): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at key_out.v(412): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at key_out.v(418): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at key_out.v(426): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "anti_shake" for hierarchy "anti_shake:inst3"
 Warning (10230): Verilog HDL assignment warning at anti_shake.v(19): truncated value with size 32 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at anti_shake.v(21): truncated value with size 32 to match size of target (1)
@@ -4276,18 +4300,19 @@ Warning (10235): Verilog HDL Always Construct warning at BCD.v(19): variable "IN
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pin_name1" is stuck at GND
     Warning (13410): Pin "SEG[0]" is stuck at VCC
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1811 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 1783 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 710 warnings
-    Info: Peak virtual memory: 468 megabytes
-    Info: Processing ended: Thu Jun 29 10:15:51 2017
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+Info (21057): Implemented 2587 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 2553 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 732 warnings
+    Info: Peak virtual memory: 472 megabytes
+    Info: Processing ended: Fri Jun 30 20:55:21 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 

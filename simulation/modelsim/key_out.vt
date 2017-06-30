@@ -1,11 +1,38 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog te	st bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "06/30/2017 10:38:30"
+                                                                                
+// Verilog Test Bench template for design : key_out
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
 
 `timescale 1 ns/ 1 ns
 module key_out_vlg_tst();
 // constants                                           
 // general purpose registers
-//reg eachvec;
+reg eachvec;
 // test vector input registers
+reg [15:0] IN_ans;
 reg IN_clk;
+reg IN_control;
 reg IN_key;
 reg IN_reset;
 reg [3:0] IN_value;
@@ -16,13 +43,15 @@ wire [7:0]  OUT_DSTL;
 wire [7:0]  OUT_SRCH;
 wire [7:0]  OUT_SRCL;
 wire OUT_finish;
-wire [1:0] OUT_state;
-wire [1:0] OUT_flag;
+wire [1:0]  OUT_flag;
+wire [1:0]  OUT_state;
 
 // assign statements (if any)                          
 key_out i1 (
 // port map - connection between master ports and signals/registers   
+	.IN_ans(IN_ans),
 	.IN_clk(IN_clk),
+	.IN_control(IN_control),
 	.IN_key(IN_key),
 	.IN_reset(IN_reset),
 	.IN_value(IN_value),
@@ -32,71 +61,36 @@ key_out i1 (
 	.OUT_SRCH(OUT_SRCH),
 	.OUT_SRCL(OUT_SRCL),
 	.OUT_finish(OUT_finish),
-	.OUT_state(OUT_state),
-	.OUT_flag(OUT_flag)
+	.OUT_flag(OUT_flag),
+	.OUT_state(OUT_state)
 );
 initial                                                
 begin                                                  
 // code that executes only once                        
 // insert code here --> begin                          
-#0		IN_clk = 1;
-#0 	IN_reset = 1;
-#1 	IN_value = 4'h1;
-#0 	IN_key = 1;
-#40	IN_value = 4'h1;
-#0 	IN_key = 0;
-#80	IN_value = 4'h3;
-#0 	IN_key = 1;
-#40	IN_value = 4'h3;
-#0 	IN_key = 0;
-#80	IN_value = 4'h7;
-#0 	IN_key = 1;
-#40	IN_value = 4'h7;
-#0 	IN_key = 0;
-#80	IN_value = 4'h2;
-#0 	IN_key = 1;
-#40	IN_value = 4'h2;
-#0 	IN_key = 0;
-
-#80	IN_value = 4'hA;
-#0 	IN_key = 1;
-#40	IN_value = 4'hA;
-#0 	IN_key = 0;
-#80	IN_value = 4'hB;
-#0 	IN_key = 1;
-#40	IN_value = 4'hB;
-#0 	IN_key = 0;
-#80	IN_value = 4'hC;
-#0 	IN_key = 1;
-#40	IN_value = 4'hC;
-#0 	IN_key = 0;
-
-#80	IN_value = 4'h8;
-#0 	IN_key = 1;
-#40	IN_value = 4'h8;
-#0 	IN_key = 0;
-#80	IN_value = 4'h9;
-#0 	IN_key = 1;
-#40	IN_value = 4'h9;
-#0 	IN_key = 0;
-#80	IN_value = 4'h6;
-#0 	IN_key = 1;
-#40	IN_value = 4'h6;
-#0 	IN_key = 0;
-#80	IN_value = 4'h4;
-#0 	IN_key = 1;
-#40	IN_value = 4'h4;
-#0 	IN_key = 0;
-
-#80	IN_value = 4'hF;
-#0 	IN_key = 1;
-#40	IN_value = 4'hF;
-#0 	IN_key = 0;
-
-
-
-
-                                             
+#0 IN_clk = 1;IN_ans = 4'h0;   
+#0 IN_control = 0;
+#0 IN_reset = 1;
+#1 IN_value = 4'h1;
+#0 IN_key = 1;
+#40 IN_key = 0;  
+#80 IN_value = 4'hA;
+#0 IN_key = 1;
+#40  IN_key = 0;  
+#80 IN_value = 4'h1;
+#0 IN_key = 1;
+#40  IN_key = 0;    
+//#80 IN_value = 4'hB;
+//#0 IN_key = 1;
+//#40  IN_key = 0;  
+//#80 IN_value = 4'h1;
+//#0 IN_key = 1;
+//#40  IN_key = 0; 
+//#40 IN_ans = 4'h2; 
+#160 IN_value = 4'hF;
+#0 IN_key = 1;
+#40  IN_key = 0; 
+                                                      
 // --> end                                             
 //$display("Running testbench");                       
 end                                                    

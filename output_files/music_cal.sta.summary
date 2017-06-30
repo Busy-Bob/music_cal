@@ -3,27 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'divider:inst5|OUT_clk1'
-Slack : -22.893
-TNS   : -1086.506
+Slack : -21.801
+TNS   : -2486.870
 
 Type  : Slow Model Setup 'music:inst1|clk_interval'
-Slack : -9.178
-TNS   : -401.406
+Slack : -9.711
+TNS   : -368.383
 
 Type  : Slow Model Setup 'CLK'
-Slack : -7.475
-TNS   : -2108.868
+Slack : -7.687
+TNS   : -2095.371
 
 Type  : Slow Model Hold 'CLK'
-Slack : -2.597
-TNS   : -5.192
+Slack : -2.610
+TNS   : -5.210
 
 Type  : Slow Model Hold 'divider:inst5|OUT_clk1'
 Slack : 0.499
 TNS   : 0.000
 
 Type  : Slow Model Hold 'music:inst1|clk_interval'
-Slack : 1.172
+Slack : 1.164
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLK'
@@ -32,34 +32,34 @@ TNS   : -568.829
 
 Type  : Slow Model Minimum Pulse Width 'divider:inst5|OUT_clk1'
 Slack : -0.742
-TNS   : -322.028
+TNS   : -498.624
 
 Type  : Slow Model Minimum Pulse Width 'music:inst1|clk_interval'
 Slack : -0.742
 TNS   : -84.588
 
 Type  : Fast Model Setup 'divider:inst5|OUT_clk1'
-Slack : -6.090
-TNS   : -214.942
+Slack : -5.758
+TNS   : -557.617
 
 Type  : Fast Model Setup 'music:inst1|clk_interval'
-Slack : -2.312
-TNS   : -92.989
+Slack : -2.255
+TNS   : -82.158
 
 Type  : Fast Model Setup 'CLK'
-Slack : -1.860
-TNS   : -413.242
+Slack : -1.906
+TNS   : -408.766
 
 Type  : Fast Model Hold 'CLK'
-Slack : -1.402
-TNS   : -2.801
+Slack : -1.413
+TNS   : -2.822
 
 Type  : Fast Model Hold 'divider:inst5|OUT_clk1'
 Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Hold 'music:inst1|clk_interval'
-Slack : 0.360
+Slack : 0.357
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLK'
@@ -68,7 +68,7 @@ TNS   : -383.380
 
 Type  : Fast Model Minimum Pulse Width 'divider:inst5|OUT_clk1'
 Slack : -0.500
-TNS   : -217.000
+TNS   : -336.000
 
 Type  : Fast Model Minimum Pulse Width 'music:inst1|clk_interval'
 Slack : -0.500

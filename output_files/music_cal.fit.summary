@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Jun 29 10:16:11 2017
+Fitter Status : Successful - Fri Jun 30 20:55:38 2017
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : music_cal
 Top-level Entity Name : music_cal
 Family : Cyclone II
 Device : EP2C5Q208C8
 Timing Models : Final
-Total logic elements : 1,779 / 4,608 ( 39 % )
-    Total combinational functions : 1,765 / 4,608 ( 38 % )
-    Dedicated logic registers : 656 / 4,608 ( 14 % )
-Total registers : 656
-Total pins : 28 / 142 ( 20 % )
+Total logic elements : 2,538 / 4,608 ( 55 % )
+    Total combinational functions : 2,521 / 4,608 ( 55 % )
+    Dedicated logic registers : 775 / 4,608 ( 17 % )
+Total registers : 775
+Total pins : 34 / 142 ( 24 % )
 Total virtual pins : 0
 Total memory bits : 0 / 119,808 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
